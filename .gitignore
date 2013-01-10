@@ -1,0 +1,4 @@
+# Ignore draft articles
+drafts/
+*.pid
+*.pyc

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+	
+
+	
+		<title> Linux on Samsung np900x3c | Natjohan </title>
+		<meta charset="utf-8" />
+	
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="."><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="." class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+				
+				
+					
+						<li><a href="./category/dev.html">Dev</a></li>
+					
+						<li class="active"><a href="./category/linux.html">Linux</a></li>
+					
+						<li><a href="./category/totw.html">ToTW</a></li>
+					
+				
+				
+					<li><a href="/pages/about.html">About</a></li>
+				
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				
+				
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				
+				
+				
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+				  
+				
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				
+				  <a href="./feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	
+	
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted lun. 19 novembre 2012</h3>
+	</header>
+
+	<article>
+		<h1 id="title">
+			<a href="./linux-on-samsung-np900x3c.html" rel="bookmark"
+				title="Permalink to Linux on Samsung np900x3c">Linux on Samsung np900x3c</a>
+		</h1>
+		<p>Few month ago I decided to buy a new laptop : the Samsung NP900X3C. It's a sleek, chic piece of hardware. Read more about that in this <a class="reference external" href="http://www.theverge.com/2012/7/16/3160289/samsung-series-9-review-13-inch-mid-2012">review</a> ou <a class="reference external" href="http://www.engadget.com/2012/01/09/redesigned-samsung-series-9-laptop-announced/">here</a>.</p>
+<img alt="/images/Samsung-NP900X3C.png" src="static/images/Samsung-NP900X3C.png" />
+<p>As a Linux user, i wanted to put Linux on it. I tried ArchLinux, but unfortunately, it was unstable and there were too many kernel panic. So, I installed Fedora 17 on this laptop, and most things works well out of the box (multitouch trackpad, wireless, sound, graphics, webcam ...).</p>
+<p>I just want to post a little fix I found on RedHat BugZilla to make FN keys work for the keyboard backlight.</p>
+<ol class="arabic simple">
+<li>Create and edit /usr/lib/udev/keymaps/samsung-900x3c</li>
+</ol>
+<div class="highlight"><pre><span class="c"># /usr/lib/udev/keymaps/samsung-900x3c</span>
+0xCE prog1              <span class="c"># FN+F1 System Settings</span>
+0x89 brightnessdown     <span class="c"># FN+F2 Brightness down</span>
+0x88 brightnessup       <span class="c"># FN+F3 Brightness up</span>
+0x82 switchvideomode    <span class="c"># FN+F4 Switch video mode</span>
+0xF9 f23                <span class="c"># FN+F5 Turn touchpad off</span>
+0xA0 mute               <span class="c"># FN+F6 Mute</span>
+0xAE volumedown         <span class="c"># FN+F7 Volume down</span>
+0xB0 volumeup           <span class="c"># FN+F8 Volume up</span>
+0x97 kbdillumdown       <span class="c"># FN+F9 Keyboard backlight down</span>
+0x96 kbdillumup         <span class="c"># FN+F10 Keyboard backlight up</span>
+0xB3 silentmode         <span class="c"># FN+F11 Silentmode</span>
+0xD5 wlan               <span class="c"># FN+F12 WiFi</span>
+</pre></div>
+<ol class="arabic simple" start="2">
+<li>Create and edit /usr/lib/udev/keymaps/force-release/samsung-900x3c</li>
+</ol>
+<div class="highlight"><pre><span class="c"># /usr/lib/udev/keymaps/force-release/samsung-900x3c</span>
+0xCE <span class="c"># FN+F1 System Settings</span>
+0x89 <span class="c"># FN+F2 Brightness down</span>
+0x88 <span class="c"># FN+F3 Brightness up</span>
+0x82 <span class="c"># FN+F4 Switch video mode</span>
+0xF9 <span class="c"># FN+F5 Turn touchpad off</span>
+0xA0 <span class="c"># FN+F6 Mute</span>
+0xAE <span class="c"># FN+F7 Volume down</span>
+0xB0 <span class="c"># FN+F8 Volume up</span>
+0x97 <span class="c"># FN+F9 Keyboard backlight down</span>
+0x96 <span class="c"># FN+F10 Keyboard backlight up</span>
+0xB3 <span class="c"># FN+F11 Silentmode</span>
+0xD5 <span class="c"># FN+F12 WiFi</span>
+</pre></div>
+<ol class="arabic simple" start="3">
+<li>Edit /usr/lib/udev/rules.d/95-keymap.rules, add following line to the other Samsung specific lines</li>
+</ol>
+<div class="highlight"><pre>ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, ATTR<span class="o">{[</span>dmi/id<span class="o">]</span>product_name<span class="o">}==</span><span class="s2">&quot;900X3C*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keymap $name samsung-900x3c&quot;</span>
+</pre></div>
+<p>Your file might look like this :</p>
+<div class="highlight"><pre><span class="o">[</span>...<span class="o">]</span>
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;MAXDATA&quot;</span>, ATTR<span class="o">{[</span>dmi/id<span class="o">]</span>product_name<span class="o">}==</span><span class="s2">&quot;Pro 7000*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keymap $name maxdata-pro_7000&quot;</span>
+
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, ATTR<span class="o">{[</span>dmi/id<span class="o">]</span>product_name<span class="o">}==</span><span class="s2">&quot;900X3C*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keymap $name samsung-900x3c&quot;</span>
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keymap $name samsung-other&quot;</span>
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, ATTR<span class="o">{[</span>dmi/id<span class="o">]</span>product_name<span class="o">}==</span><span class="s2">&quot;*SX20S*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keymap $name samsung-sx20s&quot;</span>
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, ATTR<span class="o">{[</span>dmi/id<span class="o">]</span>product_name<span class="o">}==</span><span class="s2">&quot;SQ1US&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keymap $name samsung-sq1us&quot;</span>
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, ATTR<span class="o">{[</span>dmi/id<span class="o">]</span>product_name<span class="o">}==</span><span class="s2">&quot;*700Z*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keymap $name 0xBA ejectcd 0x96 keyboardbrightnessup 0x97 keyboardbrightnessdown&quot;</span>
+<span class="o">[</span>...<span class="o">]</span>
+</pre></div>
+<ol class="arabic simple" start="4">
+<li>Edit /usr/lib/udev/rules.d/95-keyboard-force-release.rules, add following line to the other Samsung specific lines</li>
+</ol>
+<div class="highlight"><pre>ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, ATTR<span class="o">{[</span>dmi/id<span class="o">]</span>product_name<span class="o">}==</span><span class="s2">&quot;900X3C*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keyboard-force-release.sh $devpath samsung-900x3c&quot;</span>
+</pre></div>
+<p>Your file might look like this :</p>
+<div class="highlight"><pre><span class="o">[</span>...<span class="o">]</span>
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}=</span><span class="s2">&quot;$attr{[dmi/id]sys_vendor}&quot;</span>
+
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, ATTR<span class="o">{[</span>dmi/id<span class="o">]</span>product_name<span class="o">}==</span><span class="s2">&quot;900X3C*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keyboard-force-release.sh $devpath samsung-900x3c&quot;</span>
+ENV<span class="o">{</span>DMI_VENDOR<span class="o">}==</span><span class="s2">&quot;[sS][aA][mM][sS][uU][nN][gG]*&quot;</span>, RUN+<span class="o">=</span><span class="s2">&quot;keyboard-force-release.sh $devpath samsung-other&quot;</span>
+<span class="o">[</span>...<span class="o">]</span>
+</pre></div>
+<ol class="arabic simple" start="5">
+<li>Just reboot your computer and now most FN keys works except 'silent mode' and wifi switcher</li>
+</ol>
+<p>May it helps ;)</p>
+
+
+		<div id="article_meta">
+			
+				Category:
+					<a href="./category/linux.html">Linux</a>
+			
+			
+				<br />Tags:
+				
+					<a href="./tag/hardware.html">hardware</a>
+				
+					<a href="./tag/linux.html">Linux</a>
+				
+					<a href="./tag/fedora.html">Fedora</a>
+				
+					<a href="./tag/tip.html">tip</a>
+				
+			
+		</div>
+		
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+
+	</article>
+
+	<footer>
+		<a href="./" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "linux-on-samsung-np900x3c.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+	
+
+
+	</section>
+
+	
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+
+</body>
+</html>

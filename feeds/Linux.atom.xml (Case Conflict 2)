@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/linux.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-01-01T19:34:52+01:00</updated><entry><title></title><link href="http://natjohan.info/.html" rel="alternate"></link><updated>2013-01-01T19:34:52+01:00</updated><author><name>Natjohan</name></author><id>tag:natjohan.info,2013-01-01:.html</id><summary type="html">&lt;div class="section" id="tip-of-the-week-2"&gt;
+&lt;h2&gt;Tip of the week 2&lt;/h2&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;author:&lt;/th&gt;&lt;td class="field-body"&gt;natjohan&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;date:&lt;/th&gt;&lt;td class="field-body"&gt;2012-11-23 18:17&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;category:&lt;/th&gt;&lt;td class="field-body"&gt;Linux, ToTW&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;tags:&lt;/th&gt;&lt;td class="field-body"&gt;curl, tip, whatismyip&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;status:&lt;/th&gt;&lt;td class="field-body"&gt;draft&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class="section" id="get-your-public-ip-address-from-command-line"&gt;
+&lt;h2&gt;Get your public ip address from command line&lt;/h2&gt;
+&lt;/div&gt;
+</summary></entry></feed>

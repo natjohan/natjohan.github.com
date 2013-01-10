@@ -1,0 +1,8 @@
+/* natjohan.info */
+	Site name: natjohan
+	Site URL: http://natjohan.info
+	Built with: Pelican and propulsed by GitHub Pages
+
+	Editor: Jonathan M.
+	Twitter : @natjohan
+	Location: France
