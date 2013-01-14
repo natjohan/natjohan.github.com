@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.curl.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-01-01T20:03:00+01:00</updated><entry><title>Tip of the week 2</title><link href="http://natjohan.info/tip-of-the-week-2.html" rel="alternate"></link><updated>2013-01-01T20:03:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-01:tip-of-the-week-2.html</id><summary type="html">&lt;div class="section" id="simply-get-your-public-ip-address-from-command-line"&gt;
+&lt;h2&gt;Simply get your public ip address from command line&lt;/h2&gt;
+&lt;p&gt;You want to know your external ip in with command line ? just type :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan$ curl ifconfig.me&lt;/span&gt;
+&lt;span class="go"&gt;XX.XX.XX.XX&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If &lt;cite&gt;curl&lt;/cite&gt; is not on your system, you can use &lt;cite&gt;wget&lt;/cite&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan$ wget -qO- ifconfig.me/ip&lt;/span&gt;
+&lt;span class="go"&gt;XX.XX.XX.XX&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;!-- Note : you can retrieve other informations like port/user agent/host and xml or json format, read more on `ifconfig.me&lt;http://ifconfig.me/`_ and icanhazip.com also provide your ip address --&gt;
+&lt;/div&gt;
+</summary><category term="curl"></category><category term="tip"></category><category term="whatismyip"></category></entry></feed>

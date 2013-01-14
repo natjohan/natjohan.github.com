@@ -8,7 +8,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="./theme/css/font-awesome.css" type="text/css"/>
 
-	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+	<link href="http://natjohan.info/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
 	
 
 	
@@ -86,7 +86,8 @@
 			<a href="./jqplot-charts-and-graphs-for-jquery.html" rel="bookmark"
 				title="Permalink to JqPlot : charts and graphs for Jquery">JqPlot : charts and graphs for Jquery</a>
 		</h1>
-		<p>You want to add some fancy charts and graph to your webpage, backend...? So, you have to consider Jqplot, it's a JQuery plugin which have many advantages :
+		<img alt="/images/JqPlot-ex.png" src="static/images/JqPlot-ex.png" />
+<p>You want to add some fancy charts and graph to your webpage, backend...? So, you have to consider Jqplot, it's a JQuery plugin which have many advantages :
 - Open source, free to use and maintained by Chris Leonello (<a class="reference external" href="https://bitbucket.org/cleonello/jqplot/overview">Bitbucket page</a>)
 - based on JQuery
 - highly customizable (bars, pies, lines, colors, axis text, etc)
@@ -104,6 +105,7 @@
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;YOUR_PATH_TO jqplot/plugins/jqplot.highlighter.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;YOUR_PATH_TO jqplot/plugins/jqplot.cursor.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
+<p>The script part :</p>
 <div class="highlight"><pre><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
         <span class="kd">var</span> <span class="nx">stats</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mf">5.2</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mf">4.9</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mf">5.8</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mf">5.3</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mf">6.1</span><span class="p">],[</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">]];</span>
         <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
