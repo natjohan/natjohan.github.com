@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.fix.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-01-14T19:26:00+01:00</updated><entry><title>Tip of the week 4</title><link href="http://natjohan.info/tip-of-the-week-4.html" rel="alternate"></link><updated>2013-01-14T19:26:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-14:tip-of-the-week-4.html</id><summary type="html">&lt;div class="section" id="simply-edit-your-gnome-3-menu-with-alacarte"&gt;
+&lt;h2&gt;Simply edit your Gnome 3 menu with Alacarte&lt;/h2&gt;
+&lt;img alt="/images/menu-alacarte.png" src="/images/menu-alacarte.png" /&gt;
+&lt;p&gt;Unfortunately Gnome doesn't provide a simple and well documented way to add/modify a menu entry, however &lt;strong&gt;Alacarte&lt;/strong&gt; is a great tool for that.&lt;/p&gt;
+&lt;div class="section" id="installation"&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;On Fedora (Alacarte is also available in many distro)  :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install alacarte&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To get it works on Fedora (I just tested it on F17), you have to edit &lt;cite&gt;/lib/python2.7/site-packages/Alacarte/MenuEditor.py&lt;/cite&gt; and replace &lt;strong&gt;applications.menu&lt;/strong&gt; by &lt;strong&gt;applications-gnome.menu&lt;/strong&gt; and save it before launch Alacarte&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="usage"&gt;
+&lt;h3&gt;Usage&lt;/h3&gt;
+&lt;p&gt;Now you can add/modify/delete your menu entries with Alacarte (start it with Activities -&amp;gt; Applications or with Alt+f2 -&amp;gt; &lt;cite&gt;Alacarte&lt;/cite&gt;)&lt;/p&gt;
+&lt;img alt="/images/Alacarte-scan.png" src="/images/Alacarte-scan.png" /&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;strong&gt;Note&lt;/strong&gt; : You can change icon by clicking on the little picture on the left&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="tool"></category><category term="tip"></category><category term="menu"></category><category term="gnome"></category><category term="alacarte"></category><category term="fix"></category></entry></feed>

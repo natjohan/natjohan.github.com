@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.mail.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-01-07T14:17:00+01:00</updated><entry><title>Tip of the week 3</title><link href="http://natjohan.info/tip-of-the-week-3.html" rel="alternate"></link><updated>2013-01-07T14:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-07:tip-of-the-week-3.html</id><summary type="html">&lt;div class="section" id="test-email-sending-in-local"&gt;
+&lt;h2&gt;Test email sending in local&lt;/h2&gt;
+&lt;p&gt;Sometimes, you have to check if your email application works for your devs, but you don't want to importunate your users to test it. So you should test it in local, and verify that emails will be sent to the right people, and that those emails will contain the correct content.
+One way to test test it, is to run this python command that run a simple smtp server that receive and display emails locally in your terminal (in this example, the server listening on port 1025)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan$ python -m smtpd -n -c DebuggingServer localhost:1025&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;p&gt;Just read the &lt;a class="reference external" href="http://docs.python.org/2.7/library/smtpd.html#smtpd"&gt;smtpd python documentation&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="tool"></category><category term="tip"></category><category term="mail"></category><category term="python"></category></entry></feed>
