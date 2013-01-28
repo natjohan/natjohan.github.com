@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+	
+
+	
+		<title> Easily recover your data from corrupted usb disk/memory card | Natjohan </title>
+		<meta charset="utf-8" />
+	
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="."><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="." class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+				
+				
+					
+						<li><a href="./category/dev.html">Dev</a></li>
+					
+						<li class="active"><a href="./category/linux.html">Linux</a></li>
+					
+						<li><a href="./category/totw.html">ToTW</a></li>
+					
+				
+				
+					<li><a href="/pages/about.html">About</a></li>
+				
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				
+				
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				
+				
+				
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+				  
+				
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				
+				  <a href="./feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	
+	
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted lun. 28 janvier 2013</h3>
+	</header>
+
+	<article>
+		<h1 id="title">
+			<a href="./easily-recover-your-data-from-corrupted-usb-diskmemory-card.html" rel="bookmark"
+				title="Permalink to Easily recover your data from corrupted usb disk/memory card">Easily recover your data from corrupted usb disk/memory card</a>
+		</h1>
+		<p>Yesterday, I just wanted to move my pictures from my memory card to my computer. Unfortunatly, my memory card doesn't mount automatically under linux (Fedora), so i tried to mount it manually</p>
+<div class="highlight"><pre><span class="go">natjohan# fdisk -l</span>
+<span class="go">[...]</span>
+<span class="go">Périphérique Amorce  Début        Fin      Blocs     Id  Système</span>
+<span class="go">/dev/sdc1            8192    15564799     7778304    b  W95 FAT32</span>
+
+
+<span class="go">natjohan# mount -t vfat /dev/sdc1 /mnt/</span>
+<span class="go">mount: mauvais type de système de fichiers, option erronée, superbloc</span>
+<span class="go">        erroné sur /dev/sdc1, page de code ou aide manquante, ou autre erreur</span>
+<span class="go">        Dans quelques cas certaines informations sont utiles dans le journal</span>
+<span class="go">        système — essayez « dmesg | tail » ou quelque chose du genre</span>
+</pre></div>
+<p>Oooops, it doesn't works, what's in <cite>dmesg</cite> ?</p>
+<div class="highlight"><pre><span class="go">natjohan# dmesg | tail</span>
+<span class="go">[ 2571.223469] usb 2-1: new low-speed USB device number 2 using xhci_hcd</span>
+<span class="go">[ 2571.269795] usb 2-1: New USB device found, idVendor=046d, idProduct=c01e</span>
+<span class="go">[ 2571.269805] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0</span>
+<span class="go">[ 2571.269810] usb 2-1: Product: USB-PS/2 Optical Mouse</span>
+<span class="go">[ 2571.269815] usb 2-1: Manufacturer: Logitech</span>
+<span class="go">[ 2571.271718] usb 2-1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes</span>
+<span class="go">[ 2571.289396] input: Logitech USB-PS/2 Optical Mouse as /devices/pci0000:00/0000:00:1c.4/0000:03:00.0/usb2/2-1/2-1:1.0/input/input11</span>
+<span class="go">[ 2571.290150] hid-generic 0003:046D:C01E.0001: input,hidraw0: USB HID v1.10 Mouse [Logitech USB-PS/2 Optical Mouse] on usb-0000:03:00.0-1/input0</span>
+<span class="go">[ 2677.921938] FAT-fs (sdc1): invalid media value (0x00)</span>
+<span class="go">[ 2677.921944] FAT-fs (sdc1): Can&#39;t find a valid FAT filesystem</span>
+</pre></div>
+<p>I was really annoyed (all my pictures from christmas :( , but with a quicksearch I found a very interesting tool called <a class="reference external" href="http://www.cgsecurity.org/wiki/PhotoRec">photorec</a> :</p>
+<!--  -->
+<blockquote>
+<em>PhotoRec is file data recovery software designed to</em> <strong>recover lost files</strong> <em>including video, documents and archives from hard disks, CD-ROMs, and lost pictures (thus the Photo Recovery name) from digital camera memory. PhotoRec ignores the file system and goes after the underlying data, so it will still work</em> <strong>even if your media's file system has been severely damaged or reformatted.</strong></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Moreover, <cite>Photorec</cite> is :</div>
+<div class="line">- free and open source (GPLV v2+)</div>
+<div class="line">- developped by a french developper : Christian Grenier (thank you to him)</div>
+<div class="line">- multi-platform (Linux, Win and OSX)</div>
+<div class="line">- support most of filesystems : FAT, NTFS, Ext2/3/4, ExFAT, HFS+</div>
+</div>
+<p>What a promise ! So let's test it, under Fedora, there is a packet called <cite>testdisk</cite> (<a class="reference external" href="http://www.cgsecurity.org/wiki/TestDisk">testdisk</a> is a suite which include photorec, note testdisk looks great too for recovering lost partition or boot sectors, hope I never need to use it)</p>
+<div class="highlight"><pre><span class="go">natjohan# yum install testdisk</span>
+</pre></div>
+<p>Then, you just have to call <cite>photorec</cite> and follow the instructions</p>
+<div class="highlight"><pre><span class="go">natjohan# photorec</span>
+</pre></div>
+<p>Choose your storage device, your partition, folder for recovered files, etc. And take some time to drink a cup of coffee :)</p>
+<img alt="photorec in progress" src="static/images/photorec.png" />
+<p>That's it ! Then you can format your device (in FAT 32 for example) with :</p>
+<div class="highlight"><pre><span class="go">natjohan# mkfs.vfat -cvF 32 /dev/sdc1</span>
+</pre></div>
+<p><strong>WARNING :</strong> Be really careful before formating a disk, <strong>you will not be able to recover your data</strong>, check that you are applying the command to the right device before you hit ENTER</p>
+<blockquote>
+Note: I supposed you have a partition created on the disk, before you format it.</blockquote>
+
+
+		<div id="article_meta">
+			
+				Category:
+					<a href="./category/linux.html">Linux</a>
+			
+			
+				<br />Tags:
+				
+					<a href="./tag/tool.html">tool</a>
+				
+					<a href="./tag/recover.html">recover</a>
+				
+					<a href="./tag/photorec.html">photorec</a>
+				
+					<a href="./tag/repair.html">repair</a>
+				
+					<a href="./tag/testdisk.html">testdisk</a>
+				
+			
+		</div>
+		
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+
+	</article>
+
+	<footer>
+		<a href="./" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "easily-recover-your-data-from-corrupted-usb-diskmemory-card.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+	
+
+
+	</section>
+
+	
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+
+</body>
+</html>
