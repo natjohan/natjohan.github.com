@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tip.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-01-28T13:40:00+01:00</updated><entry><title>Tip of the week 6</title><link href="http://natjohan.info/tip-of-the-week-6.html" rel="alternate"></link><updated>2013-01-28T13:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-28:tip-of-the-week-6.html</id><summary type="html">&lt;img alt="/images/lldpd-why.png" src="/images/lldpd-why.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tip.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-02-04T19:36:00+01:00</updated><entry><title>Tip of the week 7</title><link href="http://natjohan.info/tip-of-the-week-7.html" rel="alternate"></link><updated>2013-02-04T19:36:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-04:tip-of-the-week-7.html</id><summary type="html">&lt;div class="section" id="upgrading-fedora-with-fedup"&gt;
+&lt;h2&gt;Upgrading Fedora with FedUp&lt;/h2&gt;
+&lt;p&gt;FedUp (Fedora Upgrading) is the new tool to upgrade Fedora. It replaces Preupgrade used in previous releases.&lt;/p&gt;
+&lt;p&gt;I tested it on Fedora 17 to 18, and it works well, here is the process :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install fedup&lt;/span&gt;
+&lt;span class="go"&gt;natjohan# fedup-cli --network 18 --debuglog fedupdebug.log&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That's all, if there isn't errors, you just have to reboot your system !&lt;/p&gt;
+&lt;!-- Note : you should read more about FedUp on `Fedora wiki &lt;http://fedoraproject.org/wiki/FedUp#How_Can_I_Upgrade_My_System_with_FedUp.3F&gt;`_ before use it --&gt;
+&lt;/div&gt;
+</summary><category term="tip"></category><category term="linux"></category></entry><entry><title>Tip of the week 6</title><link href="http://natjohan.info/tip-of-the-week-6.html" rel="alternate"></link><updated>2013-01-28T13:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-28:tip-of-the-week-6.html</id><summary type="html">&lt;img alt="/images/lldpd-why.png" src="/images/lldpd-why.png" /&gt;
 &lt;div class="section" id="know-your-network-neighbors-thanks-to-lldpd-daemon"&gt;
 &lt;h2&gt;Know your network neighbors thanks to lldpd daemon&lt;/h2&gt;
 &lt;p&gt;This week, i would like to present you lldpd. Actually, it's a useful daemon for GNU/Linux, BSD, Mac OS X developped by &lt;a class="reference external" href="http://vincent.bernat.im"&gt;Vincent Bernat&lt;/a&gt;. The picture above summarizes the situation very well ;-).&lt;/p&gt;
