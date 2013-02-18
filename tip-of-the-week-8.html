@@ -12,7 +12,7 @@
 	
 
 	
-		<title> Tip of the week 9 | Natjohan </title>
+		<title> Tip of the week 8 | Natjohan </title>
 		<meta charset="utf-8" />
 	
 </head>
@@ -83,43 +83,58 @@
 
 	<article>
 		<h1 id="title">
-			<a href="./tip-of-the-week-9.html" rel="bookmark"
-				title="Permalink to Tip of the week 9">Tip of the week 9</a>
+			<a href="./tip-of-the-week-8.html" rel="bookmark"
+				title="Permalink to Tip of the week 8">Tip of the week 8</a>
 		</h1>
-		<img alt="/images/chromium-logo.png" src="static/images/chromium-logo.png" />
-<div class="section" id="chromium">
-<h2>Chromium</h2>
-<p><cite>Chromium</cite> is an open source browser from which Google Chrome is based. Actually Chromium seems to be very similar to Chrome but there is some important differences, in few words, Chromium = Chrome (with few <a class="reference external" href="http://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome">changes</a>) + open source (under BSD licence) + privacy (RLZ tracking is disabled in chromium, see <a class="reference external" href="http://en.wikipedia.org/wiki/Chromium_(web_browser)">wikipedia</a>).</p>
+		<div class="section" id="linux-commands-to-retrieve-your-system-distro-version">
+<h2>Linux commands to retrieve your system &amp; distro version</h2>
+<p>There many ways to know your system and your distro version, here are few ways to find it :</p>
+<div class="section" id="show-your-linux-version">
+<h3>Show your Linux Version :</h3>
+<p>To show linux version using <cite>/proc/</cite></p>
+<div class="highlight"><pre><span class="go">natjohan$  cat /proc/version</span>
+<span class="go">  Linux version 3.7.4-204.fc18.x86_64 (mockbuild@bkernel01.phx2.fedoraproject.org) (gcc version 4.7.2 20121109 (Red Hat 4.7.2-8) (GCC) ) #1 SMP Wed Jan 23 16:44:29 UTC 2013</span>
+</pre></div>
+<p>With <cite>dmsg</cite> command :</p>
+<div class="highlight"><pre><span class="go">natjohan$ dmesg | grep &quot;Linux version&quot;</span>
+<span class="go">  [    0.000000] Linux version 3.7.4-204.fc18.x86_64 (mockbuild@bkernel01.phx2.fedoraproject.org) (gcc version 4.7.2 20121109 (Red Hat 4.7.2-8) (GCC) ) #1 SMP Wed Jan 23 16:44:29 UTC 2013</span>
+</pre></div>
+<p>With <cite>uname</cite> :</p>
+<div class="highlight"><pre><span class="go">natjohan$ uname -a</span>
+<span class="go">  Linux cerize-laptop 3.7.4-204.fc18.x86_64 #1 SMP Wed Jan 23 16:44:29 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux</span>
+</pre></div>
 </div>
-<div class="section" id="install-chromium-on-fedora">
-<h2>Install Chromium on Fedora</h2>
-<p>Chromium is not on the default repo, so you just have to add this repo maintained by Tom Callaway from Red-Hat with :</p>
-<div class="highlight"><pre><span class="go">natjohan# su -lc &#39;cd /etc/yum.repos.d &amp;&amp; wget http://repos.fedorapeople.org/repos/spot/chromium/fedora-chromium-stable.repo&#39;</span>
+<div class="section" id="to-check-your-distro-version">
+<h3>To check your distro version</h3>
+<p>With <cite>/etc/</cite> :</p>
+<div class="highlight"><pre><span class="go">natjohan$ cat /etc/issue</span>
+<span class="go">  Fedora release 18 (Spherical Cow)</span>
+<span class="go">  Kernel \r on an \m (\l)</span>
 </pre></div>
-<p>OR just create a file called <cite>fedora-chromium.repo</cite> under <cite>/etc/yum.repo/</cite> with this content :</p>
-<div class="highlight"><pre><span class="go">[fedora-chromium-stable]</span>
-<span class="go">name=Builds of the &quot;stable&quot; tag of the Chromium Web Browser</span>
-<span class="gp">baseurl=http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-$releasever/$</span>basearch/
-<span class="go">enabled=1</span>
-<span class="go">skip_if_unavailable=1</span>
-<span class="go">gpgcheck=0</span>
-
-<span class="go">[fedora-chromium-stable-source]</span>
-<span class="go">name=Builds of the &quot;stable&quot; tag of the Chromium Web Browser - Source</span>
-<span class="gp">baseurl=http://repos.fedorapeople.org/repos/spot/chromium-stable/fedora-$</span>releasever/SRPMS
-<span class="go">enabled=0</span>
-<span class="go">skip_if_unavailable=1</span>
-<span class="go">gpgcheck=0</span>
+<p>Or :</p>
+<div class="highlight"><pre><span class="go">natjohan$ cat /etc/*release*</span>
+<span class="go">  Fedora release 18 (Spherical Cow)</span>
+<span class="go">  cat: /etc/lsb-release.d: est un dossier</span>
+<span class="go">  NAME=Fedora</span>
+<span class="go">  VERSION=&quot;18 (Spherical Cow)&quot;</span>
+<span class="go">  ID=fedora</span>
+<span class="go">  VERSION_ID=18</span>
+<span class="go">  PRETTY_NAME=&quot;Fedora 18 (Spherical Cow)&quot;</span>
+<span class="go">  ANSI_COLOR=&quot;0;34&quot;</span>
+<span class="go">  CPE_NAME=&quot;cpe:/o:fedoraproject:fedora:18&quot;</span>
+<span class="go">  Fedora release 18 (Spherical Cow)</span>
+<span class="go">  Fedora release 18 (Spherical Cow)</span>
+<span class="go">  cpe:/o:fedoraproject:fedora:18</span>
 </pre></div>
-<p>Then, install it with yum command :</p>
-<div class="highlight"><pre><span class="go">natjohan# yum install chromium</span>
+<p>With <cite>lsb_release</cite> (if it's installed):</p>
+<div class="highlight"><pre><span class="go">natjohan$ lsb_release -a</span>
+<span class="go">  LSB Version:  :core-4.1-amd64:core-4.1-ia32:core-4.1-noarch:cxx-4.1-ia32:cxx-4.1-noarch:desktop-4.1-ia32:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-ia32:printing-4.1-noarch</span>
+<span class="go">  Distributor ID:       Fedora</span>
+<span class="go">  Description:  Fedora release 18 (Spherical Cow)</span>
+<span class="go">  Release:      18</span>
+<span class="go">  Codename:     SphericalCow</span>
 </pre></div>
-<p>Note : this is not the latest version of chromium (v23 - december 2012), however there is no major changes in v26, but hope Tom Callaway maintained this repo up to date</p>
 </div>
-<div class="section" id="go-further">
-<h2>Go further</h2>
-<p>Official <a class="reference external" href="http://www.chromium.org/Home">website</a>
-If you really want to take care of your privacy and use Chromium, i recommand you to use DuckDuckGo (just change your search settings) and read this <a class="reference external" href="http://www.howtogeek.com/100361/how-to-optimize-google-chrome-for-maximum-privacy/">article</a></p>
 </div>
 
 
@@ -135,11 +150,7 @@ If you really want to take care of your privacy and use Chromium, i recommand yo
 				
 					<a href="./tag/linux.html">linux</a>
 				
-					<a href="./tag/browser.html">browser</a>
-				
-					<a href="./tag/fedora.html">fedora</a>
-				
-					<a href="./tag/chromium.html">chromium</a>
+					<a href="./tag/version.html">version</a>
 				
 			
 		</div>
@@ -162,7 +173,7 @@ If you really want to take care of your privacy and use Chromium, i recommand yo
 		<h2>Comments</h2>
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
-			var disqus_identifier = "tip-of-the-week-9.html";
+			var disqus_identifier = "tip-of-the-week-8.html";
 			(function() {
 				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 				dsq.src = 'http://natjohan.disqus.com/embed.js';
