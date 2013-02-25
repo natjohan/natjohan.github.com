@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+	
+
+	
+		<title> Tip of the week 10 | Natjohan </title>
+		<meta charset="utf-8" />
+	
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="."><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="." class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+				
+				
+					
+						<li><a href="./category/dev.html">Dev</a></li>
+					
+						<li><a href="./category/linux.html">Linux</a></li>
+					
+						<li class="active"><a href="./category/totw.html">ToTW</a></li>
+					
+				
+				
+					<li><a href="/pages/about.html">About</a></li>
+				
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				
+				
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				
+				
+				
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+				  
+				
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				
+				  <a href="./feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	
+	
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted lun. 25 février 2013</h3>
+	</header>
+
+	<article>
+		<h1 id="title">
+			<a href="./tip-of-the-week-10.html" rel="bookmark"
+				title="Permalink to Tip of the week 10">Tip of the week 10</a>
+		</h1>
+		<div class="section" id="qalculate-the-ultimate-desktop-calculator">
+<h2>Qalculate - the ultimate desktop calculator !</h2>
+<p>According to the official <a class="reference external" href="http://qalculate.sourceforge.net/index.html">website</a>, Qalculate is :
+<cite>a multi-purpose desktop calculator for GNU/Linux. It is small and simple to use but with much power and versatility underneath. Features include customizable functions, units, arbitrary precision, plotting, and a user-friendly interface (KDE or GTK+).</cite></p>
+<p>Qalculate is also coming with a command line tool called qalc</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation</h2>
+<p><cite>Qalculate</cite> is available on our favorite distro defaults repos (debian, ubuntu, fedora...), so you just have to use your package installer, on Fedora :</p>
+<div class="highlight"><pre><span class="go">natjohan# yum install qalculate</span>
+</pre></div>
+<p>Note : There is a GUI version : qalculate-gtk or qalculate-kde</p>
+<div class="highlight"><pre><span class="go">natjohan# yum install qalculate-gtk</span>
+</pre></div>
+<p>You should read the official <a class="reference external" href="http://qalculate.sourceforge.net/gtk-manual/">documentation</a> for this GUI</p>
+<img alt="/images/qalculate.png" src="static/images/qalculate.png" />
+<p>For your first use of qalc command :</p>
+<div class="highlight"><pre><span class="go">natjohan$ qalc</span>
+<span class="go">        You need the download exchange rates to be able to convert between different currencies.</span>
+<span class="go">        You can later get current exchange rates with the &quot;exchange rates&quot; command.</span>
+<span class="go">        Do you want to fetch exchange rates now from the Internet (default yes)?</span>
+<span class="go">        Please answer yes or no: yes</span>
+<span class="go">        &gt; exit</span>
+</pre></div>
+</div>
+<div class="section" id="usage">
+<h2>Usage</h2>
+<p>Here is few examples of qalc command, unfortunately there isn't man page but the synthax is easy to understand and use.</p>
+<div class="section" id="currency-converter">
+<h3>Currency converter</h3>
+<p>So now your able to convert currencies from your command line, example :</p>
+<div class="highlight"><pre><span class="go">natjohan$ qalc 1EUR = xCAD</span>
+<span class="go">        (1 * euro) = (x * CAD) = x = 1.3458</span>
+<span class="go">natjohan$ qalc 1EUR = xCHF</span>
+<span class="go">        (1 * euro) = (x * CHF) = x = 1.2272</span>
+<span class="go">natjohan$ qalc 12EUR + 155USD = x GBP</span>
+<span class="go">        ((12 * euro) + (155 * dollar)) = (x * GBP) = - x = 111.67764</span>
+</pre></div>
+<p>Many currencies are available, just type  the <a class="reference external" href="http://www.xe.com/iso4217.php">iso 4217 code</a></p>
+<!-- note : this is an approximation, you should verify your results on the web -->
+</div>
+<div class="section" id="unit-converter">
+<h3>Unit converter</h3>
+<p>Works with many units :</p>
+<div class="highlight"><pre><span class="go">natjohan$ qalc 11km/52min = x km/h</span>
+<span class="go">        ((11 * kilometer) / (52 * minute)) = ((x * kilometer) / hour) = - x = 12.692308</span>
+<span class="go">natjohan$  qalc 1800cal = x J</span>
+<span class="go">        (1800 * calorie) = (x * joule) = x = 7536.24</span>
+<span class="go">natjohan$  qalc 40miles = x km</span>
+<span class="go">        (40 * mile) = (x * kilometer) = x = 64.37376</span>
+<span class="go">natjohan$ qalc 40nautical_miles = x km</span>
+<span class="go">        (40 * nautical_mile) = (x * kilometer) = x = 74.08</span>
+<span class="go">natjohan$ qalc 65l / 877km = x l/100km</span>
+<span class="go">        ((65 * liter) / (877 * kilometer)) = ((x * liter) / (100 * kilometer)) = - x = 7.4116306</span>
+<span class="go">natjohan$ qalc 1 years = x second</span>
+<span class="go">        (1 * year) = (x * second) = x = 31557600</span>
+</pre></div>
+<p>To calculate Unix timestamp :</p>
+<div class="highlight"><pre><span class="go">natjohan$ qalc timestamp 2013-02-25</span>
+<span class="go">        timestamp(&quot;2013-02-25&quot;) = 1.3617468E9</span>
+</pre></div>
+<p>To solve problems like : &quot;How many days will it take to transfer 200GiB at 1.25MiB/sec&quot; :</p>
+<div class="highlight"><pre><span class="go">natjohan$ qalc &quot;200Gibyte / 1.25(Mibyte/second) = x day&quot;</span>
+<span class="go">        ((200 * gibibyte) / (1.25 * (mebibyte / second))) = (x * day) = - x = 1.8962963</span>
+</pre></div>
+</div>
+<div class="section" id="functions-variables">
+<h3>Functions &amp; variables</h3>
+<p>Qalculate comes with many functions : Economic, Statistics, geometry, etc and variables like physical constants. That a great point for scientists :P</p>
+</div>
+<div class="section" id="interactive-mode">
+<h3>Interactive mode</h3>
+<p>Note you can use previous example in interactive mode, simply launch <cite>qalc</cite> command</p>
+<div class="highlight"><pre><span class="go">natjohan$ qalc</span>
+<span class="go">        &gt;</span>
+</pre></div>
+</div>
+<div class="section" id="tips">
+<h3>Tips</h3>
+<p>To find function or unit name you can launch the GUI and made an insert, or if you don't have the GUI : just go in <cite>/usr/share/qalculate</cite> and cat the xml files.</p>
+</div>
+</div>
+
+
+		<div id="article_meta">
+			
+				Category:
+					<a href="./category/totw.html">ToTW</a>
+			
+			
+				<br />Tags:
+				
+					<a href="./tag/tip.html">tip</a>
+				
+					<a href="./tag/linux.html">linux</a>
+				
+					<a href="./tag/calculate.html">calculate</a>
+				
+					<a href="./tag/qalculate.html">qalculate</a>
+				
+					<a href="./tag/qalc.html">qalc</a>
+				
+			
+		</div>
+		
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+
+	</article>
+
+	<footer>
+		<a href="./" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-10.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+	
+
+
+	</section>
+
+	
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+
+</body>
+</html>
