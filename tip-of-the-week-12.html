@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+	
+
+	
+		<title> Tip of the week 12 | Natjohan </title>
+		<meta charset="utf-8" />
+	
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="."><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="." class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+				
+				
+					
+						<li><a href="./category/dev.html">Dev</a></li>
+					
+						<li><a href="./category/linux.html">Linux</a></li>
+					
+						<li class="active"><a href="./category/totw.html">ToTW</a></li>
+					
+				
+				
+					<li><a href="/pages/about.html">About</a></li>
+				
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				
+				
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				
+				
+				
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+				  
+				
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				
+				  <a href="./feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	
+	
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted dim. 10 mars 2013</h3>
+	</header>
+
+	<article>
+		<h1 id="title">
+			<a href="./tip-of-the-week-12.html" rel="bookmark"
+				title="Permalink to Tip of the week 12">Tip of the week 12</a>
+		</h1>
+		<div class="section" id="detect-ip-address-conflicts-with-the-arping-command">
+<h2>Detect IP address conflicts  with the arping command</h2>
+<p>If you're working in large network environment and you have some ip conflicts, you can use <cite>arping</cite> command under Linux. This command sends arp requests on the Ethernet layer and is a part of iputils package (so <cite>arping</cite> is available on many distros)</p>
+<div class="section" id="usage">
+<h3>Usage</h3>
+<p><cite>arping</cite> usage is very easy :</p>
+<div class="highlight"><pre><span class="go">natjohan$ arping</span>
+<span class="go">        Usage: arping [-fqbDUAV] [-c count] [-w timeout] [-I device] [-s source] destination</span>
+<span class="go">          -f : quit on first reply</span>
+<span class="go">          -q : be quiet</span>
+<span class="go">          -b : keep broadcasting, don&#39;t go unicast</span>
+<span class="go">          -D : duplicate address detection mode</span>
+<span class="go">          -U : Unsolicited ARP mode, update your neighbours</span>
+<span class="go">          -A : ARP answer mode, update your neighbours</span>
+<span class="go">          -V : print version and exit</span>
+<span class="go">          -c count : how many packets to send</span>
+<span class="go">          -w timeout : how long to wait for a reply</span>
+<span class="go">          -I device : which ethernet device to use</span>
+<span class="go">          -s source : source ip address</span>
+<span class="go">          destination : ask for what ip address</span>
+<span class="go">natjohan$ arping  -I wlan0 192.168.1.15</span>
+<span class="go">        ARPING 192.168.1.15 from 192.168.1.17 wlan0</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  166.580ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [00:16:44:12:91:86]  167.651ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  171.751ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  89.035ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  112.753ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  32.680ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  56.519ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  81.120ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  104.755ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  34.628ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  51.382ms</span>
+<span class="go">        Unicast reply from 192.168.1.15 [5C:0A:5B:26:72:82]  75.083ms</span>
+<span class="go">        ^CSent 11 probes (1 broadcast(s))</span>
+<span class="go">        Received 12 response(s)</span>
+</pre></div>
+<p>The main options are : <strong>-I</strong> to define on which interface you want to send arp requests and the IP address you want to test, in the example above you can see that two MAC have the 192.168.1.15 ip address ([5C:0A:5B:26:72:82] and [00:16:44:12:91:86])</p>
+</div>
+</div>
+<div class="section" id="go-further">
+<h2>Go further</h2>
+<p>For your scripts : use the -D option to know if an IP is already used, <em>Duplicate address detection mode (DAD). See RFC2131, 4.4.1.  Returns 0, if DAD succeeded i.e. no replies are received</em></p>
+</div>
+
+
+		<div id="article_meta">
+			
+				Category:
+					<a href="./category/totw.html">ToTW</a>
+			
+			
+				<br />Tags:
+				
+					<a href="./tag/tip.html">tip</a>
+				
+					<a href="./tag/linux.html">linux</a>
+				
+					<a href="./tag/network.html">network</a>
+				
+			
+		</div>
+		
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+
+	</article>
+
+	<footer>
+		<a href="./" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-12.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+	
+
+
+	</section>
+
+	
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+
+</body>
+</html>
