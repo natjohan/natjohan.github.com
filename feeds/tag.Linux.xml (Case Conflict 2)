@@ -36,7 +36,7 @@
 &lt;span class="go"&gt;        ^CSent 11 probes (1 broadcast(s))&lt;/span&gt;
 &lt;span class="go"&gt;        Received 12 response(s)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The main options are : &lt;strong&gt;`-I`&lt;/strong&gt; to define on which interface you want to send arp requests and the IP address you want to test, in the example above you can see that two MAC have the 192.168.1.15 ip address ([5C:0A:5B:26:72:82] and [00:16:44:12:91:86])&lt;/p&gt;
+&lt;p&gt;The main options are : &lt;strong&gt;-I&lt;/strong&gt; to define on which interface you want to send arp requests and the IP address you want to test, in the example above you can see that two MAC have the 192.168.1.15 ip address ([5C:0A:5B:26:72:82] and [00:16:44:12:91:86])&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="go-further"&gt;

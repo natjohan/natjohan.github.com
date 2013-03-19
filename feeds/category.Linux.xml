@@ -52,7 +52,7 @@ extact the content of the rpm with :&lt;/p&gt;
 &lt;span class="go"&gt;natjohan# python2.7 setup.py build&lt;/span&gt;
 &lt;span class="go"&gt;natjohan# python2.7 setup.py install&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To emulate Cisco devices, you need dynamips. You can install dynamips from &lt;a class="reference external" href="http://www.gns3.net/dynamips/"&gt;source&lt;/a&gt; or from RPM-Sphere repository, so, at first, add RPM-Sphere repo provided by Huaren Zhong. Create &lt;cite&gt;/etc/yum.repo.d/rpm-sphere.repo&lt;/cite&gt; file and add&lt;/p&gt;
+&lt;p&gt;To emulate Cisco devices, you need dynamips. You can install dynamips from &lt;a class="reference external" href="http://www.gns3.net/dynamips/"&gt;source&lt;/a&gt; or from RPM-Sphere repository, so, at first, add RPM-Sphere repo provided by Huaren Zhong. Create &lt;cite&gt;/etc/yum.repos.d/rpm-sphere.repo&lt;/cite&gt; file and add&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;[rpm-sphere]&lt;/span&gt;
 &lt;span class="go"&gt;name=RPM Sphere&lt;/span&gt;
 &lt;span class="go"&gt;baseurl=http://download.opensuse.org/repositories/home:/zhonghuaren/Fedora_18/&lt;/span&gt;
