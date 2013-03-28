@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tool.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-02-04T20:24:00+01:00</updated><entry><title>Install GNS3 on Fedora 18</title><link href="http://natjohan.info/install-gns3-on-fedora-18.html" rel="alternate"></link><updated>2013-02-04T20:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-04:install-gns3-on-fedora-18.html</id><summary type="html">&lt;img alt="/images/GNS3-logo.png" src="/images/GNS3-logo.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tool.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-03-28T22:22:00+01:00</updated><entry><title>Tip of the week 14</title><link href="http://natjohan.info/tip-of-the-week-14.html" rel="alternate"></link><updated>2013-03-28T22:22:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-03-28:tip-of-the-week-14.html</id><summary type="html">&lt;img alt="/images/terminator.png" src="/images/terminator.png" /&gt;
+&lt;div class="section" id="terminator-a-powerful-terminal-for-sysadmins"&gt;
+&lt;h2&gt;Terminator : a powerful terminal for sysadmins&lt;/h2&gt;
+&lt;p&gt;You dream of having a terminal that allow to open many terms in one window, launch a same update/fix on these terms with a replicate system, with a lot of keyboard shortcuts, multiple layouts/profiles, and more ?
+&lt;cite&gt;Terminator&lt;/cite&gt; is for you !&lt;/p&gt;
+&lt;div class="section" id="installation"&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;&lt;cite&gt;Terminator&lt;/cite&gt; is available in many distros (Debian, Fedora, Ubuntu, RHEL, FreeBSD, etc) , and you can install it with your favorite package installer :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install terminator&lt;/span&gt;
+&lt;span class="go"&gt;or&lt;/span&gt;
+&lt;span class="go"&gt;natjohan# aptitude install terminator&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That's it ! Enjoy ;-)&lt;/p&gt;
+&lt;p&gt;official &lt;a class="reference external" href="http://www.tenshu.net/p/terminator.html"&gt;website&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="tip"></category><category term="linux"></category><category term="server"></category><category term="terminal"></category><category term="tool"></category><category term="sysadmin"></category></entry><entry><title>Install GNS3 on Fedora 18</title><link href="http://natjohan.info/install-gns3-on-fedora-18.html" rel="alternate"></link><updated>2013-02-04T20:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-04:install-gns3-on-fedora-18.html</id><summary type="html">&lt;img alt="/images/GNS3-logo.png" src="/images/GNS3-logo.png" /&gt;
 &lt;p&gt;GNS3 is a famous network simulator which allow to test network topologies and equipements.&lt;/p&gt;
 &lt;div class="section" id="installation"&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
