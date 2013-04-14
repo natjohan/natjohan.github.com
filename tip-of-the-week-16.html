@@ -12,7 +12,7 @@
 	
 
 	
-		<title> Tip of the week 15 | Natjohan </title>
+		<title> Tip of the week 16 | Natjohan </title>
 		<meta charset="utf-8" />
 	
 </head>
@@ -31,9 +31,9 @@
 					
 						<li><a href="./category/dev.html">Dev</a></li>
 					
-						<li><a href="./category/linux.html">Linux</a></li>
+						<li class="active"><a href="./category/linux.html">Linux</a></li>
 					
-						<li class="active"><a href="./category/totw.html">ToTW</a></li>
+						<li><a href="./category/totw.html">ToTW</a></li>
 					
 				
 				
@@ -78,54 +78,46 @@
 	
 	<header>
 		<h1>natjohan's blog</h1>
-		<h3>Posted sam. 06 avril 2013</h3>
+		<h3>Posted dim. 14 avril 2013</h3>
 	</header>
 
 	<article>
 		<h1 id="title">
-			<a href="./tip-of-the-week-15.html" rel="bookmark"
-				title="Permalink to Tip of the week 15">Tip of the week 15</a>
+			<a href="./tip-of-the-week-16.html" rel="bookmark"
+				title="Permalink to Tip of the week 16">Tip of the week 16</a>
 		</h1>
-		<img alt="/images/mstsc.png" src="static/images/mstsc.png" />
-<div class="section" id="access-to-linux-desktop-from-windows-with-mstsc">
-<h2>Access to Linux desktop from Windows with mstsc</h2>
-<p>If you're working on Linux servers from Microsoft environment, you probably want to simply access to your servers desktop with <a class="reference external" href="http://en.wikipedia.org/wiki/Remote_Desktop_Protocol">RDP</a> protocol thanks to mstsc. XRDP daemon is an open source RDP server, it uses vnc4server as backend.</p>
-</div>
-<div class="section" id="installation">
-<h2>Installation</h2>
-<div class="section" id="on-debian-based-distributions">
-<h3>On Debian based distributions</h3>
-<p>(Tested on Debian Squeeze) XRDP is in Debian main packages :</p>
-<div class="highlight"><pre><span class="go">Natjohan# yum install xrdp</span>
+		<img alt="/images/splunk-logo.png" src="static/images/splunk-logo.png" />
+<div class="section" id="secure-your-splunk-free-server">
+<h2>Secure your Splunk Free server</h2>
+<p>&quot;Splunk Enterprise is a fully featured, powerful platform for collecting, searching, monitoring and analyzing machine data&quot;. There is a free version of Splunk with some limitations (read <a class="reference external" href="http://docs.splunk.com/Documentation/Splunk/5.0.2/Admin/MoreAboutSplunkFree">here</a>), but it's sufficent to analyze fews hosts logs (&lt; 20). The major disadvatage of this edition is the lack of an authentication module for the web interface, which mean anyone can access to your splunk interface and show your data.</p>
+<p>One way to secure it is to bind SplunkWeb on localhost and use a ssh tunnel to access it.</p>
+<div class="section" id="configuration">
+<h3>Configuration</h3>
+<p>You just have to edit <cite>$SPLUNK_HOME/etc/system/default/web.conf</cite> to uncomment and modify this line like that :</p>
+<div class="highlight"><pre><span class="go">server.socket_host = localhost</span>
 </pre></div>
-<p>That's it, XRDP works out of the box ! Now you can launch your mstsc client.</p>
-<img alt="/images/xrdp.png" src="static/images/xrdp.png" />
-</div>
-<div class="section" id="on-fedora">
-<h3>On Fedora</h3>
-<p>(tested on Fedora 18)</p>
-<div class="highlight"><pre><span class="go">Natjohan# yum install xrdp</span>
-<span class="go">Natjohan# systemctl enable xrdp.service</span>
-<span class="go">        ln -s &#39;/usr/lib/systemd/system/xrdp.service&#39; &#39;/etc/systemd/system/multi-user.target.wants/xrdp.service&#39;</span>
-<span class="go">Natjohan# systemctl start xrdp.service</span>
+<p>Restart Splunk :</p>
+<div class="highlight"><pre><span class="go">splunk-server# $SPLUNK_HOME/bin/splunk restart splunk</span>
 </pre></div>
-<p>That's it !</p>
-<!--  -->
-<blockquote>
-<strong>Note :</strong> Don't forget to update your firewall rules to allow connexions on TCP port 3389</blockquote>
-<div class="line-block">
-<div class="line"><br /></div>
+<p>Verify your configuration :</p>
+<div class="highlight"><pre><span class="go">splunk-server# netstat -an | grep 8000</span>
+<span class="go">        tcp   0    0 127.0.0.1:8000   0.0.0.0:*   LISTEN</span>
+</pre></div>
 </div>
-<img alt="/images/firewall.png" src="static/images/firewall.png" />
-</div>
+<div class="section" id="access">
+<h3>Access</h3>
+<p>Now, if you want to access your SplunkWeb interface, you need to setup a ssh tunnel between your pc and your server to forward the remote 8000 port on your pc</p>
+<div class="highlight"><pre><span class="go">natjohan# ssh -L 8000:127.0.0.1:8000 myremoteuser@&lt;splunk-server-address&gt;</span>
+</pre></div>
+<p>Explanation : the <cite>-L 8000</cite> option mean you specify the local port on your pc to access to <cite>127.0.0.1:8000</cite> on your remote server</p>
+<p>Now your can access to your Splunk interface on your pc by typing <a class="reference external" href="https://127.0.0.1:8000">https://127.0.0.1:8000</a> in your browser.</p>
 </div>
 <div class="section" id="go-further">
-<h2>Go Further</h2>
+<h3>Go Further</h3>
 <div class="line-block">
-<div class="line"><a class="reference external" href="http://www.xrdp.org/">xrdp official website</a></div>
-<div class="line"><a class="reference external" href="https://github.com/FreeRDP/xrdp">xrdp project on github</a></div>
-<div class="line"><a class="reference external" href="https://fedoraproject.org/wiki/FirewallD">Fedora FirewallD</a></div>
-<div class="line"><br /></div>
+<div class="line"><a class="reference external" href="http://wiki.splunk.com/Community:DeployHardenedSplunk">Splunk wiki Deploy hardened Splunk</a></div>
+<div class="line"><a class="reference external" href="http://blog.7elements.co.uk/2012/11/quick-post-securing-splunk-free.html">source</a></div>
+</div>
 </div>
 </div>
 
@@ -133,20 +125,20 @@
 		<div id="article_meta">
 			
 				Category:
-					<a href="./category/totw.html">ToTW</a>
+					<a href="./category/linux.html">Linux</a>
 			
 			
 				<br />Tags:
 				
-					<a href="./tag/tip.html">tip</a>
+					<a href="./tag/tool.html">tool</a>
 				
-					<a href="./tag/linux.html">linux</a>
+					<a href="./tag/network.html">network</a>
 				
-					<a href="./tag/rdp.html">rdp</a>
+					<a href="./tag/splunk.html">splunk</a>
 				
-					<a href="./tag/xrdp.html">xrdp</a>
+					<a href="./tag/security.html">security</a>
 				
-					<a href="./tag/debian.html">debian</a>
+					<a href="./tag/ssh.html">ssh</a>
 				
 			
 		</div>
@@ -169,7 +161,7 @@
 		<h2>Comments</h2>
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
-			var disqus_identifier = "tip-of-the-week-15.html";
+			var disqus_identifier = "tip-of-the-week-16.html";
 			(function() {
 				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 				dsq.src = 'http://natjohan.disqus.com/embed.js';
