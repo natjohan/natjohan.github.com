@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tool.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-04-14T14:11:00+02:00</updated><entry><title>Tip of the week 16</title><link href="http://natjohan.info/tip-of-the-week-16.html" rel="alternate"></link><updated>2013-04-14T14:11:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-14:tip-of-the-week-16.html</id><summary type="html">&lt;img alt="/images/splunk-logo.png" src="/images/splunk-logo.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tool.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-04-15T22:47:00+02:00</updated><entry><title>Tip of the week 17</title><link href="http://natjohan.info/tip-of-the-week-17.html" rel="alternate"></link><updated>2013-04-15T22:47:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-15:tip-of-the-week-17.html</id><summary type="html">&lt;div class="section" id="serve-your-apache-website-only-on-localhost"&gt;
+&lt;h2&gt;Serve your apache website only on localhost&lt;/h2&gt;
+&lt;p&gt;When you want to test something with apache2, it's useful to serve it only on localhost to see what happens and make sure everything goes well. So, you just have to edit your &lt;cite&gt;/etc/apache2/ports.conf&lt;/cite&gt; and set the Listen directive to :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;Listen 127.0.0.1:80&lt;/span&gt;
+&lt;span class="go"&gt;Listen 127.0.0.1:443 (if you want https)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then, just restart apache2 :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# service apache2 restart&lt;/span&gt;
+&lt;span class="go"&gt;or&lt;/span&gt;
+&lt;span class="go"&gt;natjohan# /etc/init.d/apache2 restart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go further&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://httpd.apache.org/docs/2.2/en/bind.html"&gt;the official apache documentation about binding&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="tool"></category><category term="network"></category><category term="apache2"></category><category term=""></category></entry><entry><title>Tip of the week 16</title><link href="http://natjohan.info/tip-of-the-week-16.html" rel="alternate"></link><updated>2013-04-14T14:11:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-14:tip-of-the-week-16.html</id><summary type="html">&lt;img alt="/images/splunk-logo.png" src="/images/splunk-logo.png" /&gt;
 &lt;div class="section" id="secure-your-splunk-free-server"&gt;
 &lt;h2&gt;Secure your Splunk Free server&lt;/h2&gt;
 &lt;p&gt;&amp;quot;Splunk Enterprise is a fully featured, powerful platform for collecting, searching, monitoring and analyzing machine data&amp;quot;. There is a free version of Splunk with some limitations (read &lt;a class="reference external" href="http://docs.splunk.com/Documentation/Splunk/5.0.2/Admin/MoreAboutSplunkFree"&gt;here&lt;/a&gt;), but it's sufficent to analyze fews hosts logs (&amp;lt; 20). The major disadvatage of this edition is the lack of an authentication module for the web interface, which mean anyone can access to your splunk interface and show your data.&lt;/p&gt;
