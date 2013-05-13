@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all-en.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-04-15T22:47:00+02:00</updated><entry><title>Tip of the week 17</title><link href="http://natjohan.info/tip-of-the-week-17.html" rel="alternate"></link><updated>2013-04-15T22:47:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-15:tip-of-the-week-17.html</id><summary type="html">&lt;div class="section" id="serve-your-apache-website-only-on-localhost"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all-en.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-05-13T20:07:00+02:00</updated><entry><title>Tip of the week 18</title><link href="http://natjohan.info/tip-of-the-week-18.html" rel="alternate"></link><updated>2013-05-13T20:07:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-05-13:tip-of-the-week-18.html</id><summary type="html">&lt;img alt="/images/clock.png" src="/images/clock.png" /&gt;
+&lt;div class="section" id="setting-up-your-own-ntp-server-without-internet-connexion"&gt;
+&lt;h2&gt;Setting up your own ntp server without internet connexion&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://fr.wikipedia.org/wiki/Network_Time_Protocol"&gt;NTP&lt;/a&gt; (Network Time Protocol) is a protocol that allows to synchronize your computers clocks on your network.&lt;/p&gt;
+&lt;div class="section" id="installation"&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;With your favorite package manager&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan(fedora)# yum install ntp&lt;/span&gt;
+&lt;span class="go"&gt;natjohan(debian)# aptitude install ntp&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="configuration"&gt;
+&lt;h3&gt;Configuration&lt;/h3&gt;
+&lt;p&gt;NTPD is quite easy to understand, all you need is to edit &lt;cite&gt;/etc/ntp.conf&lt;/cite&gt;, and launch the service :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# service ntpd restart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ok, that's weird, but if you want to set up your own NTP server &lt;strong&gt;without an internet connexion&lt;/strong&gt; (I mean, you do not have internet access and you want to synchronize your devices with the local time of your server), you just have to edit your &lt;cite&gt;ntp.conf&lt;/cite&gt; file, comment the server part and modify like that&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#server my.pool.ntp.org&lt;/span&gt;
+server 127.127.1.0
+fudge 127.127.1.0 stratum 10
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://linuxwave.blogspot.fr/2007/08/setting-up-your-own-ntp-server.html"&gt;source&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="ntp"></category><category term="synchronize"></category><category term="linux"></category><category term="time"></category></entry><entry><title>Tip of the week 17</title><link href="http://natjohan.info/tip-of-the-week-17.html" rel="alternate"></link><updated>2013-04-15T22:47:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-15:tip-of-the-week-17.html</id><summary type="html">&lt;div class="section" id="serve-your-apache-website-only-on-localhost"&gt;
 &lt;h2&gt;Serve your apache website only on localhost&lt;/h2&gt;
 &lt;p&gt;When you want to test something with apache2, it's useful to serve it only on localhost to see what happens and make sure everything goes well. So, you just have to edit your &lt;cite&gt;/etc/apache2/ports.conf&lt;/cite&gt; and set the Listen directive to :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;Listen 127.0.0.1:80&lt;/span&gt;

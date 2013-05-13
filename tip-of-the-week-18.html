@@ -12,7 +12,7 @@
 	
 
 	
-		<title>Natjohan</title>
+		<title> Tip of the week 18 | Natjohan </title>
 		<meta charset="utf-8" />
 	
 </head>
@@ -33,7 +33,7 @@
 					
 						<li><a href="./category/linux.html">Linux</a></li>
 					
-						<li><a href="./category/totw.html">ToTW</a></li>
+						<li class="active"><a href="./category/totw.html">ToTW</a></li>
 					
 				
 				
@@ -77,29 +77,16 @@
 	
 	
 	<header>
-		<h1>Natjohan's blog</h1>
-		<h3>
-			<script type="text/javascript">
-				var currentDate = new Date();
-				var day = currentDate.getDate();
-				var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-				var month = monthNames[currentDate.getMonth()].toUpperCase();
-				var year = currentDate.getFullYear();
-				document.write(month + " " + day + ", " + year);
-			</script>
-		</h3>
+		<h1>natjohan's blog</h1>
+		<h3>Posted lun. 13 mai 2013</h3>
 	</header>
 
-
-	<dl>
-		<ol>
-			
-				<li>
-					<h1 class="title">
-						<a href="./tip-of-the-week-18.html" rel="bookmark" title="Permalink to Tip of the week 18">Tip of the week 18</a>
-					</h1>
-					<abbr class="published" title="2013-05-13T20:07:00">lun. 13 mai 2013</abbr>
-				<div class="entry-content"> <img alt="/images/clock.png" src="static/images/clock.png" />
+	<article>
+		<h1 id="title">
+			<a href="./tip-of-the-week-18.html" rel="bookmark"
+				title="Permalink to Tip of the week 18">Tip of the week 18</a>
+		</h1>
+		<img alt="/images/clock.png" src="static/images/clock.png" />
 <div class="section" id="setting-up-your-own-ntp-server-without-internet-connexion">
 <h2>Setting up your own ntp server without internet connexion</h2>
 <p><a class="reference external" href="http://fr.wikipedia.org/wiki/Network_Time_Protocol">NTP</a> (Network Time Protocol) is a protocol that allows to synchronize your computers clocks on your network.</p>
@@ -112,40 +99,66 @@
 </div>
 <div class="section" id="configuration">
 <h3>Configuration</h3>
-<p>NTPD is quite easy to understand, all ...</p></div></div> </div>
-				</li>
+<p>NTPD is quite easy to understand, all you need is to edit <cite>/etc/ntp.conf</cite>, and launch the service :</p>
+<div class="highlight"><pre><span class="go">natjohan# service ntpd restart</span>
+</pre></div>
+<p>Ok, that's weird, but if you want to set up your own NTP server <strong>without an internet connexion</strong> (I mean, you do not have internet access and you want to synchronize your devices with the local time of your server), you just have to edit your <cite>ntp.conf</cite> file, comment the server part and modify like that</p>
+<div class="highlight"><pre><span class="c">#server my.pool.ntp.org</span>
+server 127.127.1.0
+fudge 127.127.1.0 stratum 10
+</pre></div>
+<p><a class="reference external" href="http://linuxwave.blogspot.fr/2007/08/setting-up-your-own-ntp-server.html">source</a></p>
+</div>
+</div>
+
+
+		<div id="article_meta">
 			
-				<li>
-					<h1 class="title">
-						<a href="./tip-of-the-week-17.html" rel="bookmark" title="Permalink to Tip of the week 17">Tip of the week 17</a>
-					</h1>
-					<abbr class="published" title="2013-04-15T22:47:00">lun. 15 avril 2013</abbr>
-				<div class="entry-content"> <div class="section" id="serve-your-apache-website-only-on-localhost">
-<h2>Serve your apache website only on localhost</h2>
-<p>When you want to test something with apache2, it's useful to serve it only on localhost to see what happens and make sure everything goes well. So, you just have to edit your <cite>/etc/apache2/ports.conf</cite> and set the Listen directive ...</p></div> </div>
-				</li>
+				Category:
+					<a href="./category/totw.html">ToTW</a>
 			
-				<li>
-					<h1 class="title">
-						<a href="./tip-of-the-week-16.html" rel="bookmark" title="Permalink to Tip of the week 16">Tip of the week 16</a>
-					</h1>
-					<abbr class="published" title="2013-04-14T14:11:00">dim. 14 avril 2013</abbr>
-				<div class="entry-content"> <img alt="/images/splunk-logo.png" src="static/images/splunk-logo.png" />
-<div class="section" id="secure-your-splunk-free-server">
-<h2>Secure your Splunk Free server</h2>
-<p>&quot;Splunk Enterprise is a fully featured, powerful platform for collecting, searching, monitoring and analyzing machine data&quot;. There is a free version of Splunk with some limitations (read <a class="reference external" href="http://docs.splunk.com/Documentation/Splunk/5.0.2/Admin/MoreAboutSplunkFree">here</a>), but it's sufficent to analyze fews hosts logs (&lt; 20). The major disadvatage of this edition is ...</p></div> </div>
-				</li>
 			
-		</ol>
-	</dl>
+				<br />Tags:
+				
+					<a href="./tag/ntp.html">ntp</a>
+				
+					<a href="./tag/synchronize.html">synchronize</a>
+				
+					<a href="./tag/linux.html">linux</a>
+				
+					<a href="./tag/time.html">time</a>
+				
+			
+		</div>
+		
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+
+	</article>
+
+	<footer>
+		<a href="./" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
 
 	
-<p class="paginator">
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-18.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
 	
-	
-		<a href="./index2.html" class="button_accent" style="position: absolute; right: 0;">continue&nbsp;&nbsp;&nbsp;&rarr;</a>
-	
-</p>
 
 
 	</section>
