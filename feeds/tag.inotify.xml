@@ -82,6 +82,17 @@
 &lt;blockquote&gt;
 &lt;strong&gt;Note :&lt;/strong&gt; On Fedora 18, if you don't have vim installed, the &lt;cite&gt;incrontab -e&lt;/cite&gt; output an error message &lt;cite&gt;editor finished with error: No such file or directory&lt;/cite&gt; which mean you just have to edit  &lt;cite&gt;/etc/incron.conf&lt;/cite&gt; with &lt;cite&gt;editor = vi&lt;/cite&gt; in or install vim&lt;/blockquote&gt;
 &lt;/div&gt;
+&lt;div class="section" id="troubleshooting"&gt;
+&lt;h3&gt;Troubleshooting&lt;/h3&gt;
+&lt;p&gt;Just open another terminal and launch and you can show incron commands&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# tail -f /var/log/syslog&lt;/span&gt;
+&lt;span class="go"&gt;or&lt;/span&gt;
+&lt;span class="go"&gt;natjohan# tail -f /var/log/cron&lt;/span&gt;
+&lt;span class="go"&gt;(it depends on your system)&lt;/span&gt;
+
+&lt;span class="go"&gt;Jun 09 23:21:46 srv incrond[17290]: (root) CMD (/etc/init.d/freeradius restart)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;div class="section" id="tip"&gt;
 &lt;h3&gt;Tip&lt;/h3&gt;
 &lt;p&gt;Incron does not allow to monitor a file several times (one line per file/folder only), so if you want to launch many commands, the cleanest way to do it is to create a bash file with your commands.&lt;/p&gt;
