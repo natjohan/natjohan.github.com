@@ -84,7 +84,7 @@
 &lt;/div&gt;
 &lt;div class="section" id="troubleshooting"&gt;
 &lt;h3&gt;Troubleshooting&lt;/h3&gt;
-&lt;p&gt;Just open another terminal and launch and you can show incron commands&lt;/p&gt;
+&lt;p&gt;Just open another terminal and you can show incron commands with&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# tail -f /var/log/syslog&lt;/span&gt;
 &lt;span class="go"&gt;or&lt;/span&gt;
 &lt;span class="go"&gt;natjohan# tail -f /var/log/cron&lt;/span&gt;
