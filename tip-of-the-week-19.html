@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="./theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="./theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+	
+
+	
+		<title> Tip of the week 19 | Natjohan </title>
+		<meta charset="utf-8" />
+	
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="."><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="." class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+				
+				
+					
+						<li><a href="./category/dev.html">Dev</a></li>
+					
+						<li><a href="./category/linux.html">Linux</a></li>
+					
+						<li class="active"><a href="./category/totw.html">ToTW</a></li>
+					
+				
+				
+					<li><a href="/pages/about.html">About</a></li>
+				
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				
+				
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				
+				
+				
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+				  
+				
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				
+				  <a href="./feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	
+	
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted dim. 09 juin 2013</h3>
+	</header>
+
+	<article>
+		<h1 id="title">
+			<a href="./tip-of-the-week-19.html" rel="bookmark"
+				title="Permalink to Tip of the week 19">Tip of the week 19</a>
+		</h1>
+		<img alt="/images/monitor_file.png" src="static/images/monitor_file.png" />
+<div class="section" id="monitor-file-changes-to-trigger-an-action">
+<h2>Monitor file changes to trigger an action</h2>
+<div class="section" id="incron">
+<h3>Incron</h3>
+<p>According to the man incron is <em>an &quot;inotify cron&quot; system. It consists of a daemon and a table manipulator. You can use it a similar way as the regular cron. The difference is that the inotify cron handles filesystem events rather than time periods.</em></p>
+</div>
+<div class="section" id="installation">
+<h3>Installation</h3>
+<p>Just install the following package with your favorite package installer (yum for Fedora, aptitude for Debian/ubuntu, pacman or yaourt for archlinux)</p>
+<div class="highlight"><pre><span class="go">natjohan# yum install incron</span>
+<span class="go">natjohan# rpm -ql incron</span>
+<span class="go">        /etc/incron.conf</span>
+<span class="go">        /etc/incron.d</span>
+<span class="go">        /usr/bin/incrontab</span>
+<span class="go">        /usr/lib/systemd/system/incrond.service</span>
+<span class="go">        /usr/sbin/incrond</span>
+<span class="go">        /usr/share/doc/incron-0.5.10</span>
+<span class="go">        /usr/share/doc/incron-0.5.10/CHANGELOG</span>
+<span class="go">        /usr/share/doc/incron-0.5.10/COPYING</span>
+<span class="go">        /usr/share/doc/incron-0.5.10/LICENSE-GPL</span>
+<span class="go">        /usr/share/doc/incron-0.5.10/README</span>
+<span class="go">        /usr/share/doc/incron-0.5.10/TODO</span>
+<span class="go">        /usr/share/man/man1/incrontab.1.gz</span>
+<span class="go">        /usr/share/man/man5/incron.conf.5.gz</span>
+<span class="go">        /usr/share/man/man5/incrontab.5.gz</span>
+<span class="go">        /usr/share/man/man8/incrond.8.gz</span>
+<span class="go">        /var/spool/incron</span>
+</pre></div>
+</div>
+<div class="section" id="usage">
+<h3>Usage</h3>
+<dl class="docutils">
+<dt>Main files are :</dt>
+<dd><ul class="first last simple">
+<li>/etc/incron.conf : main incron configuration file</li>
+<li>/etc/incron.allow : contains users allowed to use incron, you have to create it</li>
+</ul>
+</dd>
+</dl>
+<p>At first you have to create <cite>/etc/incron.allow</cite> , for example (to allow root to use incron)</p>
+<div class="highlight"><pre><span class="go">root</span>
+</pre></div>
+<p>The incron syntax is</p>
+<div class="highlight"><pre><span class="nt">&lt;file</span> <span class="err">|</span> <span class="err">directory</span><span class="nt">&gt;</span> <span class="nt">&lt;event&gt;</span> <span class="nt">&lt;command&gt;</span> <span class="nt">&lt;options&gt;</span>
+</pre></div>
+<p>Events are the following</p>
+<div class="highlight"><pre><span class="go">IN_ACCESS File was accessed (read) (*)</span>
+<span class="go">IN_ATTRIB Metadata changed (permissions, timestamps, extended attributes, etc.) (*)</span>
+<span class="go">IN_CLOSE_WRITE File opened for writing was closed (*)</span>
+<span class="go">IN_CLOSE_NOWRITE File not opened for writing was closed (*)</span>
+<span class="go">IN_CREATE File/directory created in watched directory (*)</span>
+<span class="go">IN_DELETE File/directory deleted from watched directory (*)</span>
+<span class="go">IN_DELETE_SELF Watched file/directory was itself deleted</span>
+<span class="go">IN_MODIFY File was modified (*)</span>
+<span class="go">IN_MOVE_SELF Watched file/directory was itself moved</span>
+<span class="go">IN_MOVED_FROM File moved out of watched directory (*)</span>
+<span class="go">IN_MOVED_TO File moved into watched directory (*)</span>
+<span class="go">IN_OPEN File was opened (*)</span>
+</pre></div>
+<p>There is som wildcard you can use in your command</p>
+<div class="highlight"><pre><span class="gp">$</span><span class="nv">$ </span>dollar sign
+<span class="gp">$</span>@ watched filesystem path <span class="o">(</span>see above<span class="o">)</span>
+<span class="gp">$</span><span class="c"># event-related file name</span>
+<span class="gp">$</span>% event flags <span class="o">(</span>textually<span class="o">)</span>
+<span class="gp">$</span>&amp; event flags <span class="o">(</span>numerically<span class="o">)</span>
+</pre></div>
+<p>Now you can chose a file to trigger (here, we just want to restart the freeradius service when the user file changes), and add an entry in your incron with</p>
+<div class="highlight"><pre><span class="go">natjohan# incrontab -e</span>
+
+<span class="go">/etc/freeradius/users IN_CLOSE_WRITE, NO_LOOP /etc/init.d/freeradius restart</span>
+
+<span class="go">natjohan# incrontab -l</span>
+<span class="go">/etc/freeradius/users IN_CLOSE_WRITE, NO_LOOP /etc/init.d/freeradius restart</span>
+</pre></div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<!--  -->
+<blockquote>
+<strong>Note :</strong> On Fedora 18, if you don't have vim installed, the <cite>incrontab -e</cite> output an error message <cite>editor finished with error: No such file or directory</cite> which mean you just have to edit  <cite>/etc/incron.conf</cite> with <cite>editor = vi</cite> in or install vim</blockquote>
+</div>
+<div class="section" id="tip">
+<h3>Tip</h3>
+<p>Incron does not allow to monitor a file several times (one line per file/folder only), so if you want to launch many commands, the cleanest way to do it is to create a bash file with your commands.</p>
+<div class="highlight"><pre><span class="go">natjohan# incrontab -e</span>
+
+<span class="go">/etc/freeradius/users IN_CLOSE_WRITE, NO_LOOP myscript</span>
+</pre></div>
+</div>
+<div class="section" id="go-further">
+<h3>Go further</h3>
+<div class="line-block">
+<div class="line">official <a class="reference external" href="http://inotify.aiken.cz/">website</a></div>
+<div class="line"><a class="reference external" href="http://linux.die.net/man/5/incrontab">RTFM</a></div>
+</div>
+</div>
+</div>
+
+
+		<div id="article_meta">
+			
+				Category:
+					<a href="./category/totw.html">ToTW</a>
+			
+			
+				<br />Tags:
+				
+					<a href="./tag/linux.html">linux</a>
+				
+					<a href="./tag/incron.html">incron</a>
+				
+					<a href="./tag/inotify.html">inotify</a>
+				
+					<a href="./tag/file.html">file</a>
+				
+			
+		</div>
+		
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+
+	</article>
+
+	<footer>
+		<a href="./" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-19.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+	
+
+
+	</section>
+
+	
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+
+</body>
+</html>
