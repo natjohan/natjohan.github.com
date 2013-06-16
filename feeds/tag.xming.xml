@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.xming.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-06-16T23:27:00+02:00</updated><entry><title>Tip of the week 20</title><link href="http://natjohan.info/tip-of-the-week-20.html" rel="alternate"></link><updated>2013-06-16T23:27:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-06-16:tip-of-the-week-20.html</id><summary type="html">&lt;div class="section" id="problem-with-x11-forwarding-on-debian-squeeze"&gt;
+&lt;h2&gt;Problem with X11 forwarding on Debian Squeeze&lt;/h2&gt;
+&lt;p&gt;Few weeks ago I experienced problems with my X11 forwarding on Debian Squeeze, after googling and tried to solve my problem, I found an issue &lt;a class="reference external" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=422327"&gt;here&lt;/a&gt;. Actually, disabling ipv6 makes X11 over ssh crashes. So if you want to make X11 forwarding works, you just have to add the following line in your &lt;cite&gt;/etc/ssh/sshd_config&lt;/cite&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;AddressFamily inet
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Hope it helps ;-)&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="ssh"></category><category term="xming"></category><category term="ipv4"></category><category term="ipv6"></category><category term="debian"></category><category term="squeeze"></category></entry></feed>
