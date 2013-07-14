@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tweaks.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-07-14T21:20:00+02:00</updated><entry><title>Tip of the week 21</title><link href="http://natjohan.info/tip-of-the-week-21.html" rel="alternate"></link><updated>2013-07-14T21:20:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-07-14:tip-of-the-week-21.html</id><summary type="html">&lt;div class="section" id="easily-tweak-your-fedora-installation-with-fedora-utils"&gt;
+&lt;h2&gt;Easily tweak your Fedora installation with Fedora Utils&lt;/h2&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;Fedora Utils brings you many tweaks for your Fedora install like :&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;codecs&lt;/li&gt;
+&lt;li&gt;additional softwares (chrome, flash, steam, skype, etc)&lt;/li&gt;
+&lt;li&gt;optimizations (ssd, clean cache, etc)&lt;/li&gt;
+&lt;li&gt;simply manage your repos&lt;/li&gt;
+&lt;li&gt;update your grub config&lt;/li&gt;
+&lt;li&gt;and more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;div class="section" id="installation"&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;According to the &lt;a class="reference external" href="http://satya164.github.io/fedorautils/"&gt;official page&lt;/a&gt;, just launch this command in your terminal&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# su -c &amp;quot;curl http://download.opensuse.org/repositories/home:/satya164:/fedorautils/Fedora_19/home:satya164:fedorautils.repo -o /etc/yum.repos.d/fedorautils.repo &amp;amp;&amp;amp; yum install fedorautils&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then, just call &lt;cite&gt;fedorautils&lt;/cite&gt; command and begin your tweaks !&lt;/p&gt;
+&lt;img alt="/images/fu-tweaks.png" src="/images/fu-tweaks.png" /&gt;
+&lt;p&gt;image credits : satya164&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="fedora"></category><category term="fedora-utils"></category><category term="tweaks"></category></entry></feed>
