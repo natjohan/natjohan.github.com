@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.management.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-07-15T14:39:00+02:00</updated><entry><title>Tip of the week 22</title><link href="http://natjohan.info/tip-of-the-week-22.html" rel="alternate"></link><updated>2013-07-15T14:39:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-07-15:tip-of-the-week-22.html</id><summary type="html">&lt;img alt="/images/battery.png" src="/images/battery.png" /&gt;
+&lt;div class="section" id="power-management-and-optimizations-with-powertop"&gt;
+&lt;h2&gt;Power management and optimizations with powertop&lt;/h2&gt;
+&lt;p&gt;Powertop is a little utilitie that allow you to reduce your computer power consumption. This is an interesting soft for laptop owner, to install it, simply use you favorite package manager&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install powertop&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, just launch &lt;cite&gt;powertop&lt;/cite&gt; command with root privileges, the most interesting part is located in &lt;cite&gt;tunable&lt;/cite&gt; tab. With this tab you can activate/deactivate many power tweaks simply by press Enter&lt;/p&gt;
+&lt;img alt="/images/powertop_tunable.png" src="/images/powertop_tunable.png" /&gt;
+&lt;p&gt;you can also generate an html report with &lt;cite&gt;powertop --html&lt;/cite&gt;&lt;/p&gt;
+&lt;img alt="/images/powertop_report.png" src="/images/powertop_report.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go further&lt;/h2&gt;
+&lt;p&gt;The official &lt;a class="reference external" href="https://01.org/powertop/"&gt;website&lt;/a&gt;
+Source code on &lt;a class="reference external" href="https://github.com/fenrus75/powertop"&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="fedora"></category><category term="power"></category><category term="tweaks"></category><category term="management"></category><category term="laptop"></category></entry></feed>
