@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.sed.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-08-04T12:19:00+02:00</updated><entry><title>Tip of the week 23</title><link href="http://natjohan.info/tip-of-the-week-23.html" rel="alternate"></link><updated>2013-08-04T12:19:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-08-04:tip-of-the-week-23.html</id><summary type="html">&lt;div class="section" id="search-and-replace-a-character-string-in-multiple-files-with-sed"&gt;
+&lt;h2&gt;Search and replace a character string in multiple files with sed&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;`Sed`, Stream Editor is a Unix utility that parses and transforms text.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Here is a simple and useful example : replace the character string &lt;strong&gt;'priority 300'&lt;/strong&gt; by
+&lt;strong&gt;'bandwidth priority percent 10'&lt;/strong&gt; in all .txt files in our current directory&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;find . -type f -iname &lt;span class="s1"&gt;&amp;#39;*.txt&amp;#39;&lt;/span&gt; -exec sed -i &lt;span class="s1"&gt;&amp;#39;s/priority 300/bandwidth priority percent 10/&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;{}&lt;/span&gt; +
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go further&lt;/h2&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The Sed &lt;a class="reference external" href="http://sed.sourceforge.net/sedfaq2.html#s2.1"&gt;FAQ&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="http://www.grymoire.com/Unix/Sed.html"&gt;Sed An Introduction and Tutorial by Bruce Barnett&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Sed"&gt;Sed&lt;/a&gt; on wikipedia&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="sed"></category><category term="replace"></category><category term="files"></category><category term="recursive"></category></entry></feed>
