@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all.rss.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-09-24T13:19:00+02:00</updated><entry><title>Tip of the week 24</title><link href="http://natjohan.info/tip-of-the-week-24.html" rel="alternate"></link><updated>2013-09-24T13:19:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-09-24:tip-of-the-week-24.html</id><summary type="html">&lt;img alt="/images/pdf_folder.png" src="/images/pdf_folder.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all.rss.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-10-07T13:19:00+02:00</updated><entry><title>Tip of the week 25</title><link href="http://natjohan.info/tip-of-the-week-25.html" rel="alternate"></link><updated>2013-10-07T13:19:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-10-07:tip-of-the-week-25.html</id><summary type="html">&lt;img alt="/images/glances_logo.png" src="/images/glances_logo.png" /&gt;
+&lt;div class="section" id="glances-an-eye-on-your-system"&gt;
+&lt;h2&gt;&lt;em&gt;Glances an eye on your system&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;Are you tired to use top/free/fdisk, and other tools to show your system health ? So Glances
+is for you. It provides many system informations (process, CPU, network, etc) in your terminal&lt;/p&gt;
+&lt;p&gt;The easiest way to install it is to use pip (python package manager), you can install pip with your
+favorite package manager then install glances&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install python-pip&lt;/span&gt;
+&lt;span class="go"&gt;natjohan# pip install glances&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To launch it :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# glances&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="/images/glances_screen.png" src="/images/glances_screen.png" /&gt;
+&lt;p&gt;It's just a must have tool on your hosts !&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go further&lt;/h2&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Official &lt;a class="reference external" href="https://github.com/nicolargo/glances"&gt;repo&lt;/a&gt; on github&lt;/div&gt;
+&lt;div class="line"&gt;the creator &lt;a class="reference external" href="http://blog.nicolargo.com/"&gt;blog&lt;/a&gt; (in french)&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;All credits for Nicolargo and the official documentation of Glances&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="glances"></category><category term="monitoring"></category></entry><entry><title>Tip of the week 24</title><link href="http://natjohan.info/tip-of-the-week-24.html" rel="alternate"></link><updated>2013-09-24T13:19:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-09-24:tip-of-the-week-24.html</id><summary type="html">&lt;img alt="/images/pdf_folder.png" src="/images/pdf_folder.png" /&gt;
 &lt;div class="section" id="easily-assemble-merge-extract-your-pdf-files-under-linux-with-pdftk"&gt;
 &lt;h2&gt;Easily assemble, merge, extract your pdf files under linux with &lt;cite&gt;pdftk&lt;/cite&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;cite&gt;pdftk&lt;/cite&gt;, is a useful command line utility that allow to manipulate your pdf files. You can install it

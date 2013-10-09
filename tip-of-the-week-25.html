@@ -12,7 +12,7 @@
 	
 
 	
-		<title>Natjohan</title>
+		<title> Tip of the week 25 | Natjohan </title>
 		<meta charset="utf-8" />
 	
 </head>
@@ -33,7 +33,7 @@
 					
 						<li><a href="./category/linux.html">Linux</a></li>
 					
-						<li><a href="./category/totw.html">ToTW</a></li>
+						<li class="active"><a href="./category/totw.html">ToTW</a></li>
 					
 				
 				
@@ -77,75 +77,86 @@
 	
 	
 	<header>
-		<h1>Natjohan's blog</h1>
-		<h3>
-			<script type="text/javascript">
-				var currentDate = new Date();
-				var day = currentDate.getDate();
-				var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-				var month = monthNames[currentDate.getMonth()].toUpperCase();
-				var year = currentDate.getFullYear();
-				document.write(month + " " + day + ", " + year);
-			</script>
-		</h3>
+		<h1>natjohan's blog</h1>
+		<h3>Posted lun. 07 octobre 2013</h3>
 	</header>
 
-
-	<dl>
-		<ol>
-			
-				<li>
-					<h1 class="title">
-						<a href="./tip-of-the-week-25.html" rel="bookmark" title="Permalink to Tip of the week 25">Tip of the week 25</a>
-					</h1>
-					<abbr class="published" title="2013-10-07T13:19:00">lun. 07 octobre 2013</abbr>
-				<div class="entry-content"> <img alt="/images/glances_logo.png" src="static/images/glances_logo.png" />
+	<article>
+		<h1 id="title">
+			<a href="./tip-of-the-week-25.html" rel="bookmark"
+				title="Permalink to Tip of the week 25">Tip of the week 25</a>
+		</h1>
+		<img alt="/images/glances_logo.png" src="static/images/glances_logo.png" />
 <div class="section" id="glances-an-eye-on-your-system">
 <h2><em>Glances an eye on your system</em></h2>
 <p>Are you tired to use top/free/fdisk, and other tools to show your system health ? So Glances
 is for you. It provides many system informations (process, CPU, network, etc) in your terminal</p>
-<p>The easiest way to install it is to use pip (python ...</p></div> </div>
-				</li>
-			
-				<li>
-					<h1 class="title">
-						<a href="./tip-of-the-week-24.html" rel="bookmark" title="Permalink to Tip of the week 24">Tip of the week 24</a>
-					</h1>
-					<abbr class="published" title="2013-09-24T13:19:00">mar. 24 septembre 2013</abbr>
-				<div class="entry-content"> <img alt="/images/pdf_folder.png" src="static/images/pdf_folder.png" />
-<div class="section" id="easily-assemble-merge-extract-your-pdf-files-under-linux-with-pdftk">
-<h2>Easily assemble, merge, extract your pdf files under linux with <cite>pdftk</cite></h2>
-<p><cite>pdftk</cite>, is a useful command line utility that allow to manipulate your pdf files. You can install it
-through your favorite package manager (example under Fedora)</p>
-<div class="highlight"><pre><span class="go">natjohan# yum install pdftk</span>
+<p>The easiest way to install it is to use pip (python package manager), you can install pip with your
+favorite package manager then install glances</p>
+<div class="highlight"><pre><span class="go">natjohan# yum install python-pip</span>
+<span class="go">natjohan# pip install glances</span>
 </pre></div>
-<p>The syntax of pdftk is very simple :</p>
-<div class="highlight"><pre>pdftk <span class="nt">&lt;input_files_seperate_by_spaces ...</span></pre></div></div> </div>
-				</li>
+<p>To launch it :</p>
+<div class="highlight"><pre><span class="go">natjohan# glances</span>
+</pre></div>
+<img alt="/images/glances_screen.png" src="static/images/glances_screen.png" />
+<p>It's just a must have tool on your hosts !</p>
+</div>
+<div class="section" id="go-further">
+<h2>Go further</h2>
+<div class="line-block">
+<div class="line">Official <a class="reference external" href="https://github.com/nicolargo/glances">repo</a> on github</div>
+<div class="line">the creator <a class="reference external" href="http://blog.nicolargo.com/">blog</a> (in french)</div>
+</div>
+<p>All credits for Nicolargo and the official documentation of Glances</p>
+</div>
+
+
+		<div id="article_meta">
 			
-				<li>
-					<h1 class="title">
-						<a href="./tip-of-the-week-23.html" rel="bookmark" title="Permalink to Tip of the week 23">Tip of the week 23</a>
-					</h1>
-					<abbr class="published" title="2013-08-04T12:19:00">dim. 04 août 2013</abbr>
-				<div class="entry-content"> <div class="section" id="search-and-replace-a-character-string-in-multiple-files-with-sed">
-<h2>Search and replace a character string in multiple files with sed</h2>
-<p><em>`Sed`, Stream Editor is a Unix utility that parses and transforms text.</em></p>
-<p>Here is a simple and useful example : replace the character string <strong>'priority 300'</strong> by
-<strong>'bandwidth priority percent 10'</strong> in all .txt files in our current directory</p>
-<div class="highlight"><pre>find ...</pre></div></div> </div>
-				</li>
+				Category:
+					<a href="./category/totw.html">ToTW</a>
 			
-		</ol>
-	</dl>
+			
+				<br />Tags:
+				
+					<a href="./tag/linux.html">linux</a>
+				
+					<a href="./tag/glances.html">glances</a>
+				
+					<a href="./tag/monitoring.html">monitoring</a>
+				
+			
+		</div>
+		
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+		
+
+	</article>
+
+	<footer>
+		<a href="./" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
 
 	
-<p class="paginator">
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-25.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
 	
-	
-		<a href="./index2.html" class="button_accent" style="position: absolute; right: 0;">continue&nbsp;&nbsp;&nbsp;&rarr;</a>
-	
-</p>
 
 
 	</section>
