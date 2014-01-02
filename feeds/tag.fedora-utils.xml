@@ -19,7 +19,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# su -c &amp;quot;curl http://download.opensuse.org/repositories/home:/satya164:/fedorautils/Fedora_19/home:satya164:fedorautils.repo -o /etc/yum.repos.d/fedorautils.repo &amp;amp;&amp;amp; yum install fedorautils&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Then, just call &lt;cite&gt;fedorautils&lt;/cite&gt; command and begin your tweaks !&lt;/p&gt;
-&lt;img alt="/images/fu-tweaks.png" src="/images/fu-tweaks.png" /&gt;
+&lt;img alt="" src="/images/fu-tweaks.png" /&gt;
 &lt;p&gt;image credits : satya164&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;

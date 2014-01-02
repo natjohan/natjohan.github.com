@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all.rss.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-10-23T22:21:00+02:00</updated><entry><title>Tip of the week 26</title><link href="http://natjohan.info/tip-of-the-week-26.html" rel="alternate"></link><updated>2013-10-23T22:21:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-10-23:tip-of-the-week-26.html</id><summary type="html">&lt;div class="section" id="erase-your-command-line-history"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all.rss.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-02T22:38:00+01:00</updated><entry><title>Tip of the week 27</title><link href="http://natjohan.info/tip-of-the-week-27.html" rel="alternate"></link><updated>2014-01-02T22:38:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-02:tip-of-the-week-27.html</id><summary type="html">&lt;img alt="" src="/images/sublimeCisco.png" /&gt;
+&lt;div class="section" id="highlight-your-cisco-ios-configurations-under-sublime-text"&gt;
+&lt;h2&gt;Highlight your Cisco IOS configurations under Sublime Text&lt;/h2&gt;
+&lt;p&gt;Here is a little tip if you're using Sublime Text (which is a really great text editor with many useful features)
+It's quite easy, you just have to download the IOS language definitions and put it under your Sublime Text package directory (~/.config/sublime-text-2/Packages/ on Linux)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; ~/.config/sublime-text-2/Packages/
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; mkdir Cisco &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd &lt;/span&gt;Cisco
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; wget https://raw.github.com/illotum/IOS-Syntax/master/Cisco%20IOS.tmLanguage
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; wget https://raw.github.com/illotum/IOS-Syntax/master/Cisco%20IOS.JSON-tmLanguage
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And now all your .ios files have a syntax highlight in your Sublime Text editor, otherwise you can choose your Cisco syntax in your syntax list&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Download Sublime Text &lt;a class="reference external" href="http://www.sublimetext.com/"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The git repo for the IOS Syntax on &lt;a class="reference external" href="https://github.com/illotum/IOS-Syntax"&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="network"></category><category term="editor"></category><category term="cisco"></category><category term="ios"></category></entry><entry><title>Tip of the week 26</title><link href="http://natjohan.info/tip-of-the-week-26.html" rel="alternate"></link><updated>2013-10-23T22:21:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-10-23:tip-of-the-week-26.html</id><summary type="html">&lt;div class="section" id="erase-your-command-line-history"&gt;
 &lt;h2&gt;Erase your command line history&lt;/h2&gt;
 &lt;p&gt;Here is a little tip to erase your command line history on a linux machine,
 simply use the &lt;cite&gt;history&lt;/cite&gt; command, that's a built'in shell command which
@@ -30,7 +49,7 @@ entry and &lt;cite&gt;history -c&lt;/cite&gt; delete the whole list&lt;/p&gt;
 &lt;h2&gt;Go further&lt;/h2&gt;
 &lt;p&gt;RTFM : man history&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="linux"></category><category term="command line"></category><category term="history"></category><category term="terminal"></category></entry><entry><title>Tip of the week 25</title><link href="http://natjohan.info/tip-of-the-week-25.html" rel="alternate"></link><updated>2013-10-09T20:37:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-10-09:tip-of-the-week-25.html</id><summary type="html">&lt;img alt="/images/glances_logo.png" src="/images/glances_logo.png" /&gt;
+</summary><category term="linux"></category><category term="command line"></category><category term="history"></category><category term="terminal"></category></entry><entry><title>Tip of the week 25</title><link href="http://natjohan.info/tip-of-the-week-25.html" rel="alternate"></link><updated>2013-10-09T20:37:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-10-09:tip-of-the-week-25.html</id><summary type="html">&lt;img alt="" src="/images/glances_logo.png" /&gt;
 &lt;div class="section" id="glances-an-eye-on-your-system"&gt;
 &lt;h2&gt;&lt;em&gt;Glances an eye on your system&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;Are you tired to use top/free/fdisk, and other tools to show your system health ? So Glances
@@ -43,7 +62,7 @@ favorite package manager then install glances&lt;/p&gt;
 &lt;p&gt;To launch it :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# glances&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;img alt="/images/glances_screen.png" src="/images/glances_screen.png" /&gt;
+&lt;img alt="" src="/images/glances_screen.png" /&gt;
 &lt;p&gt;It's just a must have tool on your hosts !&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="go-further"&gt;
@@ -54,7 +73,7 @@ favorite package manager then install glances&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;All credits for Nicolargo and the official documentation of Glances&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="linux"></category><category term="glances"></category><category term="monitoring"></category></entry><entry><title>Tip of the week 24</title><link href="http://natjohan.info/tip-of-the-week-24.html" rel="alternate"></link><updated>2013-09-24T13:19:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-09-24:tip-of-the-week-24.html</id><summary type="html">&lt;img alt="/images/pdf_folder.png" src="/images/pdf_folder.png" /&gt;
+</summary><category term="linux"></category><category term="glances"></category><category term="monitoring"></category></entry><entry><title>Tip of the week 24</title><link href="http://natjohan.info/tip-of-the-week-24.html" rel="alternate"></link><updated>2013-09-24T13:19:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-09-24:tip-of-the-week-24.html</id><summary type="html">&lt;img alt="" src="/images/pdf_folder.png" /&gt;
 &lt;div class="section" id="easily-assemble-merge-extract-your-pdf-files-under-linux-with-pdftk"&gt;
 &lt;h2&gt;Easily assemble, merge, extract your pdf files under linux with &lt;cite&gt;pdftk&lt;/cite&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;cite&gt;pdftk&lt;/cite&gt;, is a useful command line utility that allow to manipulate your pdf files. You can install it
@@ -97,7 +116,7 @@ through your favorite package manager (example under Fedora)&lt;/p&gt;
 &lt;p&gt;You're afraid of using the command line ? no problem, there is a GUI called pdfchain, just install it with your package manager&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install pdfchain&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;img alt="/images/pdfchain.png" src="/images/pdfchain.png" /&gt;
+&lt;img alt="" src="/images/pdfchain.png" /&gt;
 &lt;/div&gt;
 &lt;div class="section" id="go-further"&gt;
 &lt;h2&gt;Go further&lt;/h2&gt;
@@ -123,16 +142,16 @@ through your favorite package manager (example under Fedora)&lt;/p&gt;
 &lt;div class="line"&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Sed"&gt;Sed&lt;/a&gt; on wikipedia&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="sed"></category><category term="replace"></category><category term="files"></category><category term="recursive"></category></entry><entry><title>Tip of the week 22</title><link href="http://natjohan.info/tip-of-the-week-22.html" rel="alternate"></link><updated>2013-07-15T14:39:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-07-15:tip-of-the-week-22.html</id><summary type="html">&lt;img alt="/images/battery.png" src="/images/battery.png" /&gt;
+</summary><category term="sed"></category><category term="replace"></category><category term="files"></category><category term="recursive"></category></entry><entry><title>Tip of the week 22</title><link href="http://natjohan.info/tip-of-the-week-22.html" rel="alternate"></link><updated>2013-07-15T14:39:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-07-15:tip-of-the-week-22.html</id><summary type="html">&lt;img alt="" src="/images/battery.png" /&gt;
 &lt;div class="section" id="power-management-and-optimizations-with-powertop"&gt;
 &lt;h2&gt;Power management and optimizations with powertop&lt;/h2&gt;
 &lt;p&gt;Powertop is a little utilitie that allow you to reduce your computer power consumption. This is an interesting soft for laptop owner, to install it, simply use you favorite package manager&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install powertop&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now, just launch &lt;cite&gt;powertop&lt;/cite&gt; command with root privileges, the most interesting part is located in &lt;cite&gt;tunable&lt;/cite&gt; tab. With this tab you can activate/deactivate many power tweaks simply by press Enter&lt;/p&gt;
-&lt;img alt="/images/powertop_tunable.png" src="/images/powertop_tunable.png" /&gt;
+&lt;img alt="" src="/images/powertop_tunable.png" /&gt;
 &lt;p&gt;you can also generate an html report with &lt;cite&gt;powertop --html&lt;/cite&gt;&lt;/p&gt;
-&lt;img alt="/images/powertop_report.png" src="/images/powertop_report.png" /&gt;
+&lt;img alt="" src="/images/powertop_report.png" /&gt;
 &lt;/div&gt;
 &lt;div class="section" id="go-further"&gt;
 &lt;h2&gt;Go further&lt;/h2&gt;
@@ -159,7 +178,7 @@ Source code on &lt;a class="reference external" href="https://github.com/fenrus7
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# su -c &amp;quot;curl http://download.opensuse.org/repositories/home:/satya164:/fedorautils/Fedora_19/home:satya164:fedorautils.repo -o /etc/yum.repos.d/fedorautils.repo &amp;amp;&amp;amp; yum install fedorautils&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Then, just call &lt;cite&gt;fedorautils&lt;/cite&gt; command and begin your tweaks !&lt;/p&gt;
-&lt;img alt="/images/fu-tweaks.png" src="/images/fu-tweaks.png" /&gt;
+&lt;img alt="" src="/images/fu-tweaks.png" /&gt;
 &lt;p&gt;image credits : satya164&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -170,7 +189,7 @@ Source code on &lt;a class="reference external" href="https://github.com/fenrus7
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Hope it helps ;-)&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="linux"></category><category term="ssh"></category><category term="xming"></category><category term="ipv4"></category><category term="ipv6"></category><category term="debian"></category><category term="squeeze"></category></entry><entry><title>Tip of the week 19</title><link href="http://natjohan.info/tip-of-the-week-19.html" rel="alternate"></link><updated>2013-06-09T23:07:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-06-09:tip-of-the-week-19.html</id><summary type="html">&lt;img alt="/images/monitor_file.png" src="/images/monitor_file.png" /&gt;
+</summary><category term="linux"></category><category term="ssh"></category><category term="xming"></category><category term="ipv4"></category><category term="ipv6"></category><category term="debian"></category><category term="squeeze"></category></entry><entry><title>Tip of the week 19</title><link href="http://natjohan.info/tip-of-the-week-19.html" rel="alternate"></link><updated>2013-06-09T23:07:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-06-09:tip-of-the-week-19.html</id><summary type="html">&lt;img alt="" src="/images/monitor_file.png" /&gt;
 &lt;div class="section" id="monitor-file-changes-to-trigger-an-action"&gt;
 &lt;h2&gt;Monitor file changes to trigger an action&lt;/h2&gt;
 &lt;div class="section" id="incron"&gt;
@@ -280,7 +299,7 @@ Source code on &lt;a class="reference external" href="https://github.com/fenrus7
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="linux"></category><category term="incron"></category><category term="inotify"></category><category term="file"></category></entry><entry><title>Tip of the week 18</title><link href="http://natjohan.info/tip-of-the-week-18.html" rel="alternate"></link><updated>2013-05-13T20:07:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-05-13:tip-of-the-week-18.html</id><summary type="html">&lt;img alt="/images/clock.png" src="/images/clock.png" /&gt;
+</summary><category term="linux"></category><category term="incron"></category><category term="inotify"></category><category term="file"></category></entry><entry><title>Tip of the week 18</title><link href="http://natjohan.info/tip-of-the-week-18.html" rel="alternate"></link><updated>2013-05-13T20:07:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-05-13:tip-of-the-week-18.html</id><summary type="html">&lt;img alt="" src="/images/clock.png" /&gt;
 &lt;div class="section" id="setting-up-your-own-ntp-server-without-internet-connexion"&gt;
 &lt;h2&gt;Setting up your own ntp server without internet connexion&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://fr.wikipedia.org/wiki/Network_Time_Protocol"&gt;NTP&lt;/a&gt; (Network Time Protocol) is a protocol that allows to synchronize your computers clocks on your network.&lt;/p&gt;
@@ -320,7 +339,7 @@ fudge 127.127.1.0 stratum 10
 &lt;h2&gt;Go further&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://httpd.apache.org/docs/2.2/en/bind.html"&gt;the official apache documentation about binding&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="tool"></category><category term="network"></category><category term="apache2"></category><category term=""></category></entry><entry><title>Tip of the week 16</title><link href="http://natjohan.info/tip-of-the-week-16.html" rel="alternate"></link><updated>2013-04-14T14:11:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-14:tip-of-the-week-16.html</id><summary type="html">&lt;img alt="/images/splunk-logo.png" src="/images/splunk-logo.png" /&gt;
+</summary><category term="tool"></category><category term="network"></category><category term="apache2"></category><category term=""></category></entry><entry><title>Tip of the week 16</title><link href="http://natjohan.info/tip-of-the-week-16.html" rel="alternate"></link><updated>2013-04-14T14:11:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-14:tip-of-the-week-16.html</id><summary type="html">&lt;img alt="" src="/images/splunk-logo.png" /&gt;
 &lt;div class="section" id="secure-your-splunk-free-server"&gt;
 &lt;h2&gt;Secure your Splunk Free server&lt;/h2&gt;
 &lt;p&gt;&amp;quot;Splunk Enterprise is a fully featured, powerful platform for collecting, searching, monitoring and analyzing machine data&amp;quot;. There is a free version of Splunk with some limitations (read &lt;a class="reference external" href="http://docs.splunk.com/Documentation/Splunk/5.0.2/Admin/MoreAboutSplunkFree"&gt;here&lt;/a&gt;), but it's sufficent to analyze fews hosts logs (&amp;lt; 20). The major disadvatage of this edition is the lack of an authentication module for the web interface, which mean anyone can access to your splunk interface and show your data.&lt;/p&gt;
@@ -354,7 +373,7 @@ fudge 127.127.1.0 stratum 10
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="tool"></category><category term="network"></category><category term="splunk"></category><category term="security"></category><category term="ssh"></category></entry><entry><title>Tip of the week 15</title><link href="http://natjohan.info/tip-of-the-week-15.html" rel="alternate"></link><updated>2013-04-06T16:04:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-06:tip-of-the-week-15.html</id><summary type="html">&lt;img alt="/images/mstsc.png" src="/images/mstsc.png" /&gt;
+</summary><category term="tool"></category><category term="network"></category><category term="splunk"></category><category term="security"></category><category term="ssh"></category></entry><entry><title>Tip of the week 15</title><link href="http://natjohan.info/tip-of-the-week-15.html" rel="alternate"></link><updated>2013-04-06T16:04:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-06:tip-of-the-week-15.html</id><summary type="html">&lt;img alt="" src="/images/mstsc.png" /&gt;
 &lt;div class="section" id="access-to-linux-desktop-from-windows-with-mstsc"&gt;
 &lt;h2&gt;Access to Linux desktop from Windows with mstsc&lt;/h2&gt;
 &lt;p&gt;If you're working on Linux servers from Microsoft environment, you probably want to simply access to your servers desktop with &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Remote_Desktop_Protocol"&gt;RDP&lt;/a&gt; protocol thanks to mstsc. XRDP daemon is an open source RDP server, it uses vnc4server as backend.&lt;/p&gt;
@@ -367,7 +386,7 @@ fudge 127.127.1.0 stratum 10
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;Natjohan# yum install xrdp&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That's it, XRDP works out of the box ! Now you can launch your mstsc client.&lt;/p&gt;
-&lt;img alt="/images/xrdp.png" src="/images/xrdp.png" /&gt;
+&lt;img alt="" src="/images/xrdp.png" /&gt;
 &lt;/div&gt;
 &lt;div class="section" id="on-fedora"&gt;
 &lt;h3&gt;On Fedora&lt;/h3&gt;
@@ -384,7 +403,7 @@ fudge 127.127.1.0 stratum 10
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;img alt="/images/firewall.png" src="/images/firewall.png" /&gt;
+&lt;img alt="" src="/images/firewall.png" /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="go-further"&gt;
@@ -396,7 +415,7 @@ fudge 127.127.1.0 stratum 10
 &lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="tip"></category><category term="linux"></category><category term="rdp"></category><category term="xrdp"></category><category term="debian"></category></entry><entry><title>Tip of the week 14</title><link href="http://natjohan.info/tip-of-the-week-14.html" rel="alternate"></link><updated>2013-03-28T22:22:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-03-28:tip-of-the-week-14.html</id><summary type="html">&lt;img alt="/images/terminator.png" src="/images/terminator.png" /&gt;
+</summary><category term="tip"></category><category term="linux"></category><category term="rdp"></category><category term="xrdp"></category><category term="debian"></category></entry><entry><title>Tip of the week 14</title><link href="http://natjohan.info/tip-of-the-week-14.html" rel="alternate"></link><updated>2013-03-28T22:22:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-03-28:tip-of-the-week-14.html</id><summary type="html">&lt;img alt="" src="/images/terminator.png" /&gt;
 &lt;div class="section" id="terminator-a-powerful-terminal-for-sysadmins"&gt;
 &lt;h2&gt;Terminator : a powerful terminal for sysadmins&lt;/h2&gt;
 &lt;p&gt;You dream of having a terminal that allow to open many terms in one window, launch a same update/fix on these terms with a replicate system, with a lot of keyboard shortcuts, multiple layouts/profiles, and more ?
@@ -583,7 +602,7 @@ fudge 127.127.1.0 stratum 10
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install qalculate-gtk&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You should read the official &lt;a class="reference external" href="http://qalculate.sourceforge.net/gtk-manual/"&gt;documentation&lt;/a&gt; for this GUI&lt;/p&gt;
-&lt;img alt="/images/qalculate.png" src="/images/qalculate.png" /&gt;
+&lt;img alt="" src="/images/qalculate.png" /&gt;
 &lt;p&gt;For your first use of qalc command :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan$ qalc&lt;/span&gt;
 &lt;span class="go"&gt;        You need the download exchange rates to be able to convert between different currencies.&lt;/span&gt;
@@ -650,7 +669,7 @@ fudge 127.127.1.0 stratum 10
 &lt;p&gt;To find function or unit name you can launch the GUI and made an insert, or if you don't have the GUI : just go in &lt;cite&gt;/usr/share/qalculate&lt;/cite&gt; and cat the xml files.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="tip"></category><category term="linux"></category><category term="calculate"></category><category term="qalculate"></category><category term="qalc"></category></entry><entry><title>Tip of the week 9</title><link href="http://natjohan.info/tip-of-the-week-9.html" rel="alternate"></link><updated>2013-02-18T19:39:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-18:tip-of-the-week-9.html</id><summary type="html">&lt;img alt="/images/chromium-logo.png" src="/images/chromium-logo.png" /&gt;
+</summary><category term="tip"></category><category term="linux"></category><category term="calculate"></category><category term="qalculate"></category><category term="qalc"></category></entry><entry><title>Tip of the week 9</title><link href="http://natjohan.info/tip-of-the-week-9.html" rel="alternate"></link><updated>2013-02-18T19:39:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-18:tip-of-the-week-9.html</id><summary type="html">&lt;img alt="" src="/images/chromium-logo.png" /&gt;
 &lt;div class="section" id="chromium"&gt;
 &lt;h2&gt;Chromium&lt;/h2&gt;
 &lt;p&gt;&lt;cite&gt;Chromium&lt;/cite&gt; is an open source browser from which Google Chrome is based. Actually Chromium seems to be very similar to Chrome but there is some important differences, in few words, Chromium = Chrome (with few &lt;a class="reference external" href="http://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome"&gt;changes&lt;/a&gt;) + open source (under BSD licence) + privacy (RLZ tracking is disabled in chromium, see &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Chromium_(web_browser)"&gt;wikipedia&lt;/a&gt;).&lt;/p&gt;
@@ -736,7 +755,7 @@ If you really want to take care of your privacy and use Chromium, i recommand yo
 &lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="tip"></category><category term="linux"></category><category term="version"></category></entry><entry><title>Canon Edit : how to solve libtiff.so.3 problem</title><link href="http://natjohan.info/canon-edit-how-to-solve-libtiffso3-problem.html" rel="alternate"></link><updated>2013-02-11T20:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-11:canon-edit-how-to-solve-libtiffso3-problem.html</id><summary type="html">&lt;p&gt;Edit : 11/02/2013&lt;/p&gt;
-&lt;img alt="/images/Canon-mg3250.png" src="/images/Canon-mg3250.png" /&gt;
+&lt;img alt="" src="/images/Canon-mg3250.png" /&gt;
 &lt;p&gt;I just upgraded my system from Fedora 17 to Fedora 18, and my canon printer doesn't work anymore. I followed the debug &lt;a class="reference external" href="http://fedoraproject.org/wiki/How_to_debug_printing_problems"&gt;guide&lt;/a&gt; and it's due to libtiff library (Fedora 17 use libtiff.so.3 and Fedora 18 use libtiff.so.4). Here is a way to make things work again.&lt;/p&gt;
 &lt;p&gt;Download libtiff.so.3 from here : &lt;a class="reference external" href="http://rpm.pbone.net/"&gt;http://rpm.pbone.net/&lt;/a&gt; (check advanced search -&amp;gt; fedora 17)
 extact the content of the rpm with :&lt;/p&gt;
@@ -775,7 +794,7 @@ extact the content of the rpm with :&lt;/p&gt;
 &lt;span class="go"&gt;        1:cnijfilter-mg3200series-3.80-1   ################################# [100%]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Now you can add/use your canon MG3250, enjoy !&lt;/p&gt;
-</summary><category term="fix"></category><category term="canon"></category><category term="libtiff.so"></category><category term="lib"></category><category term="printer"></category></entry><entry><title>Install GNS3 on Fedora 18</title><link href="http://natjohan.info/install-gns3-on-fedora-18.html" rel="alternate"></link><updated>2013-02-04T20:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-04:install-gns3-on-fedora-18.html</id><summary type="html">&lt;img alt="/images/GNS3-logo.png" src="/images/GNS3-logo.png" /&gt;
+</summary><category term="fix"></category><category term="canon"></category><category term="libtiff.so"></category><category term="lib"></category><category term="printer"></category></entry><entry><title>Install GNS3 on Fedora 18</title><link href="http://natjohan.info/install-gns3-on-fedora-18.html" rel="alternate"></link><updated>2013-02-04T20:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-04:install-gns3-on-fedora-18.html</id><summary type="html">&lt;img alt="" src="/images/GNS3-logo.png" /&gt;
 &lt;p&gt;GNS3 is a famous network simulator which allow to test network topologies and equipements.&lt;/p&gt;
 &lt;div class="section" id="installation"&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
@@ -872,7 +891,7 @@ extact the content of the rpm with :&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;WARNING :&lt;/strong&gt; Be really careful before formating a disk, &lt;strong&gt;you will not be able to recover your data&lt;/strong&gt;, check that you are applying the command to the right device before you hit ENTER&lt;/p&gt;
 &lt;blockquote&gt;
 Note: I supposed you have a partition created on the disk, before you format it.&lt;/blockquote&gt;
-</summary><category term="tool"></category><category term="recover"></category><category term="photorec"></category><category term="repair"></category><category term="testdisk"></category></entry><entry><title>Tip of the week 6</title><link href="http://natjohan.info/tip-of-the-week-6.html" rel="alternate"></link><updated>2013-01-28T13:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-28:tip-of-the-week-6.html</id><summary type="html">&lt;img alt="/images/lldpd-why.png" src="/images/lldpd-why.png" /&gt;
+</summary><category term="tool"></category><category term="recover"></category><category term="photorec"></category><category term="repair"></category><category term="testdisk"></category></entry><entry><title>Tip of the week 6</title><link href="http://natjohan.info/tip-of-the-week-6.html" rel="alternate"></link><updated>2013-01-28T13:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-28:tip-of-the-week-6.html</id><summary type="html">&lt;img alt="" src="/images/lldpd-why.png" /&gt;
 &lt;div class="section" id="know-your-network-neighbors-thanks-to-lldpd-daemon"&gt;
 &lt;h2&gt;Know your network neighbors thanks to lldpd daemon&lt;/h2&gt;
 &lt;p&gt;This week, i would like to present you lldpd. Actually, it's a useful daemon for GNU/Linux, BSD, Mac OS X developped by &lt;a class="reference external" href="http://vincent.bernat.im"&gt;Vincent Bernat&lt;/a&gt;. The picture above summarizes the situation very well ;-).&lt;/p&gt;
@@ -924,7 +943,7 @@ Note: I supposed you have a partition created on the disk, before you format it.
 &lt;h2&gt;Go Further&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Link_Layer_Discovery_Protocol"&gt;LLDP&lt;/a&gt; on wikipedia&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="tip"></category><category term="linux"></category><category term="lldpd"></category><category term="lldp"></category><category term="cdp"></category><category term="network"></category></entry><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2013-01-22T18:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="/images/Encfs-global.png" src="/images/Encfs-global.png" /&gt;
+</summary><category term="tip"></category><category term="linux"></category><category term="lldpd"></category><category term="lldp"></category><category term="cdp"></category><category term="network"></category></entry><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2013-01-22T18:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="" src="/images/Encfs-global.png" /&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h2&gt;Synopsis&lt;/h2&gt;
 &lt;p&gt;Nowadays, there is many cloud storage services (Dropbox, Bitcasa, Box, Hubic, Mega, Drive, Sparkleshare, etc) to sync/backup/share/copy your data. Thanks to it, you can prevent hard drive crash or access it from different devices.&lt;/p&gt;
@@ -1009,9 +1028,9 @@ to third-parties. Even worse, some cloud storage providers do not encrypt data a
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install cryptkeeper&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;CryptKeeper offer a simple GUI thanks to a system tray applet, you can mount/umount or create encrypted folders.&lt;/p&gt;
-&lt;img alt="/images/CryptKeeper.png" src="/images/CryptKeeper.png" /&gt;
+&lt;img alt="" src="/images/CryptKeeper.png" /&gt;
 &lt;p&gt;There is also some options (with a right clic on the icon). So, the content of your encrypted folder should looks like this :&lt;/p&gt;
-&lt;img alt="/images/Enc-content.png" src="/images/Enc-content.png" /&gt;
+&lt;img alt="" src="/images/Enc-content.png" /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1019,7 +1038,7 @@ to third-parties. Even worse, some cloud storage providers do not encrypt data a
 &lt;h2&gt;Android&lt;/h2&gt;
 &lt;p&gt;&amp;quot;Ok, Encfs is pretty cool, but if I want to access to my data on my android device ?!&amp;quot;
 There is several android apps for decrypt Encfs folder, but CloudFetch is my favorite, you can decrypt local folder or directly link it with Dropbox, SpiderOak, SparkleShare and Ubuntu One (for the moment). Download it via Google play &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=az.cloudfetch"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;img alt="/images/CloudFetch.png" src="/images/CloudFetch.png" /&gt;
+&lt;img alt="" src="/images/CloudFetch.png" /&gt;
 &lt;!-- Note : This app is free but unfortunately the code is no longer open source --&gt;
 &lt;/div&gt;
 &lt;div class="section" id="windows"&gt;
@@ -1032,7 +1051,7 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;div class="section" id="id2"&gt;
 &lt;h3&gt;Usage&lt;/h3&gt;
 &lt;p&gt;To launch the GUI, just double click &lt;cite&gt;encfsw.exe&lt;/cite&gt; and now you can easily manage your encrypted folders.&lt;/p&gt;
-&lt;img alt="/images/Encfs4win.png" src="/images/Encfs4win.png" /&gt;
+&lt;img alt="" src="/images/Encfs4win.png" /&gt;
 &lt;!-- Note for Win 8 users : you have to launch in compatibility mode (right clic -&gt; propriety -&gt; compatibility and set win 7) --&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1050,7 +1069,7 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;div class="line"&gt;A pdf report from Fraunhofer institut : &lt;a class="reference external" href="http://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;ved=0CD0QFjAA&amp;amp;url=http%3A%2F%2Fwww.sit.fraunhofer.de%2Fcontent%2Fdam%2Fsit%2Fen%2Fstudies%2FCloud-Storage-Security_a4.pdf&amp;amp;ei=nzf8UP62HdKIhQf6oIFw&amp;amp;usg=AFQjCNGhymnIFCQOFJaXrWI8elG_3cirCA&amp;amp;sig2=V_kMG85r96f2hxpX5s8bqw&amp;amp;bvm=bv.41248874,d.ZG4"&gt;On the security of cloud storage services&lt;/a&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="crypt"></category><category term="filesystem"></category><category term="dropbox"></category><category term="cloud"></category><category term="security"></category><category term="EncFS"></category><category term="data"></category></entry><entry><title>Tip of the week 5</title><link href="http://natjohan.info/tip-of-the-week-5.html" rel="alternate"></link><updated>2013-01-22T14:26:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:tip-of-the-week-5.html</id><summary type="html">&lt;img alt="/images/Any.do-global.png" src="/images/Any.do-global.png" /&gt;
+</summary><category term="crypt"></category><category term="filesystem"></category><category term="dropbox"></category><category term="cloud"></category><category term="security"></category><category term="EncFS"></category><category term="data"></category></entry><entry><title>Tip of the week 5</title><link href="http://natjohan.info/tip-of-the-week-5.html" rel="alternate"></link><updated>2013-01-22T14:26:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:tip-of-the-week-5.html</id><summary type="html">&lt;img alt="" src="/images/Any.do-global.png" /&gt;
 &lt;div class="section" id="any-do"&gt;
 &lt;h2&gt;Any.Do&lt;/h2&gt;
 &lt;p&gt;A fancy, useful, cool app to manage your tasks and improve your productivity ;-). It's a very simple app coming with :&lt;/p&gt;
@@ -1073,11 +1092,11 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;div class="line"&gt;- and &lt;strong&gt;more&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;So, check this out &lt;strong&gt;now on&lt;/strong&gt; &lt;a class="reference external" href="http://www.any.do/"&gt;Any.do&lt;/a&gt; !&lt;/p&gt;
-&lt;img alt="/images/Any.do-call.png" src="/images/Any.do-call.png" /&gt;
+&lt;img alt="" src="/images/Any.do-call.png" /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="tip"></category><category term="app"></category><category term="android"></category><category term="tasks"></category><category term="tool"></category></entry><entry><title>How to set up Canon MG3250 printer on Linux</title><link href="http://natjohan.info/how-to-set-up-canon-mg3250-printer-on-linux.html" rel="alternate"></link><updated>2013-01-14T20:39:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-14:how-to-set-up-canon-mg3250-printer-on-linux.html</id><summary type="html">&lt;p&gt;I recently bought a Canon MG3250 printer, this is a classic printer with a good quality price average for home usage (wifi, recto-verso, scan).&lt;/p&gt;
-&lt;img alt="/images/Canon-mg3250.png" src="/images/Canon-mg3250.png" /&gt;
+&lt;img alt="" src="/images/Canon-mg3250.png" /&gt;
 &lt;div class="section" id="prerequisites"&gt;
 &lt;h2&gt;Prerequisites&lt;/h2&gt;
 &lt;p&gt;So, you have to make the installation of your printer (follow the canon manual), connect to your wifi network with WPS (Wifi Protected Setup)&lt;/p&gt;
@@ -1112,7 +1131,7 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;/dl&gt;
 &lt;p&gt;Now you can launch scangear (&lt;cite&gt;scangearmp&lt;/cite&gt; command) and launch a scan through wifi.&lt;/p&gt;
 &lt;p&gt;To add a scangear icon on your gnome shell menu, you should install &lt;strong&gt;alacarte&lt;/strong&gt; (if you're on Fedora, there is a fix to run Alacarte : just read my &lt;a class="reference external" href="http://natjohan.info/tip-of-the-week-4.html"&gt;ToTW&lt;/a&gt; ) which provide a complete and simple menu editor for gnome. Here is my conf for the new entry (the emplacement of scangearmp is : &lt;cite&gt;/usr/local/bin/scangearmp&lt;/cite&gt; ,simply show that with &lt;cite&gt;which scangearmp&lt;/cite&gt; command) :&lt;/p&gt;
-&lt;img alt="/images/Alacarte-scan.png" src="/images/Alacarte-scan.png" /&gt;
+&lt;img alt="" src="/images/Alacarte-scan.png" /&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h3&gt;&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -1121,7 +1140,7 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;/div&gt;
 </summary><category term="printer"></category><category term="canon"></category><category term="hardware"></category></entry><entry><title>Tip of the week 4</title><link href="http://natjohan.info/tip-of-the-week-4.html" rel="alternate"></link><updated>2013-01-14T19:26:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-14:tip-of-the-week-4.html</id><summary type="html">&lt;div class="section" id="simply-edit-your-gnome-3-menu-with-alacarte"&gt;
 &lt;h2&gt;Simply edit your Gnome 3 menu with Alacarte&lt;/h2&gt;
-&lt;img alt="/images/menu-alacarte.png" src="/images/menu-alacarte.png" /&gt;
+&lt;img alt="" src="/images/menu-alacarte.png" /&gt;
 &lt;p&gt;Unfortunately Gnome doesn't provide a simple and well documented way to add/modify a menu entry, however &lt;strong&gt;Alacarte&lt;/strong&gt; is a great tool for that.&lt;/p&gt;
 &lt;div class="section" id="installation"&gt;
 &lt;h3&gt;Installation&lt;/h3&gt;
@@ -1133,7 +1152,7 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;div class="section" id="usage"&gt;
 &lt;h3&gt;Usage&lt;/h3&gt;
 &lt;p&gt;Now you can add/modify/delete your menu entries with Alacarte (start it with Activities -&amp;gt; Applications or with Alt+f2 -&amp;gt; &lt;cite&gt;Alacarte&lt;/cite&gt;)&lt;/p&gt;
-&lt;img alt="/images/Alacarte-scan.png" src="/images/Alacarte-scan.png" /&gt;
+&lt;img alt="" src="/images/Alacarte-scan.png" /&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h4&gt;&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -1141,7 +1160,7 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="tool"></category><category term="tip"></category><category term="menu"></category><category term="gnome"></category><category term="alacarte"></category><category term="fix"></category></entry><entry><title>JqPlot : charts and graphs for Jquery</title><link href="http://natjohan.info/jqplot-charts-and-graphs-for-jquery.html" rel="alternate"></link><updated>2013-01-07T19:11:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-07:jqplot-charts-and-graphs-for-jquery.html</id><summary type="html">&lt;img alt="/images/JqPlot-ex.png" src="/images/JqPlot-ex.png" /&gt;
+</summary><category term="tool"></category><category term="tip"></category><category term="menu"></category><category term="gnome"></category><category term="alacarte"></category><category term="fix"></category></entry><entry><title>JqPlot : charts and graphs for Jquery</title><link href="http://natjohan.info/jqplot-charts-and-graphs-for-jquery.html" rel="alternate"></link><updated>2013-01-07T19:11:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-07:jqplot-charts-and-graphs-for-jquery.html</id><summary type="html">&lt;img alt="" src="/images/JqPlot-ex.png" /&gt;
 &lt;p&gt;You want to add some fancy charts and graph to your webpage, backend...? So, you have to consider Jqplot, it's a JQuery plugin which have many advantages :
 - Open source, free to use and maintained by Chris Leonello (&lt;a class="reference external" href="https://bitbucket.org/cleonello/jqplot/overview"&gt;Bitbucket page&lt;/a&gt;)
 - based on JQuery
@@ -1200,7 +1219,7 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;And the result is&lt;/p&gt;
-&lt;img alt="/images/jqplotchartexample.png" src="/images/jqplotchartexample.png" /&gt;
+&lt;img alt="" src="/images/jqplotchartexample.png" /&gt;
 &lt;div class="section" id="go-further"&gt;
 &lt;h2&gt;Go further&lt;/h2&gt;
 &lt;ul class="simple"&gt;
@@ -1352,7 +1371,7 @@ One way to test test it, is to run this python command that run a simple smtp se
 &lt;p&gt;You should look at &lt;a class="reference external" href="https://extensions.gnome.org/"&gt;Gnome shell extension page&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 </summary><category term="gnome"></category><category term="extensions"></category></entry><entry><title>Linux on Samsung np900x3c</title><link href="http://natjohan.info/linux-on-samsung-np900x3c.html" rel="alternate"></link><updated>2012-11-19T13:47:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2012-11-19:linux-on-samsung-np900x3c.html</id><summary type="html">&lt;p&gt;Few month ago I decided to buy a new laptop : the Samsung NP900X3C. It's a sleek, chic piece of hardware. Read more about that in this &lt;a class="reference external" href="http://www.theverge.com/2012/7/16/3160289/samsung-series-9-review-13-inch-mid-2012"&gt;review&lt;/a&gt; ou &lt;a class="reference external" href="http://www.engadget.com/2012/01/09/redesigned-samsung-series-9-laptop-announced/"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;img alt="/images/Samsung-NP900X3C.png" src="/images/Samsung-NP900X3C.png" /&gt;
+&lt;img alt="" src="/images/Samsung-NP900X3C.png" /&gt;
 &lt;p&gt;As a Linux user, i wanted to put Linux on it. I tried ArchLinux, but unfortunately, it was unstable and there were too many kernel panic. So, I installed Fedora 17 on this laptop, and most things works well out of the box (multitouch trackpad, wireless, sound, graphics, webcam ...).&lt;/p&gt;
 &lt;p&gt;I just want to post a little fix I found on RedHat BugZilla to make FN keys work for the keyboard backlight.&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;

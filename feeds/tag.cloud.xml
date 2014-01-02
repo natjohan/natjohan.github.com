@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.cloud.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-01-22T18:17:00+01:00</updated><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2013-01-22T18:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="/images/Encfs-global.png" src="/images/Encfs-global.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.cloud.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-01-22T18:17:00+01:00</updated><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2013-01-22T18:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="" src="/images/Encfs-global.png" /&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h2&gt;Synopsis&lt;/h2&gt;
 &lt;p&gt;Nowadays, there is many cloud storage services (Dropbox, Bitcasa, Box, Hubic, Mega, Drive, Sparkleshare, etc) to sync/backup/share/copy your data. Thanks to it, you can prevent hard drive crash or access it from different devices.&lt;/p&gt;
@@ -84,9 +84,9 @@ to third-parties. Even worse, some cloud storage providers do not encrypt data a
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install cryptkeeper&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;CryptKeeper offer a simple GUI thanks to a system tray applet, you can mount/umount or create encrypted folders.&lt;/p&gt;
-&lt;img alt="/images/CryptKeeper.png" src="/images/CryptKeeper.png" /&gt;
+&lt;img alt="" src="/images/CryptKeeper.png" /&gt;
 &lt;p&gt;There is also some options (with a right clic on the icon). So, the content of your encrypted folder should looks like this :&lt;/p&gt;
-&lt;img alt="/images/Enc-content.png" src="/images/Enc-content.png" /&gt;
+&lt;img alt="" src="/images/Enc-content.png" /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -94,7 +94,7 @@ to third-parties. Even worse, some cloud storage providers do not encrypt data a
 &lt;h2&gt;Android&lt;/h2&gt;
 &lt;p&gt;&amp;quot;Ok, Encfs is pretty cool, but if I want to access to my data on my android device ?!&amp;quot;
 There is several android apps for decrypt Encfs folder, but CloudFetch is my favorite, you can decrypt local folder or directly link it with Dropbox, SpiderOak, SparkleShare and Ubuntu One (for the moment). Download it via Google play &lt;a class="reference external" href="https://play.google.com/store/apps/details?id=az.cloudfetch"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;img alt="/images/CloudFetch.png" src="/images/CloudFetch.png" /&gt;
+&lt;img alt="" src="/images/CloudFetch.png" /&gt;
 &lt;!-- Note : This app is free but unfortunately the code is no longer open source --&gt;
 &lt;/div&gt;
 &lt;div class="section" id="windows"&gt;
@@ -107,7 +107,7 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;div class="section" id="id2"&gt;
 &lt;h3&gt;Usage&lt;/h3&gt;
 &lt;p&gt;To launch the GUI, just double click &lt;cite&gt;encfsw.exe&lt;/cite&gt; and now you can easily manage your encrypted folders.&lt;/p&gt;
-&lt;img alt="/images/Encfs4win.png" src="/images/Encfs4win.png" /&gt;
+&lt;img alt="" src="/images/Encfs4win.png" /&gt;
 &lt;!-- Note for Win 8 users : you have to launch in compatibility mode (right clic -&gt; propriety -&gt; compatibility and set win 7) --&gt;
 &lt;/div&gt;
 &lt;/div&gt;

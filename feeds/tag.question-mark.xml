@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.question-mark.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-03-04T22:52:00+01:00</updated><entry><title>Tip of the week 11</title><link href="http://natjohan.info/tip-of-the-week-11.html" rel="alternate"></link><updated>2013-03-04T22:52:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-03-04:tip-of-the-week-11.html</id><summary type="html">&lt;div class="section" id="question-mark-in-your-cisco-conf"&gt;
+&lt;h2&gt;Question mark in your Cisco conf&lt;/h2&gt;
+&lt;p&gt;In Cisco CLI, the question mark allow you to obtain a list of command/options.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;Router(config)# enable secret ?&lt;/span&gt;
+&lt;span class="go"&gt;        0 Specifies an UNENCRYPTED password will follow&lt;/span&gt;
+&lt;span class="go"&gt;        5 Specifies an ENCRYPTED secret will follow&lt;/span&gt;
+&lt;span class="go"&gt;        LINE The UNENCRYPTED (cleartext) &amp;#39;enable&amp;#39; secret&lt;/span&gt;
+&lt;span class="go"&gt;        level Set exec level password&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But : how to put a question mark in your Cisco description, or in your Cisco password ?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;Router(config)# enable secret QuestionMark_(type CTRL + V here)_?&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In your descriptions :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;Router(config)# int Ge0/1/0&lt;/span&gt;
+&lt;span class="go"&gt;Router(config-if)# description in use _(type CTRL + V here)_?&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Actually, if you want to use question mark in your Cisco conf as a normal character, you just have to type &lt;cite&gt;Ctrl + V&lt;/cite&gt; before!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go further&lt;/h2&gt;
+&lt;p&gt;Read this &lt;a class="reference external" href="http://www.cisco.com/en/US/docs/ios/12_2/termserv/configuration/guide/tcfaapre_ps1835_TSD_Products_Configuration_Guide_Chapter.html"&gt;article&lt;/a&gt; about RegEx in Cisco IOS&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="tip"></category><category term="cisco"></category><category term="question mark"></category></entry></feed>

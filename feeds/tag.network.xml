@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.network.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-04-15T22:47:00+02:00</updated><entry><title>Tip of the week 17</title><link href="http://natjohan.info/tip-of-the-week-17.html" rel="alternate"></link><updated>2013-04-15T22:47:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-15:tip-of-the-week-17.html</id><summary type="html">&lt;div class="section" id="serve-your-apache-website-only-on-localhost"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.network.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-02T22:38:00+01:00</updated><entry><title>Tip of the week 27</title><link href="http://natjohan.info/tip-of-the-week-27.html" rel="alternate"></link><updated>2014-01-02T22:38:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-02:tip-of-the-week-27.html</id><summary type="html">&lt;img alt="" src="/images/sublimeCisco.png" /&gt;
+&lt;div class="section" id="highlight-your-cisco-ios-configurations-under-sublime-text"&gt;
+&lt;h2&gt;Highlight your Cisco IOS configurations under Sublime Text&lt;/h2&gt;
+&lt;p&gt;Here is a little tip if you're using Sublime Text (which is a really great text editor with many useful features)
+It's quite easy, you just have to download the IOS language definitions and put it under your Sublime Text package directory (~/.config/sublime-text-2/Packages/ on Linux)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; ~/.config/sublime-text-2/Packages/
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; mkdir Cisco &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd &lt;/span&gt;Cisco
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; wget https://raw.github.com/illotum/IOS-Syntax/master/Cisco%20IOS.tmLanguage
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; wget https://raw.github.com/illotum/IOS-Syntax/master/Cisco%20IOS.JSON-tmLanguage
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And now all your .ios files have a syntax highlight in your Sublime Text editor, otherwise you can choose your Cisco syntax in your syntax list&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Download Sublime Text &lt;a class="reference external" href="http://www.sublimetext.com/"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The git repo for the IOS Syntax on &lt;a class="reference external" href="https://github.com/illotum/IOS-Syntax"&gt;github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="network"></category><category term="editor"></category><category term="cisco"></category><category term="ios"></category></entry><entry><title>Tip of the week 17</title><link href="http://natjohan.info/tip-of-the-week-17.html" rel="alternate"></link><updated>2013-04-15T22:47:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-15:tip-of-the-week-17.html</id><summary type="html">&lt;div class="section" id="serve-your-apache-website-only-on-localhost"&gt;
 &lt;h2&gt;Serve your apache website only on localhost&lt;/h2&gt;
 &lt;p&gt;When you want to test something with apache2, it's useful to serve it only on localhost to see what happens and make sure everything goes well. So, you just have to edit your &lt;cite&gt;/etc/apache2/ports.conf&lt;/cite&gt; and set the Listen directive to :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;Listen 127.0.0.1:80&lt;/span&gt;
@@ -15,7 +34,7 @@
 &lt;h2&gt;Go further&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://httpd.apache.org/docs/2.2/en/bind.html"&gt;the official apache documentation about binding&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="tool"></category><category term="network"></category><category term="apache2"></category><category term=""></category></entry><entry><title>Tip of the week 16</title><link href="http://natjohan.info/tip-of-the-week-16.html" rel="alternate"></link><updated>2013-04-14T14:11:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-14:tip-of-the-week-16.html</id><summary type="html">&lt;img alt="/images/splunk-logo.png" src="/images/splunk-logo.png" /&gt;
+</summary><category term="tool"></category><category term="network"></category><category term="apache2"></category><category term=""></category></entry><entry><title>Tip of the week 16</title><link href="http://natjohan.info/tip-of-the-week-16.html" rel="alternate"></link><updated>2013-04-14T14:11:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-14:tip-of-the-week-16.html</id><summary type="html">&lt;img alt="" src="/images/splunk-logo.png" /&gt;
 &lt;div class="section" id="secure-your-splunk-free-server"&gt;
 &lt;h2&gt;Secure your Splunk Free server&lt;/h2&gt;
 &lt;p&gt;&amp;quot;Splunk Enterprise is a fully featured, powerful platform for collecting, searching, monitoring and analyzing machine data&amp;quot;. There is a free version of Splunk with some limitations (read &lt;a class="reference external" href="http://docs.splunk.com/Documentation/Splunk/5.0.2/Admin/MoreAboutSplunkFree"&gt;here&lt;/a&gt;), but it's sufficent to analyze fews hosts logs (&amp;lt; 20). The major disadvatage of this edition is the lack of an authentication module for the web interface, which mean anyone can access to your splunk interface and show your data.&lt;/p&gt;
@@ -93,7 +112,7 @@
 &lt;h2&gt;Go further&lt;/h2&gt;
 &lt;p&gt;For your scripts : use the -D option to know if an IP is already used, &lt;em&gt;Duplicate address detection mode (DAD). See RFC2131, 4.4.1.  Returns 0, if DAD succeeded i.e. no replies are received&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="tip"></category><category term="linux"></category><category term="network"></category></entry><entry><title>Install GNS3 on Fedora 18</title><link href="http://natjohan.info/install-gns3-on-fedora-18.html" rel="alternate"></link><updated>2013-02-04T20:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-04:install-gns3-on-fedora-18.html</id><summary type="html">&lt;img alt="/images/GNS3-logo.png" src="/images/GNS3-logo.png" /&gt;
+</summary><category term="tip"></category><category term="linux"></category><category term="network"></category></entry><entry><title>Install GNS3 on Fedora 18</title><link href="http://natjohan.info/install-gns3-on-fedora-18.html" rel="alternate"></link><updated>2013-02-04T20:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-04:install-gns3-on-fedora-18.html</id><summary type="html">&lt;img alt="" src="/images/GNS3-logo.png" /&gt;
 &lt;p&gt;GNS3 is a famous network simulator which allow to test network topologies and equipements.&lt;/p&gt;
 &lt;div class="section" id="installation"&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
@@ -128,7 +147,7 @@
 &lt;h2&gt;Go Further&lt;/h2&gt;
 &lt;p&gt;GNS &lt;a class="reference external" href="http://www.gns3.net/documentation/"&gt;documentation&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="tool"></category><category term="network"></category><category term="simulation"></category><category term="Fedora"></category></entry><entry><title>Tip of the week 6</title><link href="http://natjohan.info/tip-of-the-week-6.html" rel="alternate"></link><updated>2013-01-28T13:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-28:tip-of-the-week-6.html</id><summary type="html">&lt;img alt="/images/lldpd-why.png" src="/images/lldpd-why.png" /&gt;
+</summary><category term="tool"></category><category term="network"></category><category term="simulation"></category><category term="Fedora"></category></entry><entry><title>Tip of the week 6</title><link href="http://natjohan.info/tip-of-the-week-6.html" rel="alternate"></link><updated>2013-01-28T13:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-28:tip-of-the-week-6.html</id><summary type="html">&lt;img alt="" src="/images/lldpd-why.png" /&gt;
 &lt;div class="section" id="know-your-network-neighbors-thanks-to-lldpd-daemon"&gt;
 &lt;h2&gt;Know your network neighbors thanks to lldpd daemon&lt;/h2&gt;
 &lt;p&gt;This week, i would like to present you lldpd. Actually, it's a useful daemon for GNU/Linux, BSD, Mac OS X developped by &lt;a class="reference external" href="http://vincent.bernat.im"&gt;Vincent Bernat&lt;/a&gt;. The picture above summarizes the situation very well ;-).&lt;/p&gt;

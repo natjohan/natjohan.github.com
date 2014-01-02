@@ -14,7 +14,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install qalculate-gtk&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You should read the official &lt;a class="reference external" href="http://qalculate.sourceforge.net/gtk-manual/"&gt;documentation&lt;/a&gt; for this GUI&lt;/p&gt;
-&lt;img alt="/images/qalculate.png" src="/images/qalculate.png" /&gt;
+&lt;img alt="" src="/images/qalculate.png" /&gt;
 &lt;p&gt;For your first use of qalc command :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan$ qalc&lt;/span&gt;
 &lt;span class="go"&gt;        You need the download exchange rates to be able to convert between different currencies.&lt;/span&gt;

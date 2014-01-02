@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tip.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-04-06T16:04:00+02:00</updated><entry><title>Tip of the week 15</title><link href="http://natjohan.info/tip-of-the-week-15.html" rel="alternate"></link><updated>2013-04-06T16:04:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-06:tip-of-the-week-15.html</id><summary type="html">&lt;img alt="/images/mstsc.png" src="/images/mstsc.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tip.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-04-06T16:04:00+02:00</updated><entry><title>Tip of the week 15</title><link href="http://natjohan.info/tip-of-the-week-15.html" rel="alternate"></link><updated>2013-04-06T16:04:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-06:tip-of-the-week-15.html</id><summary type="html">&lt;img alt="" src="/images/mstsc.png" /&gt;
 &lt;div class="section" id="access-to-linux-desktop-from-windows-with-mstsc"&gt;
 &lt;h2&gt;Access to Linux desktop from Windows with mstsc&lt;/h2&gt;
 &lt;p&gt;If you're working on Linux servers from Microsoft environment, you probably want to simply access to your servers desktop with &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Remote_Desktop_Protocol"&gt;RDP&lt;/a&gt; protocol thanks to mstsc. XRDP daemon is an open source RDP server, it uses vnc4server as backend.&lt;/p&gt;
@@ -12,7 +12,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;Natjohan# yum install xrdp&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That's it, XRDP works out of the box ! Now you can launch your mstsc client.&lt;/p&gt;
-&lt;img alt="/images/xrdp.png" src="/images/xrdp.png" /&gt;
+&lt;img alt="" src="/images/xrdp.png" /&gt;
 &lt;/div&gt;
 &lt;div class="section" id="on-fedora"&gt;
 &lt;h3&gt;On Fedora&lt;/h3&gt;
@@ -29,7 +29,7 @@
 &lt;div class="line-block"&gt;
 &lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;img alt="/images/firewall.png" src="/images/firewall.png" /&gt;
+&lt;img alt="" src="/images/firewall.png" /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="go-further"&gt;
@@ -41,7 +41,7 @@
 &lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="tip"></category><category term="linux"></category><category term="rdp"></category><category term="xrdp"></category><category term="debian"></category></entry><entry><title>Tip of the week 14</title><link href="http://natjohan.info/tip-of-the-week-14.html" rel="alternate"></link><updated>2013-03-28T22:22:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-03-28:tip-of-the-week-14.html</id><summary type="html">&lt;img alt="/images/terminator.png" src="/images/terminator.png" /&gt;
+</summary><category term="tip"></category><category term="linux"></category><category term="rdp"></category><category term="xrdp"></category><category term="debian"></category></entry><entry><title>Tip of the week 14</title><link href="http://natjohan.info/tip-of-the-week-14.html" rel="alternate"></link><updated>2013-03-28T22:22:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-03-28:tip-of-the-week-14.html</id><summary type="html">&lt;img alt="" src="/images/terminator.png" /&gt;
 &lt;div class="section" id="terminator-a-powerful-terminal-for-sysadmins"&gt;
 &lt;h2&gt;Terminator : a powerful terminal for sysadmins&lt;/h2&gt;
 &lt;p&gt;You dream of having a terminal that allow to open many terms in one window, launch a same update/fix on these terms with a replicate system, with a lot of keyboard shortcuts, multiple layouts/profiles, and more ?
@@ -228,7 +228,7 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# yum install qalculate-gtk&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You should read the official &lt;a class="reference external" href="http://qalculate.sourceforge.net/gtk-manual/"&gt;documentation&lt;/a&gt; for this GUI&lt;/p&gt;
-&lt;img alt="/images/qalculate.png" src="/images/qalculate.png" /&gt;
+&lt;img alt="" src="/images/qalculate.png" /&gt;
 &lt;p&gt;For your first use of qalc command :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan$ qalc&lt;/span&gt;
 &lt;span class="go"&gt;        You need the download exchange rates to be able to convert between different currencies.&lt;/span&gt;
@@ -295,7 +295,7 @@
 &lt;p&gt;To find function or unit name you can launch the GUI and made an insert, or if you don't have the GUI : just go in &lt;cite&gt;/usr/share/qalculate&lt;/cite&gt; and cat the xml files.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="tip"></category><category term="linux"></category><category term="calculate"></category><category term="qalculate"></category><category term="qalc"></category></entry><entry><title>Tip of the week 9</title><link href="http://natjohan.info/tip-of-the-week-9.html" rel="alternate"></link><updated>2013-02-18T19:39:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-18:tip-of-the-week-9.html</id><summary type="html">&lt;img alt="/images/chromium-logo.png" src="/images/chromium-logo.png" /&gt;
+</summary><category term="tip"></category><category term="linux"></category><category term="calculate"></category><category term="qalculate"></category><category term="qalc"></category></entry><entry><title>Tip of the week 9</title><link href="http://natjohan.info/tip-of-the-week-9.html" rel="alternate"></link><updated>2013-02-18T19:39:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-02-18:tip-of-the-week-9.html</id><summary type="html">&lt;img alt="" src="/images/chromium-logo.png" /&gt;
 &lt;div class="section" id="chromium"&gt;
 &lt;h2&gt;Chromium&lt;/h2&gt;
 &lt;p&gt;&lt;cite&gt;Chromium&lt;/cite&gt; is an open source browser from which Google Chrome is based. Actually Chromium seems to be very similar to Chrome but there is some important differences, in few words, Chromium = Chrome (with few &lt;a class="reference external" href="http://code.google.com/p/chromium/wiki/ChromiumBrowserVsGoogleChrome"&gt;changes&lt;/a&gt;) + open source (under BSD licence) + privacy (RLZ tracking is disabled in chromium, see &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Chromium_(web_browser)"&gt;wikipedia&lt;/a&gt;).&lt;/p&gt;
@@ -390,7 +390,7 @@ If you really want to take care of your privacy and use Chromium, i recommand yo
 &lt;p&gt;That's all, if there isn't errors, you just have to reboot your system !&lt;/p&gt;
 &lt;!-- Note : you should read more about FedUp on `Fedora wiki &lt;http://fedoraproject.org/wiki/FedUp#How_Can_I_Upgrade_My_System_with_FedUp.3F&gt;`_ before use it --&gt;
 &lt;/div&gt;
-</summary><category term="tip"></category><category term="linux"></category></entry><entry><title>Tip of the week 6</title><link href="http://natjohan.info/tip-of-the-week-6.html" rel="alternate"></link><updated>2013-01-28T13:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-28:tip-of-the-week-6.html</id><summary type="html">&lt;img alt="/images/lldpd-why.png" src="/images/lldpd-why.png" /&gt;
+</summary><category term="tip"></category><category term="linux"></category></entry><entry><title>Tip of the week 6</title><link href="http://natjohan.info/tip-of-the-week-6.html" rel="alternate"></link><updated>2013-01-28T13:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-28:tip-of-the-week-6.html</id><summary type="html">&lt;img alt="" src="/images/lldpd-why.png" /&gt;
 &lt;div class="section" id="know-your-network-neighbors-thanks-to-lldpd-daemon"&gt;
 &lt;h2&gt;Know your network neighbors thanks to lldpd daemon&lt;/h2&gt;
 &lt;p&gt;This week, i would like to present you lldpd. Actually, it's a useful daemon for GNU/Linux, BSD, Mac OS X developped by &lt;a class="reference external" href="http://vincent.bernat.im"&gt;Vincent Bernat&lt;/a&gt;. The picture above summarizes the situation very well ;-).&lt;/p&gt;
@@ -442,7 +442,7 @@ If you really want to take care of your privacy and use Chromium, i recommand yo
 &lt;h2&gt;Go Further&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Link_Layer_Discovery_Protocol"&gt;LLDP&lt;/a&gt; on wikipedia&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="tip"></category><category term="linux"></category><category term="lldpd"></category><category term="lldp"></category><category term="cdp"></category><category term="network"></category></entry><entry><title>Tip of the week 5</title><link href="http://natjohan.info/tip-of-the-week-5.html" rel="alternate"></link><updated>2013-01-22T14:26:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:tip-of-the-week-5.html</id><summary type="html">&lt;img alt="/images/Any.do-global.png" src="/images/Any.do-global.png" /&gt;
+</summary><category term="tip"></category><category term="linux"></category><category term="lldpd"></category><category term="lldp"></category><category term="cdp"></category><category term="network"></category></entry><entry><title>Tip of the week 5</title><link href="http://natjohan.info/tip-of-the-week-5.html" rel="alternate"></link><updated>2013-01-22T14:26:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:tip-of-the-week-5.html</id><summary type="html">&lt;img alt="" src="/images/Any.do-global.png" /&gt;
 &lt;div class="section" id="any-do"&gt;
 &lt;h2&gt;Any.Do&lt;/h2&gt;
 &lt;p&gt;A fancy, useful, cool app to manage your tasks and improve your productivity ;-). It's a very simple app coming with :&lt;/p&gt;
@@ -465,12 +465,12 @@ If you really want to take care of your privacy and use Chromium, i recommand yo
 &lt;div class="line"&gt;- and &lt;strong&gt;more&lt;/strong&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;So, check this out &lt;strong&gt;now on&lt;/strong&gt; &lt;a class="reference external" href="http://www.any.do/"&gt;Any.do&lt;/a&gt; !&lt;/p&gt;
-&lt;img alt="/images/Any.do-call.png" src="/images/Any.do-call.png" /&gt;
+&lt;img alt="" src="/images/Any.do-call.png" /&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="tip"></category><category term="app"></category><category term="android"></category><category term="tasks"></category><category term="tool"></category></entry><entry><title>Tip of the week 4</title><link href="http://natjohan.info/tip-of-the-week-4.html" rel="alternate"></link><updated>2013-01-14T19:26:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-14:tip-of-the-week-4.html</id><summary type="html">&lt;div class="section" id="simply-edit-your-gnome-3-menu-with-alacarte"&gt;
 &lt;h2&gt;Simply edit your Gnome 3 menu with Alacarte&lt;/h2&gt;
-&lt;img alt="/images/menu-alacarte.png" src="/images/menu-alacarte.png" /&gt;
+&lt;img alt="" src="/images/menu-alacarte.png" /&gt;
 &lt;p&gt;Unfortunately Gnome doesn't provide a simple and well documented way to add/modify a menu entry, however &lt;strong&gt;Alacarte&lt;/strong&gt; is a great tool for that.&lt;/p&gt;
 &lt;div class="section" id="installation"&gt;
 &lt;h3&gt;Installation&lt;/h3&gt;
@@ -482,7 +482,7 @@ If you really want to take care of your privacy and use Chromium, i recommand yo
 &lt;div class="section" id="usage"&gt;
 &lt;h3&gt;Usage&lt;/h3&gt;
 &lt;p&gt;Now you can add/modify/delete your menu entries with Alacarte (start it with Activities -&amp;gt; Applications or with Alt+f2 -&amp;gt; &lt;cite&gt;Alacarte&lt;/cite&gt;)&lt;/p&gt;
-&lt;img alt="/images/Alacarte-scan.png" src="/images/Alacarte-scan.png" /&gt;
+&lt;img alt="" src="/images/Alacarte-scan.png" /&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h4&gt;&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -581,7 +581,7 @@ One way to test test it, is to run this python command that run a simple smtp se
 &lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="tool"></category><category term="tip"></category><category term="ImageMagick"></category></entry><entry><title>Linux on Samsung np900x3c</title><link href="http://natjohan.info/linux-on-samsung-np900x3c.html" rel="alternate"></link><updated>2012-11-19T13:47:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2012-11-19:linux-on-samsung-np900x3c.html</id><summary type="html">&lt;p&gt;Few month ago I decided to buy a new laptop : the Samsung NP900X3C. It's a sleek, chic piece of hardware. Read more about that in this &lt;a class="reference external" href="http://www.theverge.com/2012/7/16/3160289/samsung-series-9-review-13-inch-mid-2012"&gt;review&lt;/a&gt; ou &lt;a class="reference external" href="http://www.engadget.com/2012/01/09/redesigned-samsung-series-9-laptop-announced/"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;img alt="/images/Samsung-NP900X3C.png" src="/images/Samsung-NP900X3C.png" /&gt;
+&lt;img alt="" src="/images/Samsung-NP900X3C.png" /&gt;
 &lt;p&gt;As a Linux user, i wanted to put Linux on it. I tried ArchLinux, but unfortunately, it was unstable and there were too many kernel panic. So, I installed Fedora 17 on this laptop, and most things works well out of the box (multitouch trackpad, wireless, sound, graphics, webcam ...).&lt;/p&gt;
 &lt;p&gt;I just want to post a little fix I found on RedHat BugZilla to make FN keys work for the keyboard backlight.&lt;/p&gt;
 &lt;ol class="arabic simple"&gt;
