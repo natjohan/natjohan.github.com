@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.python3.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-06T22:03:00+01:00</updated><entry><title>Tip of the week 28</title><link href="http://natjohan.info/tip-of-the-week-28.html" rel="alternate"></link><updated>2014-01-06T22:03:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-06:tip-of-the-week-28.html</id><summary type="html">&lt;div class="section" id="install-python3-2-pip-and-virualenv"&gt;
-&lt;h2&gt;Install python3.2, pip and virualenv&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.python3.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-06T22:03:00+01:00</updated><entry><title>Tip of the week 28</title><link href="http://natjohan.info/tip-of-the-week-28.html" rel="alternate"></link><updated>2014-01-06T22:03:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-06:tip-of-the-week-28.html</id><summary type="html">&lt;div class="section" id="install-python3-2-pip-and-virtualenv"&gt;
+&lt;h2&gt;Install python3.2, pip and virtualenv&lt;/h2&gt;
 &lt;p&gt;As Elementary is based on Ubuntu 12.04, here is the way to install python3 and pip on it :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo aptitude install python3
 &lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; wget http://python-distribute.org/distribute_setup.py
