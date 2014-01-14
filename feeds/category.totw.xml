@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/category.totw.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-06T22:03:00+01:00</updated><entry><title>Tip of the week 28</title><link href="http://natjohan.info/tip-of-the-week-28.html" rel="alternate"></link><updated>2014-01-06T22:03:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-06:tip-of-the-week-28.html</id><summary type="html">&lt;div class="section" id="install-python3-2-pip-and-virtualenv"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/category.totw.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-14T19:56:00+01:00</updated><entry><title>Tip of the week 29</title><link href="http://natjohan.info/tip-of-the-week-29.html" rel="alternate"></link><updated>2014-01-14T19:56:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-14:tip-of-the-week-29.html</id><summary type="html">&lt;div class="section" id="a-little-cisco-ios-embedded-event-manager-eem-script-example"&gt;
+&lt;h2&gt;A little Cisco IOS Embedded Event Manager (EEM) script example&lt;/h2&gt;
+&lt;p&gt;Here is a little script to retrieve and store the output of command periodically on your cisco router.
+It can be usefull when logs don't want to speak.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;conf t&lt;/span&gt;
+&lt;span class="go"&gt;!&lt;/span&gt;
+&lt;span class="go"&gt;event manager session cli username &amp;lt;myusername&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;event manager applet MyScriptLogs&lt;/span&gt;
+&lt;span class="go"&gt;event timer watchdog name MyScriptLogs time &amp;lt;mytimer&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;action 1 cli command “en&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;action 2 cli command “show clock | append bootflash:MyScriptLogs&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;action 3 cli command &amp;quot;show policy-map interface | append bootflash:MyScriptLogs&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;!&lt;/span&gt;
+&lt;span class="go"&gt;End&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Where &lt;cite&gt;&amp;lt;myusername&amp;gt;&lt;/cite&gt; is an user who has privileges to execute the following commands and &amp;lt;mytimer&amp;gt; is the time in seconds between each instance of the script.&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;strong&gt;Note&lt;/strong&gt; : you can add many commands to this script with 'action X cli command'.&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;p&gt;EEM on Cisco &lt;a class="reference external" href="http://www.cisco.com/en/US/products/ps6815/products_ios_protocol_group_home.html"&gt;website&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="cisco"></category><category term="script"></category><category term="eem"></category></entry><entry><title>Tip of the week 28</title><link href="http://natjohan.info/tip-of-the-week-28.html" rel="alternate"></link><updated>2014-01-06T22:03:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-06:tip-of-the-week-28.html</id><summary type="html">&lt;div class="section" id="install-python3-2-pip-and-virtualenv"&gt;
 &lt;h2&gt;Install python3.2, pip and virtualenv&lt;/h2&gt;
 &lt;p&gt;As Elementary is based on Ubuntu 12.04, here is the way to install python3 and pip on it :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo aptitude install python3
