@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.ubuntu.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-20T21:28:00+01:00</updated><entry><title>Tip of the week 30</title><link href="http://natjohan.info/tip-of-the-week-30.html" rel="alternate"></link><updated>2014-01-20T21:28:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-20:tip-of-the-week-30.html</id><summary type="html">&lt;img alt="" src="/images/Gnome-EncFS-tray.png" /&gt;
+&lt;div class="section" id="gnome-encfs-manager"&gt;
+&lt;h2&gt;Gnome EncFS Manager&lt;/h2&gt;
+&lt;p&gt;As I switched on &lt;a class="reference external" href="http://elementaryos.org/"&gt;ElementaryOs&lt;/a&gt; (which is a really great distrib) few months ago, I just discovered a new tool to mount my &lt;a class="reference external" href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html"&gt;EncFS&lt;/a&gt; folders. Actually CryptKeeper didn't work properly under Elementary (due to some &lt;a class="reference external" href="https://bugs.launchpad.net/elementaryos/+bug/1196312"&gt;bugs&lt;/a&gt; with the tray system). So, I find a tool called Gnome EncFS Manager, and it works great.
+Here is the way to install it under Elementary (or Ubuntu)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo add-apt-repository ppa:gencfsm &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get install gnome-encfs-manager
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then you can easily manage(mount/umount/create) your encrypted folders&lt;/p&gt;
+&lt;img alt="" src="/images/Gnome-EncFS-configure.png" /&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;strong&gt;Note :&lt;/strong&gt; you can install this tool under many other distro (Fedora, Debian, OpenSuse and Arch)&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;p&gt;The project &lt;a class="reference external" href="http://libertyzero.com/GEncfsM/"&gt;webpage&lt;/a&gt; (All screenshots credits to this webpage)&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="encfs"></category><category term="manager"></category><category term="gnome encfs"></category><category term="ubuntu"></category><category term="ElementaryOs"></category></entry></feed>
