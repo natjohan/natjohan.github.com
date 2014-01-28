@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/category.totw.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-20T21:28:00+01:00</updated><entry><title>Tip of the week 30</title><link href="http://natjohan.info/tip-of-the-week-30.html" rel="alternate"></link><updated>2014-01-20T21:28:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-20:tip-of-the-week-30.html</id><summary type="html">&lt;img alt="" src="/images/Gnome-EncFS-tray.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/category.totw.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-28T18:01:00+01:00</updated><entry><title>Tip of the week 31</title><link href="http://natjohan.info/tip-of-the-week-31.html" rel="alternate"></link><updated>2014-01-28T18:01:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-28:tip-of-the-week-31.html</id><summary type="html">&lt;img alt="" src="/images/Springseed_logo.png" /&gt;
+&lt;div class="section" id="springseed-simply-awesome-note-taking"&gt;
+&lt;h2&gt;Springseed : &lt;cite&gt;Simply awesome note taking&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;I just want to present you a simple note taking app called Springseed. This application
+allow you to take notes in &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Markdown"&gt;markdown&lt;/a&gt; format and you can synchronize your notes with Dropbox.&lt;/p&gt;
+&lt;p&gt;To install it under ElementaryOs or Ubuntu, simply goes to getspringseed.com_ and download
+the .deb&lt;/p&gt;
+&lt;p&gt;Enjoy this really clean and not disturbing app to focus on your decision notes ;-)&lt;/p&gt;
+&lt;img alt="" src="/images/Springseed_example.png" /&gt;
+&lt;/div&gt;
+</summary><category term="notes"></category><category term="springseed"></category><category term="ubuntu"></category><category term="ElementaryOs"></category><category term="app"></category></entry><entry><title>Tip of the week 30</title><link href="http://natjohan.info/tip-of-the-week-30.html" rel="alternate"></link><updated>2014-01-20T21:28:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-20:tip-of-the-week-30.html</id><summary type="html">&lt;img alt="" src="/images/Gnome-EncFS-tray.png" /&gt;
 &lt;div class="section" id="gnome-encfs-manager"&gt;
 &lt;h2&gt;Gnome EncFS Manager&lt;/h2&gt;
 &lt;p&gt;As I switched on &lt;a class="reference external" href="http://elementaryos.org/"&gt;ElementaryOs&lt;/a&gt; (which is a really great distrib) few months ago, I just discovered a new tool to mount my &lt;a class="reference external" href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html"&gt;EncFS&lt;/a&gt; folders. Actually CryptKeeper didn't work properly under Elementary (due to some &lt;a class="reference external" href="https://bugs.launchpad.net/elementaryos/+bug/1196312"&gt;bugs&lt;/a&gt; with the tray system). So, I found a tool called Gnome EncFS Manager, and it works great.
