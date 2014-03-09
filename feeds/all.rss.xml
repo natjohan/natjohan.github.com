@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all.rss.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-28T18:01:00+01:00</updated><entry><title>Tip of the week 31</title><link href="http://natjohan.info/tip-of-the-week-31.html" rel="alternate"></link><updated>2014-01-28T18:01:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-28:tip-of-the-week-31.html</id><summary type="html">&lt;img alt="" src="/images/Springseed_logo.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all.rss.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-03-09T17:40:00+01:00</updated><entry><title>Tip of the week 32</title><link href="http://natjohan.info/tip-of-the-week-32.html" rel="alternate"></link><updated>2014-03-09T17:40:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-03-09:tip-of-the-week-32.html</id><summary type="html">&lt;div class="section" id="add-and-manage-packages-under-sublime-text-with-package-control"&gt;
+&lt;h2&gt;Add and manage packages under sublime text with &lt;cite&gt;Package Control&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;cite&gt;Package Control&lt;/cite&gt; allows you to install many addons for your Sublime Text editor.
+To install it, simply goes &lt;a class="reference external" href="https://sublime.wbond.net/installation"&gt;here&lt;/a&gt; and follow the instructions.&lt;/p&gt;
+&lt;p&gt;Restart your editor and open the pallete with &lt;cite&gt;ctrl+shift+p&lt;/cite&gt; (Win, Linux)
+or &lt;cite&gt;cmd+shift+p&lt;/cite&gt; (OS X) and type &lt;cite&gt;package&lt;/cite&gt; to search and easily install packages.&lt;/p&gt;
+&lt;p&gt;You can browse and find package on &lt;cite&gt;Package Control&lt;/cite&gt; &lt;a class="reference external" href="https://sublime.wbond.net/browse"&gt;website&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="sublime text"></category><category term="package"></category></entry><entry><title>Tip of the week 31</title><link href="http://natjohan.info/tip-of-the-week-31.html" rel="alternate"></link><updated>2014-01-28T18:01:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-28:tip-of-the-week-31.html</id><summary type="html">&lt;img alt="" src="/images/Springseed_logo.png" /&gt;
 &lt;div class="section" id="springseed-simply-awesome-note-taking"&gt;
 &lt;h2&gt;Springseed : &lt;cite&gt;Simply awesome note taking&lt;/cite&gt;&lt;/h2&gt;
 &lt;p&gt;I just want to present you a simple note taking app called Springseed. This application
