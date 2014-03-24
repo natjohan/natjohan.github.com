@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.vpn.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-03-24T22:24:00+01:00</updated><entry><title>Tip of the week 33</title><link href="http://natjohan.info/tip-of-the-week-33.html" rel="alternate"></link><updated>2014-03-24T22:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-03-24:tip-of-the-week-33.html</id><summary type="html">&lt;div class="section" id="connect-to-cisco-anyconnect-vpn-under-linux-with-openconnect"&gt;
+&lt;h2&gt;Connect to Cisco Anyconnect VPN under Linux with &lt;cite&gt;OpenConnect&lt;/cite&gt;&lt;/h2&gt;
+&lt;p&gt;If you're on Linux and you want to connect to a Cisco VPN, Cisco provides
+an Anyconnect client for Linux, unfortunately it's not well integrated with
+your linux network manager.&lt;/p&gt;
+&lt;p&gt;&lt;cite&gt;Openconnect&lt;/cite&gt; is a great alternative to the Anyconnect client,  it's available in
+your distro repositories (just check &lt;a class="reference external" href="http://www.infradead.org/openconnect/packages.html"&gt;here&lt;/a&gt; to know the name of the package(s)) and it works
+like a charm&lt;/p&gt;
+&lt;p&gt;In order to install it under ElementaryOs/Ubuntu (that's quite similar for other distro,
+just chek the name of the package with the link above)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan~$ sudo aptitude install openconnect network-manager-openconnect&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I used &lt;cite&gt;aptitude&lt;/cite&gt; but it's the same with &lt;cite&gt;apt-get&lt;/cite&gt;, now you're able to perform an anyconnect
+connexion under your network manager&lt;/p&gt;
+&lt;img alt="" src="/images/openconnect_integration.png" /&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;img alt="" src="/images/openconnect_vpn.png" /&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;img alt="" src="/images/openconnect_config.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;official &lt;a class="reference external" href="http://www.infradead.org/openconnect/index.html"&gt;website&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Archlinux &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/OpenConnect"&gt;instructions&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;If you have to use a software token : &lt;a class="reference external" href="http://sourceforge.net/p/stoken/wiki/Home/"&gt;stocken&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Cisco"></category><category term="anyconnect"></category><category term="linux"></category><category term="ubuntu"></category><category term="elementaryos"></category><category term="Fedora"></category><category term="VPN"></category></entry></feed>
