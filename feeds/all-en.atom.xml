@@ -1,5 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all-en.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-03-24T22:24:00+01:00</updated><entry><title>Tip of the week 33</title><link href="http://natjohan.info/tip-of-the-week-33.html" rel="alternate"></link><updated>2014-03-24T22:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-03-24:tip-of-the-week-33.html</id><summary type="html">&lt;div class="section" id="connect-to-cisco-anyconnect-vpn-under-linux-with-openconnect"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all-en.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-04-21T16:31:00+02:00</updated><entry><title>JNC under ElementaryOs/Ubuntu</title><link href="http://natjohan.info/jnc-under-elementaryosubuntu.html" rel="alternate"></link><updated>2014-04-21T16:31:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-04-21:jnc-under-elementaryosubuntu.html</id><summary type="html">&lt;p&gt;Here is the way to simply install JNC (Juniper Network Connect which is the Juniper VPN client) under
+ElementaryOs or Ubuntu&lt;/p&gt;
+&lt;div class="section" id="installing-oracle-java-and-download-the-juniper-software"&gt;
+&lt;h2&gt;1/ Installing Oracle Java and download the Juniper software&lt;/h2&gt;
+&lt;p&gt;If you're under a &lt;strong&gt;32 bits&lt;/strong&gt; version (&lt;cite&gt;uname -a&lt;/cite&gt; =&amp;gt; i386)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo add-apt-repository ppa:webupd8team/java
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo apt-get update
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo apt-get install oracle-java7-set-default
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, goes on your Juniper VPN server through your favorite web browser (&lt;a class="reference external" href="https://vpn.mycompany.com"&gt;https://vpn.mycompany.com&lt;/a&gt;),
+just login and then click on the &lt;cite&gt;start&lt;/cite&gt; button next to the &lt;cite&gt;Network Connect&lt;/cite&gt; item&lt;/p&gt;
+&lt;img alt="" src="/images/JNC_start.png" /&gt;
+&lt;p&gt;&lt;strong&gt;/!\&lt;/strong&gt; Don't forget to accept execution of the Java applet in your web browser&lt;/p&gt;
+&lt;p&gt;Once you click on it a message will appear&lt;/p&gt;
+&lt;img alt="" src="/images/JNC_wait.png" /&gt;
+&lt;p&gt;Just wait few minutes, nothing happens but the JNC software should be downloaded under your home directory at
+&lt;cite&gt;~/.juniper_networks/network_connect&lt;/cite&gt;. If not, just go to &lt;a class="reference external" href="https://vpn.mycompany.com/dana-cached/nc/ncLinuxApp.jar"&gt;https://vpn.mycompany.com/dana-cached/nc/ncLinuxApp.jar&lt;/a&gt; in order to download the jar file&lt;/p&gt;
+&lt;p&gt;If you're under &lt;strong&gt;64 bits&lt;/strong&gt; or if you don't want to install java at all (you're right !), just go
+to &lt;a class="reference external" href="https://vpn.mycompany.com"&gt;https://vpn.mycompany.com&lt;/a&gt;, just login an go to &lt;a class="reference external" href="https://vpn.mycompany.com/dana-cached/nc/ncLinuxApp.jar"&gt;https://vpn.mycompany.com/dana-cached/nc/ncLinuxApp.jar&lt;/a&gt;
+and download it on your computer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="installing-jnc-wrapper"&gt;
+&lt;h2&gt;2/ Installing JNC wrapper&lt;/h2&gt;
+&lt;p&gt;We will install JNC which is a perl wrapper for the Juniper network connect client provides by
+Klara Mall.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo chown root:root ~/.juniper_networks/network_connect/ncsvc
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; .juniper_networks
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; unzip ~/.juniper_networks/ncLinuxApp.jar -d ~/.juniper_networks/network_connect/
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo chown root:root ~/.juniper_networks/network_connect/ncsvc
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo chmod 6711 ~/.juniper_networks/network_connect/ncsvc
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; chmod 744 ~/.juniper_networks/network_connect/ncdiag
+
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; /usr/local/bin
+&lt;span class="gp"&gt;natjohan:/usr/local/bin$&lt;/span&gt; sudo wget http://www.scc.kit.edu/scc/net/juniper-vpn/linux/jnc
+&lt;span class="gp"&gt;natjohan:/usr/local/bin$&lt;/span&gt; chmod a+x jnc
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo aptitude install openssl
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Create the config directory&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; mkdir -p ~/.juniper_networks/network_connect/config
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And now you can edit mycompanyvpn.conf under this directory with the following parameters&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;host&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;vpn.mycompany.com
+&lt;span class="nv"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;username
+&lt;span class="nv"&gt;realm&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;your_realm
+&lt;span class="nv"&gt;cafile&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/etc/ssl/mycompanycertificate.pem
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;realm&lt;/strong&gt; : if you don't know how to find your realm, just go to vpn.mycompany.com, take a look
+at the html source of this page and try to find a line like this&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;hidden&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;realm&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;REALMNAME&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you don't find it, just try without this parameter or ask your IT department about that.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;cafile&lt;/strong&gt; : just go to your vpn.mycompany.com page with you browser and click on the https logo,
+then go to something like &lt;cite&gt;Show your certificate&lt;/cite&gt;, then &lt;cite&gt;Details&lt;/cite&gt;, and you probably can &lt;cite&gt;export&lt;/cite&gt;
+(it depends on your web browser) it in the .pem format. Just save it under &lt;cite&gt;/etc/ssl/mycompanycertificate.pem&lt;/cite&gt;
+(for example).&lt;/p&gt;
+&lt;p&gt;I know that you can put a &lt;cite&gt;password&lt;/cite&gt; field in your config file, but you should not do that for
+obvious security reasons&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="launch-jnc"&gt;
+&lt;h2&gt;3/ Launch JNC&lt;/h2&gt;
+&lt;p&gt;Now you can launch JNC wrapper and use your company's VPN&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; jnc --nox mycompanyvpn
+&lt;span class="go"&gt;Password:&lt;/span&gt;
+&lt;span class="go"&gt;Connecting to XXXXX.com : 443.&lt;/span&gt;
+&lt;span class="go"&gt;Waiting for ncsvc for 3 seconds... done&lt;/span&gt;
+&lt;span class="go"&gt;ncsvc is running, but tunnel is not established yet. Waiting for 3 seconds... done.&lt;/span&gt;
+&lt;span class="go"&gt;ncsvc is running in background (PID: 744):&lt;/span&gt;
+&lt;span class="go"&gt;tunnel interface tun0, addr: X.X.X.X&lt;/span&gt;
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The &lt;strong&gt;--nox&lt;/strong&gt; option is to launch jnc without gui. To stop it&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; jnc stop
+&lt;span class="go"&gt;ncsvc is running, sending signal... terminated.&lt;/span&gt;
+&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go further&lt;/h2&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;JNC wrapper &lt;a class="reference external" href="http://www.scc.kit.edu/scc/net/juniper-vpn/linux/"&gt;webpage&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Troubleshoot &lt;a class="reference external" href="http://holyarmy.org/2009/06/vpn-on-ubuntu-linux-with-juniper-network-connect/"&gt;tips&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;JNC on &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Juniper_VPN"&gt;archlinux&lt;/a&gt;'s wiki&lt;/div&gt;
+&lt;div class="line"&gt;Another method with the MadScientist script &lt;a class="reference external" href="http://mad-scientist.us/juniper.html"&gt;msjnc&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Juniper"></category><category term="Network Connect"></category><category term="VPN"></category><category term="ElementaryOs"></category><category term="Ubuntu"></category></entry><entry><title>Tip of the week 33</title><link href="http://natjohan.info/tip-of-the-week-33.html" rel="alternate"></link><updated>2014-03-24T22:24:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-03-24:tip-of-the-week-33.html</id><summary type="html">&lt;div class="section" id="connect-to-cisco-anyconnect-vpn-under-linux-with-openconnect"&gt;
 &lt;h2&gt;Connect to Cisco Anyconnect VPN under Linux with &lt;cite&gt;OpenConnect&lt;/cite&gt;&lt;/h2&gt;
 &lt;p&gt;If you're on Linux and you want to connect to a Cisco VPN, Cisco provides
 an Anyconnect client for Linux, unfortunately it's not well integrated with

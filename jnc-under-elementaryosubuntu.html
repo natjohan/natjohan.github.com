@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://natjohan.info/theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="http://natjohan.info/theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://natjohan.info/theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+
+		<title> JNC under ElementaryOs/Ubuntu | Natjohan </title>
+		<meta charset="utf-8" />
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="http://natjohan.info"><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="http://natjohan.info" class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+						<li><a href="http://natjohan.info/category/dev.html">Dev</a></li>
+						<li class="active"><a href="http://natjohan.info/category/linux.html">Linux</a></li>
+						<li><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
+					<li><a href="/pages/about.html">About</a></li>
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+  
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				  <a href="http://natjohan.info/feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted lun. 21 avril 2014</h3>
+	</header>
+	<article>
+		<h1 id="title">
+			<a href="http://natjohan.info/jnc-under-elementaryosubuntu.html" rel="bookmark"
+				title="Permalink to JNC under ElementaryOs/Ubuntu">JNC under ElementaryOs/Ubuntu</a>
+		</h1>
+		<p>Here is the way to simply install JNC (Juniper Network Connect which is the Juniper VPN client) under
+ElementaryOs or Ubuntu</p>
+<div class="section" id="installing-oracle-java-and-download-the-juniper-software">
+<h2>1/ Installing Oracle Java and download the Juniper software</h2>
+<p>If you're under a <strong>32 bits</strong> version (<cite>uname -a</cite> =&gt; i386)</p>
+<div class="highlight"><pre><span class="gp">natjohan:~$</span> sudo add-apt-repository ppa:webupd8team/java
+<span class="gp">natjohan:~$</span> sudo apt-get update
+<span class="gp">natjohan:~$</span> sudo apt-get install oracle-java7-set-default
+</pre></div>
+<p>Now, goes on your Juniper VPN server through your favorite web browser (<a class="reference external" href="https://vpn.mycompany.com">https://vpn.mycompany.com</a>),
+just login and then click on the <cite>start</cite> button next to the <cite>Network Connect</cite> item</p>
+<img alt="" src="/images/JNC_start.png" />
+<p><strong>/!\</strong> Don't forget to accept execution of the Java applet in your web browser</p>
+<p>Once you click on it a message will appear</p>
+<img alt="" src="/images/JNC_wait.png" />
+<p>Just wait few minutes, nothing happens but the JNC software should be downloaded under your home directory at
+<cite>~/.juniper_networks/network_connect</cite>. If not, just go to <a class="reference external" href="https://vpn.mycompany.com/dana-cached/nc/ncLinuxApp.jar">https://vpn.mycompany.com/dana-cached/nc/ncLinuxApp.jar</a> in order to download the jar file</p>
+<p>If you're under <strong>64 bits</strong> or if you don't want to install java at all (you're right !), just go
+to <a class="reference external" href="https://vpn.mycompany.com">https://vpn.mycompany.com</a>, just login an go to <a class="reference external" href="https://vpn.mycompany.com/dana-cached/nc/ncLinuxApp.jar">https://vpn.mycompany.com/dana-cached/nc/ncLinuxApp.jar</a>
+and download it on your computer.</p>
+</div>
+<div class="section" id="installing-jnc-wrapper">
+<h2>2/ Installing JNC wrapper</h2>
+<p>We will install JNC which is a perl wrapper for the Juniper network connect client provides by
+Klara Mall.</p>
+<div class="highlight"><pre><span class="gp">natjohan:~$</span> sudo chown root:root ~/.juniper_networks/network_connect/ncsvc
+<span class="gp">natjohan:~$</span> <span class="nb">cd</span> .juniper_networks
+<span class="gp">natjohan:~$</span> unzip ~/.juniper_networks/ncLinuxApp.jar -d ~/.juniper_networks/network_connect/
+<span class="gp">natjohan:~$</span> sudo chown root:root ~/.juniper_networks/network_connect/ncsvc
+<span class="gp">natjohan:~$</span> sudo chmod 6711 ~/.juniper_networks/network_connect/ncsvc
+<span class="gp">natjohan:~$</span> chmod 744 ~/.juniper_networks/network_connect/ncdiag
+
+<span class="gp">natjohan:~$</span> <span class="nb">cd</span> /usr/local/bin
+<span class="gp">natjohan:/usr/local/bin$</span> sudo wget http://www.scc.kit.edu/scc/net/juniper-vpn/linux/jnc
+<span class="gp">natjohan:/usr/local/bin$</span> chmod a+x jnc
+<span class="gp">natjohan:~$</span> sudo aptitude install openssl
+</pre></div>
+<p>Create the config directory</p>
+<div class="highlight"><pre><span class="gp">natjohan:~$</span> mkdir -p ~/.juniper_networks/network_connect/config
+</pre></div>
+<p>And now you can edit mycompanyvpn.conf under this directory with the following parameters</p>
+<div class="highlight"><pre><span class="nv">host</span><span class="o">=</span>vpn.mycompany.com
+<span class="nv">user</span><span class="o">=</span>username
+<span class="nv">realm</span><span class="o">=</span>your_realm
+<span class="nv">cafile</span><span class="o">=</span>/etc/ssl/mycompanycertificate.pem
+</pre></div>
+<p><strong>realm</strong> : if you don't know how to find your realm, just go to vpn.mycompany.com, take a look
+at the html source of this page and try to find a line like this</p>
+<div class="highlight"><pre><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name=</span><span class="s">&quot;realm&quot;</span> <span class="na">value=</span><span class="s">&quot;REALMNAME&quot;</span><span class="nt">&gt;</span>
+</pre></div>
+<p>If you don't find it, just try without this parameter or ask your IT department about that.</p>
+<p><strong>cafile</strong> : just go to your vpn.mycompany.com page with you browser and click on the https logo,
+then go to something like <cite>Show your certificate</cite>, then <cite>Details</cite>, and you probably can <cite>export</cite>
+(it depends on your web browser) it in the .pem format. Just save it under <cite>/etc/ssl/mycompanycertificate.pem</cite>
+(for example).</p>
+<p>I know that you can put a <cite>password</cite> field in your config file, but you should not do that for
+obvious security reasons</p>
+</div>
+<div class="section" id="launch-jnc">
+<h2>3/ Launch JNC</h2>
+<p>Now you can launch JNC wrapper and use your company's VPN</p>
+<div class="highlight"><pre><span class="gp">natjohan:~$</span> jnc --nox mycompanyvpn
+<span class="go">Password:</span>
+<span class="go">Connecting to XXXXX.com : 443.</span>
+<span class="go">Waiting for ncsvc for 3 seconds... done</span>
+<span class="go">ncsvc is running, but tunnel is not established yet. Waiting for 3 seconds... done.</span>
+<span class="go">ncsvc is running in background (PID: 744):</span>
+<span class="go">tunnel interface tun0, addr: X.X.X.X</span>
+<span class="gp">natjohan:~$</span>
+</pre></div>
+<p>The <strong>--nox</strong> option is to launch jnc without gui. To stop it</p>
+<div class="highlight"><pre><span class="gp">natjohan:~$</span> jnc stop
+<span class="go">ncsvc is running, sending signal... terminated.</span>
+<span class="gp">natjohan:~$</span>
+</pre></div>
+</div>
+<div class="section" id="go-further">
+<h2>Go further</h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">JNC wrapper <a class="reference external" href="http://www.scc.kit.edu/scc/net/juniper-vpn/linux/">webpage</a></div>
+<div class="line">Troubleshoot <a class="reference external" href="http://holyarmy.org/2009/06/vpn-on-ubuntu-linux-with-juniper-network-connect/">tips</a></div>
+<div class="line">JNC on <a class="reference external" href="https://wiki.archlinux.org/index.php/Juniper_VPN">archlinux</a>'s wiki</div>
+<div class="line">Another method with the MadScientist script <a class="reference external" href="http://mad-scientist.us/juniper.html">msjnc</a></div>
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+		<div id="article_meta">
+				Category:
+					<a href="http://natjohan.info/category/linux.html">Linux</a>
+				<br />Tags:
+					<a href="http://natjohan.info/tag/juniper.html">Juniper</a>
+					<a href="http://natjohan.info/tag/network-connect.html">Network Connect</a>
+					<a href="http://natjohan.info/tag/vpn.html">VPN</a>
+					<a href="http://natjohan.info/tag/elementaryos.html">ElementaryOs</a>
+					<a href="http://natjohan.info/tag/ubuntu.html">Ubuntu</a>
+		</div>
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+
+	</article>
+
+	<footer>
+		<a href="http://natjohan.info/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "jnc-under-elementaryosubuntu.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+
+	</section>
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+</body>
+</html>
