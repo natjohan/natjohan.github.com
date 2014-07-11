@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all-en.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-04-21T17:45:00+02:00</updated><entry><title>Tip of the week 34</title><link href="http://natjohan.info/tip-of-the-week-34.html" rel="alternate"></link><updated>2014-04-21T17:45:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-04-21:tip-of-the-week-34.html</id><summary type="html">&lt;p&gt;In a previous &lt;cite&gt;ToTW&lt;/cite&gt;, I &lt;a class="reference external" href="http://natjohan.info/tip-of-the-week-32.html"&gt;showed&lt;/a&gt; you how to manage and install package under Sublime Text. Here is a useful markdown
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all-en.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-06-11T20:38:00+02:00</updated><entry><title>Tip of the week 35</title><link href="http://natjohan.info/tip-of-the-week-35.html" rel="alternate"></link><updated>2014-06-11T20:38:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-06-11:tip-of-the-week-35.html</id><summary type="html">&lt;img alt="" src="/images/graylog.png" /&gt;
+&lt;div class="section" id="simply-install-graylog-under-ubuntu-server"&gt;
+&lt;h2&gt;Simply install Graylog under Ubuntu Server&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://graylog2.org/"&gt;Graylog&lt;/a&gt; is an open source log management and data analytics. It's a 'Splunk' like but for free and open source, useful for collecting your syslog messages for example.&lt;/p&gt;
+&lt;p&gt;Here is a little script provided by &lt;cite&gt;mrlesmithjr&lt;/cite&gt; on github to simply install Graylog on your server (and it works great) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo apt-get -y install git
+&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; ~
+&lt;span class="gp"&gt;$&lt;/span&gt; git clone https://github.com/mrlesmithjr/graylog2/
+&lt;span class="gp"&gt;$&lt;/span&gt; chmod +x ./graylog2/install_graylog2_20_ubuntu.sh
+&lt;span class="gp"&gt;$&lt;/span&gt; sudo ./graylog2/install_graylog2_20_ubuntu.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To read more about this script : &lt;a class="reference external" href="https://github.com/mrlesmithjr/graylog2"&gt;https://github.com/mrlesmithjr/graylog2&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="syslog"></category><category term="graylog"></category><category term="ubuntu"></category></entry><entry><title>Tip of the week 34</title><link href="http://natjohan.info/tip-of-the-week-34.html" rel="alternate"></link><updated>2014-04-21T17:45:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-04-21:tip-of-the-week-34.html</id><summary type="html">&lt;p&gt;In a previous &lt;cite&gt;ToTW&lt;/cite&gt;, I &lt;a class="reference external" href="http://natjohan.info/tip-of-the-week-32.html"&gt;showed&lt;/a&gt; you how to manage and install package under Sublime Text. Here is a useful markdown
 plugin that I use to edit my markdown files : &lt;a class="reference external" href="https://github.com/SublimeText-Markdown/MarkdownEditing"&gt;https://github.com/SublimeText-Markdown/MarkdownEditing&lt;/a&gt; .&lt;/p&gt;
 &lt;!--  --&gt;
 &lt;blockquote&gt;
