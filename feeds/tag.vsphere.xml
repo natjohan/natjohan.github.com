@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.vsphere.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-08-10T14:42:00+02:00</updated><entry><title>Tip of the week 36</title><link href="http://natjohan.info/tip-of-the-week-36.html" rel="alternate"></link><updated>2014-08-10T14:42:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-08-10:tip-of-the-week-36.html</id><summary type="html">&lt;img alt="" src="/images/VMware_logo.png" /&gt;
+&lt;div class="section" id="use-the-vmware-vsphere-web-under-elementaryos-ubuntu-with-chromium"&gt;
+&lt;h2&gt;Use the VMware Vsphere web under elementaryos/ubuntu with chromium&lt;/h2&gt;
+&lt;p&gt;If you recently try to use the latest Vsphere web client under Linux, and you certainly saw
+that this web client require at least the flash player version 11.5...&lt;/p&gt;
+&lt;p&gt;As Adobe stopped their Flash Player developpement under Linux :&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;strong&gt;NOTE:&lt;/strong&gt; Adobe Flash Player 11.2 will be the last version to target Linux as a supported platform. Adobe will continue to provide security backports to Flash Player 11.2 for Linux.&lt;/blockquote&gt;
+&lt;p&gt;Fortunatly Google provides an API called Pepper Flash Player and allow to use newer version of Flash Player,
+to install it with your &lt;a class="reference external" href="http://natjohan.info/tip-of-the-week-9.html"&gt;chromium&lt;/a&gt; installation, you just have to add a ppa and install the following packet :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo add-apt-repository ppa:skunk/pepper-flash
+&lt;span class="gp"&gt;$&lt;/span&gt; sudo aptitude update
+&lt;span class="gp"&gt;$&lt;/span&gt; sudo aptitude install pepflashplugin-installer
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then just edit &lt;cite&gt;/etc/chromium-browser/default&lt;/cite&gt; :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo vi /etc/chromium-browser/default
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And add the following line at the end of the file&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;. /usr/lib/pepflashplugin-installer/pepflashplayer.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And that's all, just restart chromium and visit &lt;cite&gt;chrome://plugins&lt;/cite&gt; in order to check your Flash plugin version
+(which should be higher than 11.5) and now you can use the Vmware Vsphere web client on your Linux install !
+(&lt;a class="reference external" href="https://vSphere_Web_Client_host_name_or_IP:9443"&gt;https://vSphere_Web_Client_host_name_or_IP:9443&lt;/a&gt;)&lt;/p&gt;
+&lt;img alt="" src="/images/chromium-pepper.png" /&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="ubuntu"></category><category term="elementaryos"></category><category term="vmware"></category><category term="vsphere"></category><category term="chromium"></category></entry></feed>
