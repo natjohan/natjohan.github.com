@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all-en.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-08-10T14:42:00+02:00</updated><entry><title>Tip of the week 36</title><link href="http://natjohan.info/tip-of-the-week-36.html" rel="alternate"></link><updated>2014-08-10T14:42:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-08-10:tip-of-the-week-36.html</id><summary type="html">&lt;img alt="" src="/images/VMware_logo.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/all-en.atom.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-08-24T22:40:00+02:00</updated><entry><title>Tip of the week 37</title><link href="http://natjohan.info/tip-of-the-week-37.html" rel="alternate"></link><updated>2014-08-24T22:40:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-08-24:tip-of-the-week-37.html</id><summary type="html">&lt;img alt="" src="/images/Wireshark.png" /&gt;
+&lt;div class="section" id="running-wireshark-as-a-non-root"&gt;
+&lt;h2&gt;Running Wireshark as a non root&lt;/h2&gt;
+&lt;p&gt;There is two different ways :&lt;/p&gt;
+&lt;p&gt;1/ On Debian based distributions :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~ sudo dpkg-reconfigure wireshark-common&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then, just select yes and add your user to the wireshark group :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~ sudo adduser MYUSER wireshark&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;2/ On other distros (you can do it on debian distibutions too) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~ sudo chgrp adm /usr/bin/dumpcap&lt;/span&gt;
+&lt;span class="go"&gt;~ sudo chmod 750 /usr/bin/dumpcap&lt;/span&gt;
+&lt;span class="go"&gt;~ sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And you have to add your user in the adm group :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~ sudo adduser MYUSER adm&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;strong&gt;Note :&lt;/strong&gt; Please be sure of what you're doing, this process may add some &lt;strong&gt;security risks&lt;/strong&gt; to your system&lt;/blockquote&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="networking"></category><category term="tools"></category><category term="wireshark"></category><category term="ubuntu"></category><category term="elementaryos"></category><category term="fedora"></category></entry><entry><title>Tip of the week 36</title><link href="http://natjohan.info/tip-of-the-week-36.html" rel="alternate"></link><updated>2014-08-10T14:42:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-08-10:tip-of-the-week-36.html</id><summary type="html">&lt;img alt="" src="/images/VMware_logo.png" /&gt;
 &lt;div class="section" id="use-the-vmware-vsphere-web-under-elementaryos-ubuntu-with-chromium"&gt;
 &lt;h2&gt;Use the VMware Vsphere web under elementaryos/ubuntu with chromium&lt;/h2&gt;
 &lt;p&gt;If you recently try to use the latest Vsphere web client under Linux, and you certainly saw

@@ -10,7 +10,7 @@
 
 	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
 
-		<title>Natjohan</title>
+		<title>Natjohan - wireshark</title>
 		<meta charset="utf-8" />
 </head>
 <body>
@@ -25,7 +25,7 @@
 			<ul>
 						<li><a href="http://natjohan.info/category/dev.html">Dev</a></li>
 						<li><a href="http://natjohan.info/category/linux.html">Linux</a></li>
-						<li class="active"><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
+						<li><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
 					<li><a href="/pages/about.html">About</a></li>
 			</ul>
 		</div>
@@ -72,55 +72,26 @@
 		<ol>
 				<li>
 					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-22.html" rel="bookmark" title="Permalink to Tip of the week 22">Tip of the week 22</a>
+						<a href="http://natjohan.info/tip-of-the-week-37.html" rel="bookmark" title="Permalink to Tip of the week 37">Tip of the week 37</a>
 					</h1>
-					<abbr class="published" title="2013-07-15T14:39:00">lun. 15 juillet 2013</abbr>
-				<div class="entry-content"> <img alt="" src="/images/battery.png" />
-<div class="section" id="power-management-and-optimizations-with-powertop">
-<h2>Power management and optimizations with powertop</h2>
-<p>Powertop is a little utilitie that allow you to reduce your computer power consumption. This is an interesting soft for laptop owner, to install it, simply use you favorite package manager</p>
-<div class="highlight"><pre><span class="go">natjohan# yum install powertop</span>
+					<abbr class="published" title="2014-08-24T22:40:00">dim. 24 août 2014</abbr>
+				<div class="entry-content"> <img alt="" src="/images/Wireshark.png" />
+<div class="section" id="running-wireshark-as-a-non-root">
+<h2>Running Wireshark as a non root</h2>
+<p>There is two different ways :</p>
+<p>1/ On Debian based distributions :</p>
+<div class="highlight"><pre><span class="go">~ sudo dpkg-reconfigure wireshark-common</span>
 </pre></div>
-<p>Now, just launch <cite>powertop</cite> command with root privileges, the ...</p></div> </div>
-				</li>
-				<li>
-					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-21.html" rel="bookmark" title="Permalink to Tip of the week 21">Tip of the week 21</a>
-					</h1>
-					<abbr class="published" title="2013-07-14T21:20:00">dim. 14 juillet 2013</abbr>
-				<div class="entry-content"> <div class="section" id="easily-tweak-your-fedora-installation-with-fedora-utils">
-<h2>Easily tweak your Fedora installation with Fedora Utils</h2>
-<dl class="docutils">
-<dt>Fedora Utils brings you many tweaks for your Fedora install like :</dt>
-<dd><ul class="first last simple">
-<li>codecs</li>
-<li>additional softwares (chrome, flash, steam, skype, etc)</li>
-<li>optimizations (ssd, clean cache, etc)</li>
-<li>simply manage your repos</li>
-<li>update your grub config</li>
-<li>and more</li>
-</ul>
-</dd>
-</dl>
-<div class="section" id="installation">
-<h3>Installation</h3>
-<p>According to the <a class="reference external" href="http://satya164.github.io/fedorautils/">official page</a>, just launch ...</p></div></div> </div>
-				</li>
-				<li>
-					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-20.html" rel="bookmark" title="Permalink to Tip of the week 20">Tip of the week 20</a>
-					</h1>
-					<abbr class="published" title="2013-06-16T23:27:00">dim. 16 juin 2013</abbr>
-				<div class="entry-content"> <div class="section" id="problem-with-x11-forwarding-on-debian-squeeze">
-<h2>Problem with X11 forwarding on Debian Squeeze</h2>
-<p>Few weeks ago I experienced problems with my X11 forwarding on Debian Squeeze, after googling and tried to solve my problem, I found an issue <a class="reference external" href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=422327">here</a>. Actually, disabling ipv6 makes X11 over ssh crashes. So if you want to make X11 forwarding works ...</p></div> </div>
+<p>Then, just select yes and add your user to the wireshark group :</p>
+<div class="highlight"><pre><span class="go">~ sudo adduser MYUSER wireshark</span>
+</pre></div>
+<p>2/ On other distros (you can do it on debian distibutions too) :</p>
+<div class="highlight"><pre><span class="go">~ sudo chgrp adm ...</span></pre></div></div> </div>
 				</li>
 		</ol>
 	</dl>
 
 <p class="paginator">
-			<a href="http://natjohan.info/category/totw5.html" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;newer</a>
-		<a href="http://natjohan.info/category/totw7.html" class="button_accent" style="position: absolute; right: 0;">continue&nbsp;&nbsp;&nbsp;&rarr;</a>
 </p>
 	</section>
 

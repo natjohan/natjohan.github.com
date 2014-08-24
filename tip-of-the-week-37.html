@@ -10,7 +10,7 @@
 
 	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
 
-		<title>Natjohan - Linux</title>
+		<title> Tip of the week 37 | Natjohan </title>
 		<meta charset="utf-8" />
 </head>
 <body>
@@ -25,7 +25,7 @@
 			<ul>
 						<li><a href="http://natjohan.info/category/dev.html">Dev</a></li>
 						<li><a href="http://natjohan.info/category/linux.html">Linux</a></li>
-						<li><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
+						<li class="active"><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
 					<li><a href="/pages/about.html">About</a></li>
 			</ul>
 		</div>
@@ -55,27 +55,15 @@
 
 	<section id="posts">
 	<header>
-		<h1>Natjohan's blog</h1>
-		<h3>
-			<script type="text/javascript">
-				var currentDate = new Date();
-				var day = currentDate.getDate();
-				var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-				var month = monthNames[currentDate.getMonth()].toUpperCase();
-				var year = currentDate.getFullYear();
-				document.write(month + " " + day + ", " + year);
-			</script>
-		</h3>
+		<h1>natjohan's blog</h1>
+		<h3>Posted dim. 24 août 2014</h3>
 	</header>
-
-	<dl>
-		<ol>
-				<li>
-					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-37.html" rel="bookmark" title="Permalink to Tip of the week 37">Tip of the week 37</a>
-					</h1>
-					<abbr class="published" title="2014-08-24T22:40:00">dim. 24 août 2014</abbr>
-				<div class="entry-content"> <img alt="" src="/images/Wireshark.png" />
+	<article>
+		<h1 id="title">
+			<a href="http://natjohan.info/tip-of-the-week-37.html" rel="bookmark"
+				title="Permalink to Tip of the week 37">Tip of the week 37</a>
+		</h1>
+		<img alt="" src="/images/Wireshark.png" />
 <div class="section" id="running-wireshark-as-a-non-root">
 <h2>Running Wireshark as a non root</h2>
 <p>There is two different ways :</p>
@@ -86,41 +74,62 @@
 <div class="highlight"><pre><span class="go">~ sudo adduser MYUSER wireshark</span>
 </pre></div>
 <p>2/ On other distros (you can do it on debian distibutions too) :</p>
-<div class="highlight"><pre><span class="go">~ sudo chgrp adm ...</span></pre></div></div> </div>
-				</li>
-				<li>
-					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-36.html" rel="bookmark" title="Permalink to Tip of the week 36">Tip of the week 36</a>
-					</h1>
-					<abbr class="published" title="2014-08-10T14:42:00">dim. 10 août 2014</abbr>
-				<div class="entry-content"> <img alt="" src="/images/VMware_logo.png" />
-<div class="section" id="use-the-vmware-vsphere-web-under-elementaryos-ubuntu-with-chromium">
-<h2>Use the VMware Vsphere web under elementaryos/ubuntu with chromium</h2>
-<p>If you recently try to use the latest Vsphere web client under Linux, and you certainly saw
-that this web client require at least the flash player version 11.5...</p>
-<p>As Adobe stopped their Flash Player developpement under Linux :</p>
+<div class="highlight"><pre><span class="go">~ sudo chgrp adm /usr/bin/dumpcap</span>
+<span class="go">~ sudo chmod 750 /usr/bin/dumpcap</span>
+<span class="go">~ sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap</span>
+</pre></div>
+<p>And you have to add your user in the adm group :</p>
+<div class="highlight"><pre><span class="go">~ sudo adduser MYUSER adm</span>
+</pre></div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
 <!--  -->
 <blockquote>
-<strong>NOTE ...</strong></blockquote></!--></div> </div>
-				</li>
-				<li>
-					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-33.html" rel="bookmark" title="Permalink to Tip of the week 33">Tip of the week 33</a>
-					</h1>
-					<abbr class="published" title="2014-03-24T22:24:00">lun. 24 mars 2014</abbr>
-				<div class="entry-content"> <div class="section" id="connect-to-cisco-anyconnect-vpn-under-linux-with-openconnect">
-<h2>Connect to Cisco Anyconnect VPN under Linux with <cite>OpenConnect</cite></h2>
-<p>If you're on Linux and you want to connect to a Cisco VPN, Cisco provides
-an Anyconnect client for Linux, unfortunately it's not well integrated with
-your linux network manager.</p>
-<p><cite>Openconnect</cite> is a great alternative to the Anyconnect client ...</p></div> </div>
-				</li>
-		</ol>
-	</dl>
+<strong>Note :</strong> Please be sure of what you're doing, this process may add some <strong>security risks</strong> to your system</blockquote>
+</div>
 
-<p class="paginator">
-		<a href="http://natjohan.info/tag/linux2.html" class="button_accent" style="position: absolute; right: 0;">continue&nbsp;&nbsp;&nbsp;&rarr;</a>
-</p>
+
+		<div id="article_meta">
+				Category:
+					<a href="http://natjohan.info/category/totw.html">ToTW</a>
+				<br />Tags:
+					<a href="http://natjohan.info/tag/linux.html">linux</a>
+					<a href="http://natjohan.info/tag/networking.html">networking</a>
+					<a href="http://natjohan.info/tag/tools.html">tools</a>
+					<a href="http://natjohan.info/tag/wireshark.html">wireshark</a>
+					<a href="http://natjohan.info/tag/ubuntu.html">ubuntu</a>
+					<a href="http://natjohan.info/tag/elementaryos.html">elementaryos</a>
+					<a href="http://natjohan.info/tag/fedora.html">fedora</a>
+		</div>
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+
+	</article>
+
+	<footer>
+		<a href="http://natjohan.info/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-37.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+
 	</section>
 
 <script type="text/javascript">
