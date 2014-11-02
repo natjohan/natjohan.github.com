@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://natjohan.info/theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="http://natjohan.info/theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://natjohan.info/theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+
+		<title> Tip of the week 38 | Natjohan </title>
+		<meta charset="utf-8" />
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="http://natjohan.info"><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="http://natjohan.info" class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+						<li><a href="http://natjohan.info/category/dev.html">Dev</a></li>
+						<li><a href="http://natjohan.info/category/linux.html">Linux</a></li>
+						<li class="active"><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
+					<li><a href="/pages/about.html">About</a></li>
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+  
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				  <a href="http://natjohan.info/feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted dim. 02 novembre 2014</h3>
+	</header>
+	<article>
+		<h1 id="title">
+			<a href="http://natjohan.info/tip-of-the-week-38.html" rel="bookmark"
+				title="Permalink to Tip of the week 38">Tip of the week 38</a>
+		</h1>
+		<img alt="" src="/images/cyanogenmod.png" />
+<div class="section" id="install-cyanogenmod-11-on-your-samsung-galaxy-s3-i9300-from-elementaryos-ubuntu">
+<h2>Install CyanogenMod 11 on your Samsung Galaxy S3 (i9300) from ElementaryOs/Ubuntu</h2>
+<p>This process is well tested on Ubuntu 12.04 (ElementaryOs), but it's the same approach in other distros</p>
+<div class="section" id="download-cyanogenmod-image-for-your-phone">
+<h3>Download CyanogenMod image for your phone</h3>
+<p>Just go <a class="reference external" href="http://download.cyanogenmod.org/?device=i9300">here</a> and select your image to download. For the Samung Galaxy S3, I suggest to chose the latest snapshot which is more stable than the nightly builds.</p>
+</div>
+<div class="section" id="install-heimdall">
+<h3>Install Heimdall</h3>
+<p><em>Heimdall_ is a cross-platform open-source tool suite used to flash firmware (aka ROMs) onto Samsung mobile devices.</em></p>
+<p>Installing Heimdall (no need the frontend part) :</p>
+<div class="highlight"><pre><span class="gp">$</span> sudo apt-get install libusb-1.0-0-dev
+</pre></div>
+<p>Download <cite>ubuntu12.10-heimdall_1.4.0-0_amd64.deb</cite> from <a class="reference external" href="https://bitbucket.org/benjamin_dobell/heimdall/downloads">https://bitbucket.org/benjamin_dobell/heimdall/downloads</a>
+and install it with <cite>dpkg</cite> (install with sudo <cite>aptitude install dpkg</cite> if needed)</p>
+<div class="highlight"><pre><span class="gp">$</span> sudo dpkg -i ubuntu12.10-heimdall_1.4.0-0_amd64.deb
+</pre></div>
+</div>
+<div class="section" id="let-s-go">
+<h3>Let's go !</h3>
+<p>Just boot your Galaxy S3 i9300 in download mode :</p>
+<div class="line-block">
+<div class="line">- Power off your Galaxy</div>
+<div class="line">- Boot the Galaxy S3 into download mode. <strong>Hold Home, Volume Down &amp; Power</strong>. Accept the disclaimer on the device.</div>
+<div class="line">- Insert the USB cable into the device.</div>
+</div>
+<p>Download ClockWorkMod Recovery from <a class="reference external" href="http://clockworkmod.com/rommanager">http://clockworkmod.com/rommanager</a> (which is a ROM manager and installer)</p>
+<p>Link for Galaxy S3 : <a class="reference external" href="http://download2.clockworkmod.com/recoveries/recovery-clockwork-6.0.4.6-i9300.img">http://download2.clockworkmod.com/recoveries/recovery-clockwork-6.0.4.6-i9300.img</a></p>
+<p>As CyanogenMod came without Google Apps, if you need them, just download it from <a class="reference external" href="http://wiki.cyanogenmod.org/w/Google_Apps">http://wiki.cyanogenmod.org/w/Google_Apps</a></p>
+<p>Now launch Heimdall in command line (replace <em>recovery-clockwork-6.0.4.6-i9300.img</em> with the image that you just downloaded) :</p>
+<!--  -->
+<blockquote>
+<strong>Note</strong> that sometimes Heimdall command line output some errors like :
+<em>libusb:error [op_open] open failed, code -1 errno 5</em>
+<em>ERROR: Failed to access device. libusb error: -1</em>
+Just unplug/plug your phone and retry, it should be okay after several attempts</blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight"><pre><span class="gp">$</span> sudo heimdall flash --RECOVERY recovery-clockwork-6.0.4.6-i9300.img
+<span class="go">Heimdall v1.4.0</span>
+
+<span class="go">Copyright (c) 2010-2013, Benjamin Dobell, Glass Echidna</span>
+<span class="go">http://www.glassechidna.com.au/</span>
+
+<span class="go">This software is provided free of charge. Copying and redistribution is</span>
+<span class="go">encouraged.</span>
+
+<span class="go">If you appreciate this software and you would like to support future</span>
+<span class="go">development please consider donating:</span>
+<span class="go">http://www.glassechidna.com.au/donate/</span>
+
+<span class="go">Initialising connection...</span>
+<span class="go">Detecting device...</span>
+<span class="go">Claiming interface...</span>
+<span class="go">Attempt failed. Detaching driver...</span>
+<span class="go">Claiming interface again...</span>
+<span class="go">Setting up interface...</span>
+
+<span class="go">Initialising protocol...</span>
+<span class="go">Protocol initialisation successful.</span>
+
+<span class="go">Beginning session...</span>
+
+<span class="go">Some devices may take up to 2 minutes to respond.</span>
+<span class="go">Please be patient!</span>
+
+<span class="go">Session begun.</span>
+
+<span class="go">Downloading device&#39;s PIT file...</span>
+<span class="go">PIT file download successful.</span>
+
+<span class="go">Uploading RECOVERY</span>
+<span class="go">100%</span>
+<span class="go">RECOVERY upload successful</span>
+
+<span class="go">Ending session...</span>
+<span class="go">Rebooting device...</span>
+<span class="go">Releasing device interface...</span>
+<span class="go">Re-attaching kernel driver..</span>
+</pre></div>
+<dl class="docutils">
+<dt>You phone should reboot, Be sure to reboot into recovery <strong>immediately</strong> after having installed the custom recovery (remove your battery for example). Otherwise the custom recovery will be overwritten and the device will reboot (appearing as though your custom recovery failed to install)</dt>
+<dd>=&gt; <strong>Hold Home, Volume Up &amp; Power</strong></dd>
+</dl>
+<p>Normally you should see the ClockWorkMod logo (see under) with a menu</p>
+<img alt="" src="/images/rommanager-icon.png" />
+<p>You can backup your actual system if you want
+Now Select <cite>wipe data/factory reset</cite></p>
+<p>Next,  you have to install <cite>adb</cite> (Android Debug Bridge, it's a tool that allow you to open a terminal on your phone from an usb link) in order to put our zip files on your phone</p>
+<div class="highlight"><pre><span class="gp">$</span> sudo add-apt-repository ppa:nilarimogard/webupd8
+<span class="gp">$</span> sudo apt-get update
+<span class="gp">$</span> sudo apt-get install android-tools-adb android-tools-fastboot
+</pre></div>
+<p>Plug your phone on your computer and launch an <cite>adb</cite> shell :</p>
+<div class="highlight"><pre><span class="gp">$</span> sudo adb shell
+</pre></div>
+<p>If you see a shell and you can execute command like ls, that's ok, just exit and under ClockWorkMod on your device just go under <cite>install zip</cite> =&gt; <cite>install zip from sideload</cite></p>
+<p>On your terminal launch :</p>
+<div class="highlight"><pre><span class="gp">$</span> sudo adb sideload cm-11-20140916-SNAPSHOT-M10-i9300.zip
+</pre></div>
+<p>It will install the CyanogenMod ROM, just follow the same process for Google Apps (<cite>install zip</cite> =&gt; <cite>install zip from sideload</cite>) :</p>
+<div class="highlight"><pre><span class="gp">$</span> sudo adb sideload gapps-kk-20140606-signed.zip
+</pre></div>
+</div>
+</div>
+
+
+		<div id="article_meta">
+				Category:
+					<a href="http://natjohan.info/category/totw.html">ToTW</a>
+				<br />Tags:
+					<a href="http://natjohan.info/tag/linux.html">linux</a>
+					<a href="http://natjohan.info/tag/ubuntu.html">ubuntu</a>
+					<a href="http://natjohan.info/tag/elementaryos.html">elementaryos</a>
+					<a href="http://natjohan.info/tag/cyanogenmod.html">cyanogenmod</a>
+					<a href="http://natjohan.info/tag/android.html">android</a>
+		</div>
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+
+	</article>
+
+	<footer>
+		<a href="http://natjohan.info/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-38.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+
+	</section>
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+</body>
+</html>

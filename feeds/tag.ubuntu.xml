@@ -1,5 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.ubuntu.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-08-25T19:20:00+02:00</updated><entry><title>Install GNS3 1.0 beta on your Ubuntu from scratch</title><link href="http://natjohan.info/install-gns3-10-beta-on-your-ubuntu-from-scratch.html" rel="alternate"></link><updated>2014-08-25T19:20:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-08-25:install-gns3-10-beta-on-your-ubuntu-from-scratch.html</id><summary type="html">&lt;img alt="" src="/images/GNS3-logo-new.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.ubuntu.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-11-02T22:52:00+01:00</updated><entry><title>Tip of the week 38</title><link href="http://natjohan.info/tip-of-the-week-38.html" rel="alternate"></link><updated>2014-11-02T22:52:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-11-02:tip-of-the-week-38.html</id><summary type="html">&lt;img alt="" src="/images/cyanogenmod.png" /&gt;
+&lt;div class="section" id="install-cyanogenmod-11-on-your-samsung-galaxy-s3-i9300-from-elementaryos-ubuntu"&gt;
+&lt;h2&gt;Install CyanogenMod 11 on your Samsung Galaxy S3 (i9300) from ElementaryOs/Ubuntu&lt;/h2&gt;
+&lt;p&gt;This process is well tested on Ubuntu 12.04 (ElementaryOs), but it's the same approach in other distros&lt;/p&gt;
+&lt;div class="section" id="download-cyanogenmod-image-for-your-phone"&gt;
+&lt;h3&gt;Download CyanogenMod image for your phone&lt;/h3&gt;
+&lt;p&gt;Just go &lt;a class="reference external" href="http://download.cyanogenmod.org/?device=i9300"&gt;here&lt;/a&gt; and select your image to download. For the Samung Galaxy S3, I suggest to chose the latest snapshot which is more stable than the nightly builds.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="install-heimdall"&gt;
+&lt;h3&gt;Install Heimdall&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Heimdall_ is a cross-platform open-source tool suite used to flash firmware (aka ROMs) onto Samsung mobile devices.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Installing Heimdall (no need the frontend part) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo apt-get install libusb-1.0-0-dev
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Download &lt;cite&gt;ubuntu12.10-heimdall_1.4.0-0_amd64.deb&lt;/cite&gt; from &lt;a class="reference external" href="https://bitbucket.org/benjamin_dobell/heimdall/downloads"&gt;https://bitbucket.org/benjamin_dobell/heimdall/downloads&lt;/a&gt;
+and install it with &lt;cite&gt;dpkg&lt;/cite&gt; (install with sudo &lt;cite&gt;aptitude install dpkg&lt;/cite&gt; if needed)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo dpkg -i ubuntu12.10-heimdall_1.4.0-0_amd64.deb
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="let-s-go"&gt;
+&lt;h3&gt;Let's go !&lt;/h3&gt;
+&lt;p&gt;Just boot your Galaxy S3 i9300 in download mode :&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- Power off your Galaxy&lt;/div&gt;
+&lt;div class="line"&gt;- Boot the Galaxy S3 into download mode. &lt;strong&gt;Hold Home, Volume Down &amp;amp; Power&lt;/strong&gt;. Accept the disclaimer on the device.&lt;/div&gt;
+&lt;div class="line"&gt;- Insert the USB cable into the device.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Download ClockWorkMod Recovery from &lt;a class="reference external" href="http://clockworkmod.com/rommanager"&gt;http://clockworkmod.com/rommanager&lt;/a&gt; (which is a ROM manager and installer)&lt;/p&gt;
+&lt;p&gt;Link for Galaxy S3 : &lt;a class="reference external" href="http://download2.clockworkmod.com/recoveries/recovery-clockwork-6.0.4.6-i9300.img"&gt;http://download2.clockworkmod.com/recoveries/recovery-clockwork-6.0.4.6-i9300.img&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As CyanogenMod came without Google Apps, if you need them, just download it from &lt;a class="reference external" href="http://wiki.cyanogenmod.org/w/Google_Apps"&gt;http://wiki.cyanogenmod.org/w/Google_Apps&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now launch Heimdall in command line (replace &lt;em&gt;recovery-clockwork-6.0.4.6-i9300.img&lt;/em&gt; with the image that you just downloaded) :&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;strong&gt;Note&lt;/strong&gt; that sometimes Heimdall command line output some errors like :
+&lt;em&gt;libusb:error [op_open] open failed, code -1 errno 5&lt;/em&gt;
+&lt;em&gt;ERROR: Failed to access device. libusb error: -1&lt;/em&gt;
+Just unplug/plug your phone and retry, it should be okay after several attempts&lt;/blockquote&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo heimdall flash --RECOVERY recovery-clockwork-6.0.4.6-i9300.img
+&lt;span class="go"&gt;Heimdall v1.4.0&lt;/span&gt;
+
+&lt;span class="go"&gt;Copyright (c) 2010-2013, Benjamin Dobell, Glass Echidna&lt;/span&gt;
+&lt;span class="go"&gt;http://www.glassechidna.com.au/&lt;/span&gt;
+
+&lt;span class="go"&gt;This software is provided free of charge. Copying and redistribution is&lt;/span&gt;
+&lt;span class="go"&gt;encouraged.&lt;/span&gt;
+
+&lt;span class="go"&gt;If you appreciate this software and you would like to support future&lt;/span&gt;
+&lt;span class="go"&gt;development please consider donating:&lt;/span&gt;
+&lt;span class="go"&gt;http://www.glassechidna.com.au/donate/&lt;/span&gt;
+
+&lt;span class="go"&gt;Initialising connection...&lt;/span&gt;
+&lt;span class="go"&gt;Detecting device...&lt;/span&gt;
+&lt;span class="go"&gt;Claiming interface...&lt;/span&gt;
+&lt;span class="go"&gt;Attempt failed. Detaching driver...&lt;/span&gt;
+&lt;span class="go"&gt;Claiming interface again...&lt;/span&gt;
+&lt;span class="go"&gt;Setting up interface...&lt;/span&gt;
+
+&lt;span class="go"&gt;Initialising protocol...&lt;/span&gt;
+&lt;span class="go"&gt;Protocol initialisation successful.&lt;/span&gt;
+
+&lt;span class="go"&gt;Beginning session...&lt;/span&gt;
+
+&lt;span class="go"&gt;Some devices may take up to 2 minutes to respond.&lt;/span&gt;
+&lt;span class="go"&gt;Please be patient!&lt;/span&gt;
+
+&lt;span class="go"&gt;Session begun.&lt;/span&gt;
+
+&lt;span class="go"&gt;Downloading device&amp;#39;s PIT file...&lt;/span&gt;
+&lt;span class="go"&gt;PIT file download successful.&lt;/span&gt;
+
+&lt;span class="go"&gt;Uploading RECOVERY&lt;/span&gt;
+&lt;span class="go"&gt;100%&lt;/span&gt;
+&lt;span class="go"&gt;RECOVERY upload successful&lt;/span&gt;
+
+&lt;span class="go"&gt;Ending session...&lt;/span&gt;
+&lt;span class="go"&gt;Rebooting device...&lt;/span&gt;
+&lt;span class="go"&gt;Releasing device interface...&lt;/span&gt;
+&lt;span class="go"&gt;Re-attaching kernel driver..&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;You phone should reboot, Be sure to reboot into recovery &lt;strong&gt;immediately&lt;/strong&gt; after having installed the custom recovery (remove your battery for example). Otherwise the custom recovery will be overwritten and the device will reboot (appearing as though your custom recovery failed to install)&lt;/dt&gt;
+&lt;dd&gt;=&amp;gt; &lt;strong&gt;Hold Home, Volume Up &amp;amp; Power&lt;/strong&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Normally you should see the ClockWorkMod logo (see under) with a menu&lt;/p&gt;
+&lt;img alt="" src="/images/rommanager-icon.png" /&gt;
+&lt;p&gt;You can backup your actual system if you want
+Now Select &lt;cite&gt;wipe data/factory reset&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;Next,  you have to install &lt;cite&gt;adb&lt;/cite&gt; (Android Debug Bridge, it's a tool that allow you to open a terminal on your phone from an usb link) in order to put our zip files on your phone&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo add-apt-repository ppa:nilarimogard/webupd8
+&lt;span class="gp"&gt;$&lt;/span&gt; sudo apt-get update
+&lt;span class="gp"&gt;$&lt;/span&gt; sudo apt-get install android-tools-adb android-tools-fastboot
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Plug your phone on your computer and launch an &lt;cite&gt;adb&lt;/cite&gt; shell :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo adb shell
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you see a shell and you can execute command like ls, that's ok, just exit and under ClockWorkMod on your device just go under &lt;cite&gt;install zip&lt;/cite&gt; =&amp;gt; &lt;cite&gt;install zip from sideload&lt;/cite&gt;&lt;/p&gt;
+&lt;p&gt;On your terminal launch :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo adb sideload cm-11-20140916-SNAPSHOT-M10-i9300.zip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;It will install the CyanogenMod ROM, just follow the same process for Google Apps (&lt;cite&gt;install zip&lt;/cite&gt; =&amp;gt; &lt;cite&gt;install zip from sideload&lt;/cite&gt;) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sudo adb sideload gapps-kk-20140606-signed.zip
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="ubuntu"></category><category term="elementaryos"></category><category term="cyanogenmod"></category><category term="android"></category></entry><entry><title>Install GNS3 1.0 beta on your Ubuntu from scratch</title><link href="http://natjohan.info/install-gns3-10-beta-on-your-ubuntu-from-scratch.html" rel="alternate"></link><updated>2014-08-25T19:20:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-08-25:install-gns3-10-beta-on-your-ubuntu-from-scratch.html</id><summary type="html">&lt;img alt="" src="/images/GNS3-logo-new.png" /&gt;
 &lt;p&gt;Some weeks ago, GNS3 released its beta version, here is the way to install it from scratch on ubuntu/elementaryos :&lt;/p&gt;
 &lt;div class="section" id="you-need-python-3-3-or-higher-pip-qtmake-and-other-stuff"&gt;
 &lt;h2&gt;1/ You need python 3.3 or higher, pip, qtmake and other stuff :&lt;/h2&gt;
