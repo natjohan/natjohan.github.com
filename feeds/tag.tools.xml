@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tools.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-08-24T22:40:00+02:00</updated><entry><title>Tip of the week 37</title><link href="http://natjohan.info/tip-of-the-week-37.html" rel="alternate"></link><updated>2014-08-24T22:40:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-08-24:tip-of-the-week-37.html</id><summary type="html">&lt;img alt="" src="/images/Wireshark.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.tools.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2015-02-21T14:51:00+01:00</updated><entry><title>Tip of the week 39</title><link href="http://natjohan.info/tip-of-the-week-39.html" rel="alternate"></link><updated>2015-02-21T14:51:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-02-21:tip-of-the-week-39.html</id><summary type="html">&lt;div class="section" id="a-command-line-tool-for-your-networking-calc-sipcalc"&gt;
+&lt;h2&gt;A command line tool for your networking calc : sipcalc&lt;/h2&gt;
+&lt;p&gt;I just want to show you a useful tool for your networking calc called sipcalc,
+to install it (under debian based, but it should also exists in your favorite distro) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;sudo aptitude install sipcalc&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Some examples, here in IPv4 format :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~  sipcalc  192.0.2.0/24&lt;/span&gt;
+&lt;span class="go"&gt;-[ipv4 : 192.0.2.0/24] - 0&lt;/span&gt;
+
+&lt;span class="go"&gt;[CIDR]&lt;/span&gt;
+&lt;span class="go"&gt;Host address            - 192.0.2.0&lt;/span&gt;
+&lt;span class="go"&gt;Host address (decimal)  - 3221225984&lt;/span&gt;
+&lt;span class="go"&gt;Host address (hex)      - C0000200&lt;/span&gt;
+&lt;span class="go"&gt;Network address         - 192.0.2.0&lt;/span&gt;
+&lt;span class="go"&gt;Network mask            - 255.255.255.0&lt;/span&gt;
+&lt;span class="go"&gt;Network mask (bits)     - 24&lt;/span&gt;
+&lt;span class="go"&gt;Network mask (hex)      - FFFFFF00&lt;/span&gt;
+&lt;span class="go"&gt;Broadcast address       - 192.0.2.255&lt;/span&gt;
+&lt;span class="go"&gt;Cisco wildcard          - 0.0.0.255&lt;/span&gt;
+&lt;span class="go"&gt;Addresses in network    - 256&lt;/span&gt;
+&lt;span class="go"&gt;Network range           - 192.0.2.0 - 192.0.2.255&lt;/span&gt;
+&lt;span class="go"&gt;Usable range            - 192.0.2.1 - 192.0.2.254&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can also split a network with the &lt;cite&gt;-s&lt;/cite&gt; option :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~  sipcalc  192.0.2.0/24 -s 28&lt;/span&gt;
+&lt;span class="go"&gt;-[ipv4 : 192.0.2.0/24] - 0&lt;/span&gt;
+
+&lt;span class="go"&gt;[Split network]&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.0       - 192.0.2.15&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.16      - 192.0.2.31&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.32      - 192.0.2.47&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.48      - 192.0.2.63&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.64      - 192.0.2.79&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.80      - 192.0.2.95&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.96      - 192.0.2.111&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.112     - 192.0.2.127&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.128     - 192.0.2.143&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.144     - 192.0.2.159&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.160     - 192.0.2.175&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.176     - 192.0.2.191&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.192     - 192.0.2.207&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.208     - 192.0.2.223&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.224     - 192.0.2.239&lt;/span&gt;
+&lt;span class="go"&gt;Network                 - 192.0.2.240     - 192.0.2.255&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;for IPv6 :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~  sipcalc  2001:DB8::/32&lt;/span&gt;
+&lt;span class="go"&gt;-[ipv6 : 2001:DB8::/32] - 0&lt;/span&gt;
+
+&lt;span class="go"&gt;[IPV6 INFO]&lt;/span&gt;
+&lt;span class="go"&gt;Expanded Address        - 2001:0db8:0000:0000:0000:0000:0000:0000&lt;/span&gt;
+&lt;span class="go"&gt;Compressed address      - 2001:db8::&lt;/span&gt;
+&lt;span class="go"&gt;Subnet prefix (masked)  - 2001:db8:0:0:0:0:0:0/32&lt;/span&gt;
+&lt;span class="go"&gt;Address ID (masked)     - 0:0:0:0:0:0:0:0/32&lt;/span&gt;
+&lt;span class="go"&gt;Prefix address          - ffff:ffff:0:0:0:0:0:0&lt;/span&gt;
+&lt;span class="go"&gt;Prefix length           - 32&lt;/span&gt;
+&lt;span class="go"&gt;Address type            - Aggregatable Global Unicast Addresses&lt;/span&gt;
+&lt;span class="go"&gt;Network range           - 2001:0db8:0000:0000:0000:0000:0000:0000 -&lt;/span&gt;
+&lt;span class="go"&gt;                          2001:0db8:ffff:ffff:ffff:ffff:ffff:ffff&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Don't forget to read the manual or display the help with '-h' argument.&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+Note that I used standard IANA IP for documentation in these examples, you can find
+it int &lt;a class="reference external" href="https://tools.ietf.org/html/rfc5737"&gt;RFC5737&lt;/a&gt; for IPv4 and &lt;a class="reference external" href="https://tools.ietf.org/html/rfc3849"&gt;RFC3849&lt;/a&gt; for IPV6&lt;/blockquote&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="networking"></category><category term="tools"></category></entry><entry><title>Tip of the week 37</title><link href="http://natjohan.info/tip-of-the-week-37.html" rel="alternate"></link><updated>2014-08-24T22:40:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-08-24:tip-of-the-week-37.html</id><summary type="html">&lt;img alt="" src="/images/Wireshark.png" /&gt;
 &lt;div class="section" id="running-wireshark-as-a-non-root"&gt;
 &lt;h2&gt;Running Wireshark as a non root&lt;/h2&gt;
 &lt;p&gt;There is two different ways :&lt;/p&gt;

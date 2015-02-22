@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://natjohan.info/theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="http://natjohan.info/theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://natjohan.info/theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+
+		<title> Install GNS3 1.2 on your Ubuntu from scratch | Natjohan </title>
+		<meta charset="utf-8" />
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="http://natjohan.info"><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="http://natjohan.info" class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+						<li><a href="http://natjohan.info/category/dev.html">Dev</a></li>
+						<li class="active"><a href="http://natjohan.info/category/linux.html">Linux</a></li>
+						<li><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
+					<li><a href="/pages/about.html">About</a></li>
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+  
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				  <a href="http://natjohan.info/feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted dim. 22 février 2015</h3>
+	</header>
+	<article>
+		<h1 id="title">
+			<a href="http://natjohan.info/install-gns3-12-on-your-ubuntu-from-scratch.html" rel="bookmark"
+				title="Permalink to Install GNS3 1.2 on your Ubuntu from scratch">Install GNS3 1.2 on your Ubuntu from scratch</a>
+		</h1>
+		<img alt="" src="/images/GNS3-logo-new.png" />
+<p>Some weeks ago, I published an <a class="reference external" href="http://natjohan.info/install-gns3-10-beta-on-your-ubuntu-from-scratch.html">article</a> in order to install GNS3 beta,
+now GNS3 is under 1.2.3 version, so here is an update to install it from scratch on ubuntu/elementaryos :</p>
+<div class="section" id="you-need-python-3-3-or-higher-pip-qtmake-and-other-stuff">
+<h2>1/ You need python 3.3 or higher, pip, qtmake and other stuff :</h2>
+<div class="highlight"><pre><span class="go">~ sudo add-apt-repository ppa:fkrull/deadsnakes</span>
+<span class="go">~ sudo aptitude update</span>
+<span class="go">~ sudo aptitude install git python3.4 python3.4-dev qt4-qmake qt4-dev-tools libzmq-dev cmake libelf1 libelf-dev uuid-dev libpcap-dev</span>
+<span class="go">~ cd /tmp/</span>
+<span class="go">~ wget https://bootstrap.pypa.io/get-pip.py</span>
+<span class="go">~ sudo python3.4 get-pip.py</span>
+</pre></div>
+<p>Download SIP, PyQt4 from :
+- <a class="reference external" href="http://www.riverbankcomputing.com/software/sip/download">http://www.riverbankcomputing.com/software/sip/download</a>
+- <a class="reference external" href="http://www.riverbankcomputing.com/software/pyqt/download">http://www.riverbankcomputing.com/software/pyqt/download</a></p>
+<div class="highlight"><pre><span class="go">~ tar xvzf PyQt-x11-gpl-4.11.3.tar.gz</span>
+<span class="go">~ tar xvzf sip-4.16.5.tar.gz</span>
+<span class="go">~ cd sip-4.16.5/</span>
+<span class="go">~ python3.4 configure.py</span>
+<span class="go">~ make &amp;&amp; sudo make install</span>
+<span class="go">~ cd ../PyQt-x11-gpl-4.11.3</span>
+<span class="go">~ python3.4 configure.py</span>
+<span class="go">~ make &amp;&amp; sudo make install</span>
+</pre></div>
+</div>
+<div class="section" id="install-gns3-gui">
+<h2>2/ Install gns3-gui</h2>
+<div class="highlight"><pre><span class="go">~ cd /tmp/</span>
+<span class="go">~ git clone https://github.com/GNS3/gns3-gui.git</span>
+<span class="go">~ cd gns3-gui</span>
+<span class="go">~ sudo python3.4 setup.py install</span>
+</pre></div>
+</div>
+<div class="section" id="install-dynamips">
+<h2>3/ Install Dynamips</h2>
+<div class="highlight"><pre><span class="go">~ cd /tmp/</span>
+<span class="go">~ git clone https://github.com/GNS3/dynamips.git</span>
+<span class="go">~ cd dynamips</span>
+<span class="go">~ mkdir build</span>
+<span class="go">~ cd build</span>
+<span class="go">~ cmake ..</span>
+<span class="go">~ make &amp;&amp; sudo make install</span>
+</pre></div>
+</div>
+<div class="section" id="install-gns3-server">
+<h2>4/ Install gns3-server</h2>
+<div class="highlight"><pre><span class="go">~ cd /tmp/</span>
+<span class="go">~ git clone https://github.com/GNS3/gns3-server.git</span>
+<span class="go">~ cd gns3-server</span>
+<span class="go">~ sudo python3.4 setup.py install</span>
+</pre></div>
+<p>Change the gns-server path in <cite>Edit-&gt;Preferences</cite> by <cite>/usr/local/bin/gns3server</cite>
+launch GNS3 with <cite>gns3</cite></p>
+<p>If you encounter the following issue :
+Could not connect to the local server 127.0.0.1 on port 8000: Websocket exception &lt;class 'ws4py.exc.HandshakeError'&gt;: Invalid response status: b'403' b'Forbidden'</p>
+<p>Just install Tornado in the following version :</p>
+<div class="highlight"><pre><span class="go">~ sudo pip3.4 uninstall tornado</span>
+<span class="go">~ sudo pip3.4 install tornado==3.2.2</span>
+</pre></div>
+</div>
+<div class="section" id="bonus">
+<h2>5/ Bonus</h2>
+<div class="section" id="for-virtualbox-integration">
+<h3>For Virtualbox integration :</h3>
+<p>(Yes you have to use python2.7)</p>
+<div class="highlight"><pre><span class="go">~ cd /tmp</span>
+<span class="go">~ git clone https://github.com/GNS3/vboxwrapper.git</span>
+<span class="go">~ cd vboxwrapper</span>
+<span class="go">~ sudo python2.7 setup.py install</span>
+</pre></div>
+<p>Then just copying these files :</p>
+<div class="highlight"><pre><span class="go">~ sudo cp -r adapters nios vboxwrapper.py tcp_pipe_proxy.py virtualbox_controller.py virtualbox_error.py /usr/local/lib/python2.7/dist-packages</span>
+</pre></div>
+<p>And now, just edit the vboxwrapper path in gns3 : <cite>Edit-&gt;Preferences</cite> with <cite>/usr/local/bin/vboxwrapper</cite></p>
+<img alt="" src="/images/GNS3-virtualbox.png" />
+</div>
+<div class="section" id="iou-integration">
+<h3>IOU integration :</h3>
+<p>Installing IOU then, download and install iouyap from :
+<a class="reference external" href="http://sourceforge.net/projects/gns-3/files/Tools/iouyap.tar.gz/download">http://sourceforge.net/projects/gns-3/files/Tools/iouyap.tar.gz/download</a></p>
+<div class="highlight"><pre><span class="go">~ cd /tmp</span>
+<span class="go">~ tar zxvf iouyap.tar.gz</span>
+<span class="go">~ cp iouyap /usr/local/bin/iouyap</span>
+</pre></div>
+<p>Now, put correct paths in your gns3 preferences <cite>Edit-&gt;Preferences</cite>  by <cite>/home/MYUSER/.iourc</cite> and <cite>/usr/local/bin/iouyap</cite></p>
+<img alt="" src="/images/GNS3-IOU.png" />
+</div>
+<div class="section" id="vpcs-integration-virtual-pc">
+<h3>VPCs integration (Virtual PC):</h3>
+<div class="highlight"><pre><span class="go">~ sudo aptitude install subversion</span>
+<span class="go">~ cd /tmp</span>
+<span class="go">~ svn checkout svn://svn.code.sf.net/p/vpcs/code/trunk vpcs-code</span>
+<span class="go">or download it from : http://sourceforge.net/projects/vpcs/?source=typ_redirect</span>
+<span class="go">~ cd vpcs-code/src</span>
+<span class="go">~ sudo ./mk.sh</span>
+<span class="go">~ sudo mv -f vpcs /usr/bin/vpcs</span>
+</pre></div>
+<p>And now you can put the correct path <cite>/usr/bin/vpcs</cite> for VPCS in your GNS3 preferences</p>
+<img alt="" src="/images/GNS3-VPCS.png" />
+</div>
+<div class="section" id="gns3-converter">
+<h3>GNS3 Converter</h3>
+<p>GNS3 Converter allow you to convert your old gns3 files to get it works on the new GNS3 (<a class="reference external" href="http://forum.gns3.net/post35824.html">http://forum.gns3.net/post35824.html</a>) :</p>
+<div class="highlight"><pre><span class="go">~ sudo pip3 install gns3-converter</span>
+</pre></div>
+</div>
+<div class="section" id="roxterm">
+<h3>Roxterm</h3>
+<p>For a multi-tabbed terminal :</p>
+<div class="highlight"><pre><span class="go">~ sudo aptitude install roxterm</span>
+</pre></div>
+<p>Then change your GNS3 settings : <cite>Edit-&gt;Preferences-&gt;General-&gt;Console applications-&gt; Preconfigured commands</cite> and change from <cite>xterm</cite> to <cite>Roxterm</cite></p>
+</div>
+</div>
+<div class="section" id="gns3-desktop-icon">
+<h2>GNS3 desktop icon</h2>
+<p>Just create a .desktop file :</p>
+<div class="highlight"><pre><span class="go">~ sudo vi /usr/share/applications/gns3.desktop</span>
+<span class="go">[Desktop Entry]</span>
+<span class="go">Version=1.0</span>
+<span class="go">Type=Application</span>
+<span class="go">Terminal=false</span>
+<span class="go">Exec=gns3 %f</span>
+<span class="go">Name=GNS3</span>
+<span class="go">Comment=GNS3 Graphical Network Simulator</span>
+<span class="go">Icon=gns3</span>
+<span class="go">Categories=Education;</span>
+<span class="go">MimeType=application/x-gns3;</span>
+<span class="go">Keywords=simulator;network;netsim;</span>
+</pre></div>
+</div>
+<div class="section" id="upgrade-your-gns3-version-1-2-x-to-1-2-x">
+<h2>Upgrade your GNS3 version 1.2.X to 1.2.X</h2>
+<p>Simply download the latest version from repository and launch again the installation
+(for gns3-gui, gns3-server, dynamips) :</p>
+<div class="highlight"><pre><span class="go">// gns3-gui</span>
+<span class="go">~ cd /tmp/</span>
+<span class="go">      ~ git clone https://github.com/GNS3/gns3-server.git</span>
+<span class="go">      ~ cd gns3-server</span>
+<span class="go">      ~ sudo python3.4 setup.py install</span>
+<span class="go">// dynamips</span>
+<span class="go">~ cd /tmp/</span>
+<span class="go">      ~ git clone https://github.com/GNS3/dynamips.git</span>
+<span class="go">      ~ cd dynamips</span>
+<span class="go">      ~ mkdir build</span>
+<span class="go">      ~ cd build</span>
+<span class="go">      ~ cmake ..</span>
+<span class="go">      ~ make &amp;&amp; sudo make install</span>
+<span class="go">// gns3-server</span>
+<span class="go">~ cd /tmp/</span>
+<span class="go">      ~ git clone https://github.com/GNS3/gns3-server.git</span>
+<span class="go">      ~ cd gns3-server</span>
+<span class="go">      ~ sudo python3.4 setup.py install</span>
+</pre></div>
+</div>
+
+
+		<div id="article_meta">
+				Category:
+					<a href="http://natjohan.info/category/linux.html">Linux</a>
+				<br />Tags:
+					<a href="http://natjohan.info/tag/tool.html">tool</a>
+					<a href="http://natjohan.info/tag/networking.html">networking</a>
+					<a href="http://natjohan.info/tag/network.html">network</a>
+					<a href="http://natjohan.info/tag/gns3.html">GNS3</a>
+					<a href="http://natjohan.info/tag/ubuntu.html">ubuntu</a>
+					<a href="http://natjohan.info/tag/elementaryos.html">elementaryos</a>
+					<a href="http://natjohan.info/tag/simulation.html">simulation</a>
+		</div>
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+
+	</article>
+
+	<footer>
+		<a href="http://natjohan.info/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "install-gns3-12-on-your-ubuntu-from-scratch.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+
+	</section>
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+</body>
+</html>
