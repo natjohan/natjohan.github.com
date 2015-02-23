@@ -1,5 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.network.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2015-02-22T14:52:00+01:00</updated><entry><title>Install GNS3 1.2 on your Ubuntu from scratch</title><link href="http://natjohan.info/install-gns3-12-on-your-ubuntu-from-scratch.html" rel="alternate"></link><updated>2015-02-22T14:52:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-02-22:install-gns3-12-on-your-ubuntu-from-scratch.html</id><summary type="html">&lt;img alt="" src="/images/GNS3-logo-new.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.network.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2015-02-23T21:57:00+01:00</updated><entry><title>Tip of the week 40</title><link href="http://natjohan.info/tip-of-the-week-40.html" rel="alternate"></link><updated>2015-02-23T21:57:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-02-23:tip-of-the-week-40.html</id><summary type="html">&lt;div class="section" id="connect-your-linux-local-host-to-your-gns3-s-devices"&gt;
+&lt;h2&gt;Connect your Linux local host to your GNS3's devices&lt;/h2&gt;
+&lt;p&gt;Some days ago I tried to connect my GNS3 devices to the outside with the cloud icon
+(note that you have to launch GN3 with root rights), it works well but I noticed
+that I couldn't reach my local host...
+After some investigation, I found an article on the GNS3 FAQ &lt;a class="reference external" href="http://forum.gns3.net/topic18.html"&gt;here&lt;/a&gt; :&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;On Linux / Unix / OS X, when I bridge a router or switch interface to my local
+host I can’t ping it from my host. But this works on Windows? What gives?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This does generally work on Windows (depending on your network card)
+but not on Linux / Unix. Most likely this is due to differences between
+libpcap and Winpcap, and the differences in the network stacks on Unix /
+Windows (e.g. NDIS). However you should be able to ping your bridged
+interfaces from other systems on the bridged network. If this does
+not work on Windows for your particular NIC, try creating a Windows
+loopback adapter and bridging to that. On Linux you can use a tap
+interface and the NIO_tap (available from a cloud). OS X you can
+install tun/tap drivers.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ok, so I need to create a tap interface, here is how with the &lt;cite&gt;ip&lt;/cite&gt; command
+(as &lt;cite&gt;ifconfig&lt;/cite&gt; is deprecated):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~ sudo ip tuntap add tap1 mode tap user root&lt;/span&gt;
+&lt;span class="go"&gt;~ sudo ip link set tap1 up&lt;/span&gt;
+&lt;span class="go"&gt;~ sudo ip addr add 192.0.2.100/24 dev tap1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Check it with :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~ ip addr show tap1&lt;/span&gt;
+&lt;span class="go"&gt;6: tap1: &amp;lt;NO-CARRIER,BROADCAST,MULTICAST,UP&amp;gt; mtu 1500 qdisc pfifo_fast state DOWN qlen 500&lt;/span&gt;
+&lt;span class="go"&gt;    link/ether ce:d5:8b:bc:5e:74 brd ff:ff:ff:ff:ff:ff&lt;/span&gt;
+&lt;span class="go"&gt;    inet 192.168.2.100/24 scope global tap1&lt;/span&gt;
+&lt;span class="go"&gt;       valid_lft forever preferred_lft forever&lt;/span&gt;
+&lt;span class="go"&gt;    inet 192.0.2.100/24 scope global tap1&lt;/span&gt;
+&lt;span class="go"&gt;       valid_lft forever preferred_lft forever&lt;/span&gt;
+&lt;span class="go"&gt;    inet6 fe80::ccd5:8bff:febc:5e74/64 scope link&lt;/span&gt;
+&lt;span class="go"&gt;       valid_lft forever preferred_lft forever&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note that the tap1 is in DOWN state because there no carrier.&lt;/p&gt;
+&lt;p&gt;Create a host under GNS3, right click on it and configure, go
+under &lt;cite&gt;NIO TAP&lt;/cite&gt; tab and add the tap1 you just created.&lt;/p&gt;
+&lt;img alt="" src="/images/gns3-tap.png" /&gt;
+&lt;p&gt;Then, create the link to your device and apply your interface
+configuration in order to test the reachability.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;R1(config)#int ethernet 0/0&lt;/span&gt;
+&lt;span class="go"&gt;R1(config-if)#ip addr&lt;/span&gt;
+&lt;span class="go"&gt;R1(config-if)#ip address 192.0.2.200 255.255.255.0&lt;/span&gt;
+&lt;span class="go"&gt;R1(config-if)#no shut&lt;/span&gt;
+&lt;span class="go"&gt;R1(config-if)#^Z&lt;/span&gt;
+&lt;span class="go"&gt;R1#conf t&lt;/span&gt;
+&lt;span class="go"&gt;*Mar  1 00:00:36.731: %SYS-5-CONFIG_I: Configured from console by console&lt;/span&gt;
+&lt;span class="go"&gt;R1#conf&lt;/span&gt;
+&lt;span class="go"&gt;*Mar  1 00:00:37.699: %LINK-3-UPDOWN: Interface Ethernet0/0, changed state to up&lt;/span&gt;
+&lt;span class="go"&gt;*Mar  1 00:00:38.699: %LINEPROTO-5-UPDOWN: Line protocol on Interface Ethernet0/0, changed state to up&lt;/span&gt;
+&lt;span class="go"&gt;R1#&lt;/span&gt;
+&lt;span class="go"&gt;R1#&lt;/span&gt;
+&lt;span class="go"&gt;R1#ping 192.0.2.100&lt;/span&gt;
+
+&lt;span class="go"&gt;Type escape sequence to abort.&lt;/span&gt;
+&lt;span class="go"&gt;Sending 5, 100-byte ICMP Echos to 192.0.2.100, timeout is 2 seconds:&lt;/span&gt;
+&lt;span class="go"&gt;.!!!!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now you can reach the router from your Linux. That's interesting if you want for example to test
+some supervision tool.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;p&gt;If you want to make your &lt;cite&gt;tap&lt;/cite&gt; interface persistent, you have to edit your
+&lt;cite&gt;/etc/network/interfaces&lt;/cite&gt; file with the following :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;iface tap1 inet manual&lt;/span&gt;
+&lt;span class="go"&gt;pre-up ip tuntap add tap1 mode tap user root&lt;/span&gt;
+&lt;span class="go"&gt;pre-up ip addr add 192.0.2.100/24 dev tap1&lt;/span&gt;
+&lt;span class="go"&gt;up ip link set dev tap1 up&lt;/span&gt;
+&lt;span class="go"&gt;post-down ip link del dev tap1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="ubuntu"></category><category term="gns3"></category><category term="network"></category><category term="tap"></category></entry><entry><title>Install GNS3 1.2 on your Ubuntu from scratch</title><link href="http://natjohan.info/install-gns3-12-on-your-ubuntu-from-scratch.html" rel="alternate"></link><updated>2015-02-22T14:52:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-02-22:install-gns3-12-on-your-ubuntu-from-scratch.html</id><summary type="html">&lt;img alt="" src="/images/GNS3-logo-new.png" /&gt;
 &lt;p&gt;Some weeks ago, I published an &lt;a class="reference external" href="http://natjohan.info/install-gns3-10-beta-on-your-ubuntu-from-scratch.html"&gt;article&lt;/a&gt; in order to install GNS3 beta,
 now GNS3 is under 1.2.3 version, so here is an update to install it from scratch on ubuntu/elementaryos :&lt;/p&gt;
 &lt;div class="section" id="you-need-python-3-3-or-higher-pip-qtmake-and-other-stuff"&gt;
