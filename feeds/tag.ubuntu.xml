@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.ubuntu.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2015-02-23T21:57:00+01:00</updated><entry><title>Tip of the week 40</title><link href="http://natjohan.info/tip-of-the-week-40.html" rel="alternate"></link><updated>2015-02-23T21:57:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-02-23:tip-of-the-week-40.html</id><summary type="html">&lt;div class="section" id="connect-your-linux-local-host-to-your-gns3-s-devices"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.ubuntu.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2015-03-08T11:39:00+01:00</updated><entry><title>Tip of the week 41</title><link href="http://natjohan.info/tip-of-the-week-41.html" rel="alternate"></link><updated>2015-03-08T11:39:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-03-08:tip-of-the-week-41.html</id><summary type="html">&lt;div class="section" id="a-mib-browser-for-linux-qtmib"&gt;
+&lt;h2&gt;A MIB browser for Linux : qtmib&lt;/h2&gt;
+&lt;p&gt;&lt;cite&gt;qtmib&lt;/cite&gt; is a simple and open source MIB browser for Linux based on QT. It supports
+SNMP v1 and v2c, network discovery, a lot of built-in MIBs and you can add
+your private MIB also (under &lt;cite&gt;~/.config/qtmib/mibs&lt;/cite&gt;).&lt;/p&gt;
+&lt;p&gt;To install it, simply go on the offical &lt;a class="reference external" href="http://qtmib.sourceforge.net/index.html"&gt;website&lt;/a&gt; and download the .deb or .rpm
+file from &lt;a class="reference external" href="http://sourceforge.net/projects/qtmib/files/"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;img alt="" src="/images/qtmib-report.png" /&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="ubuntu"></category><category term="snmp"></category><category term="network"></category><category term="mib"></category></entry><entry><title>Tip of the week 40</title><link href="http://natjohan.info/tip-of-the-week-40.html" rel="alternate"></link><updated>2015-02-23T21:57:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-02-23:tip-of-the-week-40.html</id><summary type="html">&lt;div class="section" id="connect-your-linux-local-host-to-your-gns3-s-devices"&gt;
 &lt;h2&gt;Connect your Linux local host to your GNS3's devices&lt;/h2&gt;
 &lt;p&gt;Some days ago I tried to connect my GNS3 devices to the outside with the cloud icon
 (note that you have to launch GN3 with root rights), it works well but I noticed
