@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://natjohan.info/theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="http://natjohan.info/theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://natjohan.info/theme/css/font-awesome.css" type="text/css"/>
+
+	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
+
+		<title> Tip of the week 43 | Natjohan </title>
+		<meta charset="utf-8" />
+</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="http://natjohan.info"><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="http://natjohan.info" class="">Natjohan</a></h1>
+			<h2>just some notes</h2>
+			<ul>
+						<li><a href="http://natjohan.info/category/dev.html">Dev</a></li>
+						<li><a href="http://natjohan.info/category/linux.html">Linux</a></li>
+						<li class="active"><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
+					<li><a href="/pages/about.html">About</a></li>
+			</ul>
+		</div>
+		<footer>
+			<div id="social" style="font-size: 20px;">
+				  <script language="JavaScript">
+				    u = "tcatnoc";
+				    s = "ofni.nahojtan";
+				    r_address = s + '@' + u
+				    document.write('<a href=\"mailto:' + r_address.split("").reverse().join("") + '\" target=\"_blank\">');
+				  </script>
+				  <i class="icon-envelope icon-large"></i>
+				  </a>
+				  <a href="http://twitter.com/natjohan" target="_blank"> <i class="icon-twitter-sign icon-large"> </i> </a>
+				  <a href="https://github.com/natjohan" target="_blank">  <i class="icon-github-sign icon-large"></i> </a>
+  
+				  <a href="http://www.flickr.com/photos/joanhant/" target="_blank">  <i class="icon-camera icon-large"></i> </a>
+				  <a href="http://natjohan.info/feeds/all.rss.xml" rel="alternate" title="Recent Blog Posts"> <i class="icon-rss icon-large"></i> </a>
+			</div>
+			<br>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+	<header>
+		<h1>natjohan's blog</h1>
+		<h3>Posted sam. 03 octobre 2015</h3>
+	</header>
+	<article>
+		<h1 id="title">
+			<a href="http://natjohan.info/tip-of-the-week-43.html" rel="bookmark"
+				title="Permalink to Tip of the week 43">Tip of the week 43</a>
+		</h1>
+		<img alt="" src="/images/prey-logo.png" />
+<div class="section" id="protect-your-computer-against-theft-with-prey">
+<h2>Protect your computer against theft with Prey</h2>
+<p>Everyday, a ton of electronic devices are stolen in the world, and it does
+not only happen to others, and you should protect your devices. That's why
+I just tested Prey and I think it's quite a good solution.</p>
+<p>As the official website says :</p>
+<!--  -->
+<blockquote>
+<strong>Prey</strong> lets you keep track of your laptop, phone and tablet whenever missing,
+whether you're in town or abroad. Open source, proven software with hundreds
+of documented recoveries all around the world.</blockquote>
+<p>It's a multi-platform open source software that allows you to track your personal devices.
+You can use the Prey platform (I mean website) which is really good to track your device or
+you can set up your own control panel from this <a class="reference external" href="https://github.com/prey/prey-standalone-control-panel">project</a>.</p>
+<p>Prey is free up to tree devices, you can also subscribe for a pro plan which have
+some advanced features (more reports, accelerated tracking, delete files remotely etc).
+But, note that you can subscribe it whenever you need.</p>
+</div>
+<div class="section" id="installation-under-ubuntu-elementaryos">
+<h2>Installation under Ubuntu/ElementaryOs</h2>
+<p>Before the installation, you should activate the <cite>universe</cite> Ubuntu repository
+in your <cite>/etc/apt/sources.list</cite> as <cite>Prey</cite> needs some dependencies (scrot, streamer, mpg123 ),
+so simply edit this file and add or uncomment the following lines :</p>
+<div class="highlight"><pre><span class="go">// /etc/apt/sources.list</span>
+<span class="go">deb http://fr.archive.ubuntu.com/ubuntu/ precise universe</span>
+<span class="go">deb-src http://fr.archive.ubuntu.com/ubuntu/ precise universe</span>
+<span class="go">deb http://fr.archive.ubuntu.com/ubuntu/ precise-updates universe</span>
+<span class="go">deb-src http://fr.archive.ubuntu.com/ubuntu/ precise-updates universe</span>
+</pre></div>
+<p>Then run an <cite>aptitude update</cite>/<cite>apt-get update</cite>, download the deb file from
+the Prey website <a class="reference external" href="https://preyproject.com/download">here</a> and launch the installation with your package manager.</p>
+<img alt="" src="/images/prey-start.png" />
+<p>Prey will ask you to create or use a Prey account in order to track your device.
+And that's all, you can now track your device from the Prey <a class="reference external" href="https://panel.preyproject.com">website</a>, and you can
+test it !</p>
+<p>PS : hope that you don't have to use it ;-)</p>
+<img alt="" src="/images/prey-msg.png" />
+<img alt="" src="/images/prey-panel.png" />
+</div>
+<div class="section" id="go-further">
+<h2>Go Further</h2>
+<p>I also tested it on my Samsung Galaxy S3 without problems.</p>
+</div>
+
+
+		<div id="article_meta">
+				Category:
+					<a href="http://natjohan.info/category/totw.html">ToTW</a>
+				<br />Tags:
+					<a href="http://natjohan.info/tag/linux.html">linux</a>
+					<a href="http://natjohan.info/tag/ubuntu.html">ubuntu</a>
+					<a href="http://natjohan.info/tag/prey.html">prey</a>
+					<a href="http://natjohan.info/tag/anti-theft.html">anti-theft</a>
+		</div>
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+
+	</article>
+
+	<footer>
+		<a href="http://natjohan.info/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-43.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+
+	</section>
+
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-37093039-1");
+			pageTracker._trackPageview();
+		} catch(err) {}</script>
+</body>
+</html>

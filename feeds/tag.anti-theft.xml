@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.anti-theft.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2015-10-03T18:29:00+02:00</updated><entry><title>Tip of the week 43</title><link href="http://natjohan.info/tip-of-the-week-43.html" rel="alternate"></link><updated>2015-10-03T18:29:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-10-03:tip-of-the-week-43.html</id><summary type="html">&lt;img alt="" src="/images/prey-logo.png" /&gt;
+&lt;div class="section" id="protect-your-computer-against-theft-with-prey"&gt;
+&lt;h2&gt;Protect your computer against theft with Prey&lt;/h2&gt;
+&lt;p&gt;Everyday, a ton of electronic devices are stolen in the world, and it does
+not only happen to others, and you should protect your devices. That's why
+I just tested Prey and I think it's quite a good solution.&lt;/p&gt;
+&lt;p&gt;As the official website says :&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;strong&gt;Prey&lt;/strong&gt; lets you keep track of your laptop, phone and tablet whenever missing,
+whether you're in town or abroad. Open source, proven software with hundreds
+of documented recoveries all around the world.&lt;/blockquote&gt;
+&lt;p&gt;It's a multi-platform open source software that allows you to track your personal devices.
+You can use the Prey platform (I mean website) which is really good to track your device or
+you can set up your own control panel from this &lt;a class="reference external" href="https://github.com/prey/prey-standalone-control-panel"&gt;project&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Prey is free up to tree devices, you can also subscribe for a pro plan which have
+some advanced features (more reports, accelerated tracking, delete files remotely etc).
+But, note that you can subscribe it whenever you need.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="installation-under-ubuntu-elementaryos"&gt;
+&lt;h2&gt;Installation under Ubuntu/ElementaryOs&lt;/h2&gt;
+&lt;p&gt;Before the installation, you should activate the &lt;cite&gt;universe&lt;/cite&gt; Ubuntu repository
+in your &lt;cite&gt;/etc/apt/sources.list&lt;/cite&gt; as &lt;cite&gt;Prey&lt;/cite&gt; needs some dependencies (scrot, streamer, mpg123 ),
+so simply edit this file and add or uncomment the following lines :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;// /etc/apt/sources.list&lt;/span&gt;
+&lt;span class="go"&gt;deb http://fr.archive.ubuntu.com/ubuntu/ precise universe&lt;/span&gt;
+&lt;span class="go"&gt;deb-src http://fr.archive.ubuntu.com/ubuntu/ precise universe&lt;/span&gt;
+&lt;span class="go"&gt;deb http://fr.archive.ubuntu.com/ubuntu/ precise-updates universe&lt;/span&gt;
+&lt;span class="go"&gt;deb-src http://fr.archive.ubuntu.com/ubuntu/ precise-updates universe&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then run an &lt;cite&gt;aptitude update&lt;/cite&gt;/&lt;cite&gt;apt-get update&lt;/cite&gt;, download the deb file from
+the Prey website &lt;a class="reference external" href="https://preyproject.com/download"&gt;here&lt;/a&gt; and launch the installation with your package manager.&lt;/p&gt;
+&lt;img alt="" src="/images/prey-start.png" /&gt;
+&lt;p&gt;Prey will ask you to create or use a Prey account in order to track your device.
+And that's all, you can now track your device from the Prey &lt;a class="reference external" href="https://panel.preyproject.com"&gt;website&lt;/a&gt;, and you can
+test it !&lt;/p&gt;
+&lt;p&gt;PS : hope that you don't have to use it ;-)&lt;/p&gt;
+&lt;img alt="" src="/images/prey-msg.png" /&gt;
+&lt;img alt="" src="/images/prey-panel.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;p&gt;I also tested it on my Samsung Galaxy S3 without problems.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="ubuntu"></category><category term="prey"></category><category term="anti-theft"></category></entry></feed>
