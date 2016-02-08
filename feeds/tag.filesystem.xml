@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.filesystem.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-01-22T18:17:00+01:00</updated><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2013-01-22T18:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="" src="/images/Encfs-global.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.filesystem.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2016-02-08T21:17:00+01:00</updated><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2016-02-08T21:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2016-02-08:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="" src="/images/Encfs-global.png" /&gt;
+&lt;div class="section" id="edit"&gt;
+&lt;h2&gt;Edit&lt;/h2&gt;
+&lt;p&gt;First, I published this article three years ago, in 2013. As things moving fast, specially in security, Sebastian Messmer just
+advising me that &lt;cite&gt;EncFS&lt;/cite&gt; is not a really secure tool anymore to save files on Dropbox. In February 2014, Taylor Hornby a scientist and security researcher done an audit of the EncFS code, and bad news :&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;em&gt;EncFS is probably safe as long as the adversary only gets one copy of
+the ciphertext and nothing more. EncFS is not safe if the adversary
+has the opportunity to see two or more snapshots of the ciphertext at
+different times. EncFS attempts to protect files from malicious
+modification, but there are serious problems with this feature.&lt;/em&gt;&lt;/blockquote&gt;
+&lt;p&gt;You can find the whole audit &lt;a class="reference external" href="https://defuse.ca/audits/encfs.htm"&gt;online&lt;/a&gt; .
+That mean &lt;cite&gt;EncFS&lt;/cite&gt; is not a good way to secure your Dropbox, as it saves many snapshots of your files. Since this audit, several
+versions were released : &lt;a class="reference external" href="https://github.com/vgough/encfs/releases"&gt;https://github.com/vgough/encfs/releases&lt;/a&gt; , but unfortunately, all issues are not fixed &lt;a class="reference external" href="https://github.com/vgough/encfs/issues/9"&gt;yet&lt;/a&gt;. So Sebastian built his own crypto tool named Cryfs, it alreadydo the job, even if it's not user-friendly and cross platform yet, but that's a young tool. You can find a comparison of the market : &lt;a class="reference external" href="https://www.cryfs.org/comparison"&gt;https://www.cryfs.org/comparison&lt;/a&gt; and if you're interested in crypto, you can also read the Sebastian's &lt;a class="reference external" href="https://www.cryfs.org/cryfs_mathesis.pdf"&gt;thesis&lt;/a&gt; about cryfs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lesson learned :&lt;/strong&gt; don't use the current encfs (1.8) version to protect your files on Dropbox, Open Source allows users to edit the code freely and thus increase the level of security for users of this code.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h2&gt;Synopsis&lt;/h2&gt;
 &lt;p&gt;Nowadays, there is many cloud storage services (Dropbox, Bitcasa, Box, Hubic, Mega, Drive, Sparkleshare, etc) to sync/backup/share/copy your data. Thanks to it, you can prevent hard drive crash or access it from different devices.&lt;/p&gt;

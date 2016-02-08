@@ -56,7 +56,7 @@
 	<section id="posts">
 	<header>
 		<h1>natjohan's blog</h1>
-		<h3>Posted mar. 22 janvier 2013</h3>
+		<h3>Posted lun. 08 février 2016</h3>
 	</header>
 	<article>
 		<h1 id="title">
@@ -64,6 +64,22 @@
 				title="Permalink to EncFS : simply protect and access to your private data on cloud services">EncFS : simply protect and access to your private data on cloud services</a>
 		</h1>
 		<img alt="" src="/images/Encfs-global.png" />
+<div class="section" id="edit">
+<h2>Edit</h2>
+<p>First, I published this article three years ago, in 2013. As things moving fast, specially in security, Sebastian Messmer just
+advising me that <cite>EncFS</cite> is not a really secure tool anymore to save files on Dropbox. In February 2014, Taylor Hornby a scientist and security researcher done an audit of the EncFS code, and bad news :</p>
+<!--  -->
+<blockquote>
+<em>EncFS is probably safe as long as the adversary only gets one copy of
+the ciphertext and nothing more. EncFS is not safe if the adversary
+has the opportunity to see two or more snapshots of the ciphertext at
+different times. EncFS attempts to protect files from malicious
+modification, but there are serious problems with this feature.</em></blockquote>
+<p>You can find the whole audit <a class="reference external" href="https://defuse.ca/audits/encfs.htm">online</a> .
+That mean <cite>EncFS</cite> is not a good way to secure your Dropbox, as it saves many snapshots of your files. Since this audit, several
+versions were released : <a class="reference external" href="https://github.com/vgough/encfs/releases">https://github.com/vgough/encfs/releases</a> , but unfortunately, all issues are not fixed <a class="reference external" href="https://github.com/vgough/encfs/issues/9">yet</a>. So Sebastian built his own crypto tool named Cryfs, it alreadydo the job, even if it's not user-friendly and cross platform yet, but that's a young tool. You can find a comparison of the market : <a class="reference external" href="https://www.cryfs.org/comparison">https://www.cryfs.org/comparison</a> and if you're interested in crypto, you can also read the Sebastian's <a class="reference external" href="https://www.cryfs.org/cryfs_mathesis.pdf">thesis</a> about cryfs.</p>
+<p><strong>Lesson learned :</strong> don't use the current encfs (1.8) version to protect your files on Dropbox, Open Source allows users to edit the code freely and thus increase the level of security for users of this code.</p>
+</div>
 <div class="section" id="synopsis">
 <h2>Synopsis</h2>
 <p>Nowadays, there is many cloud storage services (Dropbox, Bitcasa, Box, Hubic, Mega, Drive, Sparkleshare, etc) to sync/backup/share/copy your data. Thanks to it, you can prevent hard drive crash or access it from different devices.</p>

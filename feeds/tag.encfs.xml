@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.encfs.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2014-01-20T21:28:00+01:00</updated><entry><title>Tip of the week 30</title><link href="http://natjohan.info/tip-of-the-week-30.html" rel="alternate"></link><updated>2014-01-20T21:28:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-20:tip-of-the-week-30.html</id><summary type="html">&lt;img alt="" src="/images/Gnome-EncFS-tray.png" /&gt;
-&lt;div class="section" id="gnome-encfs-manager"&gt;
-&lt;h2&gt;Gnome EncFS Manager&lt;/h2&gt;
-&lt;p&gt;As I switched on &lt;a class="reference external" href="http://elementaryos.org/"&gt;ElementaryOs&lt;/a&gt; (which is a really great distrib) few months ago, I just discovered a new tool to mount my &lt;a class="reference external" href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html"&gt;EncFS&lt;/a&gt; folders. Actually CryptKeeper didn't work properly under Elementary (due to some &lt;a class="reference external" href="https://bugs.launchpad.net/elementaryos/+bug/1196312"&gt;bugs&lt;/a&gt; with the tray system). So, I found a tool called Gnome EncFS Manager, and it works great.
-Here is the way to install it under Elementary (or Ubuntu)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo add-apt-repository ppa:gencfsm &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get install gnome-encfs-manager
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Then you can easily manage(mount/umount/create) your encrypted folders&lt;/p&gt;
-&lt;img alt="" src="/images/Gnome-EncFS-configure.png" /&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
-&lt;/div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.encfs.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2016-02-08T21:17:00+01:00</updated><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2016-02-08T21:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2016-02-08:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="" src="/images/Encfs-global.png" /&gt;
+&lt;div class="section" id="edit"&gt;
+&lt;h2&gt;Edit&lt;/h2&gt;
+&lt;p&gt;First, I published this article three years ago, in 2013. As things moving fast, specially in security, Sebastian Messmer just
+advising me that &lt;cite&gt;EncFS&lt;/cite&gt; is not a really secure tool anymore to save files on Dropbox. In February 2014, Taylor Hornby a scientist and security researcher done an audit of the EncFS code, and bad news :&lt;/p&gt;
 &lt;!--  --&gt;
 &lt;blockquote&gt;
-&lt;strong&gt;Note :&lt;/strong&gt; you can install this tool under many other distro (Fedora, Debian, OpenSuse and Arch)&lt;/blockquote&gt;
+&lt;em&gt;EncFS is probably safe as long as the adversary only gets one copy of
+the ciphertext and nothing more. EncFS is not safe if the adversary
+has the opportunity to see two or more snapshots of the ciphertext at
+different times. EncFS attempts to protect files from malicious
+modification, but there are serious problems with this feature.&lt;/em&gt;&lt;/blockquote&gt;
+&lt;p&gt;You can find the whole audit &lt;a class="reference external" href="https://defuse.ca/audits/encfs.htm"&gt;online&lt;/a&gt; .
+That mean &lt;cite&gt;EncFS&lt;/cite&gt; is not a good way to secure your Dropbox, as it saves many snapshots of your files. Since this audit, several
+versions were released : &lt;a class="reference external" href="https://github.com/vgough/encfs/releases"&gt;https://github.com/vgough/encfs/releases&lt;/a&gt; , but unfortunately, all issues are not fixed &lt;a class="reference external" href="https://github.com/vgough/encfs/issues/9"&gt;yet&lt;/a&gt;. So Sebastian built his own crypto tool named Cryfs, it alreadydo the job, even if it's not user-friendly and cross platform yet, but that's a young tool. You can find a comparison of the market : &lt;a class="reference external" href="https://www.cryfs.org/comparison"&gt;https://www.cryfs.org/comparison&lt;/a&gt; and if you're interested in crypto, you can also read the Sebastian's &lt;a class="reference external" href="https://www.cryfs.org/cryfs_mathesis.pdf"&gt;thesis&lt;/a&gt; about cryfs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lesson learned :&lt;/strong&gt; don't use the current encfs (1.8) version to protect your files on Dropbox, Open Source allows users to edit the code freely and thus increase the level of security for users of this code.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="go-further"&gt;
-&lt;h2&gt;Go Further&lt;/h2&gt;
-&lt;p&gt;The project &lt;a class="reference external" href="http://libertyzero.com/GEncfsM/"&gt;webpage&lt;/a&gt; (All screenshots credits to this webpage)&lt;/p&gt;
-&lt;/div&gt;
-</summary><category term="encfs"></category><category term="manager"></category><category term="gnome encfs"></category><category term="ubuntu"></category><category term="ElementaryOs"></category></entry><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2013-01-22T18:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="" src="/images/Encfs-global.png" /&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h2&gt;Synopsis&lt;/h2&gt;
 &lt;p&gt;Nowadays, there is many cloud storage services (Dropbox, Bitcasa, Box, Hubic, Mega, Drive, Sparkleshare, etc) to sync/backup/share/copy your data. Thanks to it, you can prevent hard drive crash or access it from different devices.&lt;/p&gt;
@@ -145,4 +141,24 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;div class="line"&gt;A pdf report from Fraunhofer institut : &lt;a class="reference external" href="http://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;ved=0CD0QFjAA&amp;amp;url=http%3A%2F%2Fwww.sit.fraunhofer.de%2Fcontent%2Fdam%2Fsit%2Fen%2Fstudies%2FCloud-Storage-Security_a4.pdf&amp;amp;ei=nzf8UP62HdKIhQf6oIFw&amp;amp;usg=AFQjCNGhymnIFCQOFJaXrWI8elG_3cirCA&amp;amp;sig2=V_kMG85r96f2hxpX5s8bqw&amp;amp;bvm=bv.41248874,d.ZG4"&gt;On the security of cloud storage services&lt;/a&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="crypt"></category><category term="filesystem"></category><category term="dropbox"></category><category term="cloud"></category><category term="security"></category><category term="EncFS"></category><category term="data"></category></entry></feed>
+</summary><category term="crypt"></category><category term="filesystem"></category><category term="dropbox"></category><category term="cloud"></category><category term="security"></category><category term="EncFS"></category><category term="data"></category></entry><entry><title>Tip of the week 30</title><link href="http://natjohan.info/tip-of-the-week-30.html" rel="alternate"></link><updated>2014-01-20T21:28:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2014-01-20:tip-of-the-week-30.html</id><summary type="html">&lt;img alt="" src="/images/Gnome-EncFS-tray.png" /&gt;
+&lt;div class="section" id="gnome-encfs-manager"&gt;
+&lt;h2&gt;Gnome EncFS Manager&lt;/h2&gt;
+&lt;p&gt;As I switched on &lt;a class="reference external" href="http://elementaryos.org/"&gt;ElementaryOs&lt;/a&gt; (which is a really great distrib) few months ago, I just discovered a new tool to mount my &lt;a class="reference external" href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html"&gt;EncFS&lt;/a&gt; folders. Actually CryptKeeper didn't work properly under Elementary (due to some &lt;a class="reference external" href="https://bugs.launchpad.net/elementaryos/+bug/1196312"&gt;bugs&lt;/a&gt; with the tray system). So, I found a tool called Gnome EncFS Manager, and it works great.
+Here is the way to install it under Elementary (or Ubuntu)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="gp"&gt;natjohan:~$&lt;/span&gt; sudo add-apt-repository ppa:gencfsm &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get update &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sudo apt-get install gnome-encfs-manager
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then you can easily manage(mount/umount/create) your encrypted folders&lt;/p&gt;
+&lt;img alt="" src="/images/Gnome-EncFS-configure.png" /&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;br /&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;strong&gt;Note :&lt;/strong&gt; you can install this tool under many other distro (Fedora, Debian, OpenSuse and Arch)&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h2&gt;Go Further&lt;/h2&gt;
+&lt;p&gt;The project &lt;a class="reference external" href="http://libertyzero.com/GEncfsM/"&gt;webpage&lt;/a&gt; (All screenshots credits to this webpage)&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="encfs"></category><category term="manager"></category><category term="gnome encfs"></category><category term="ubuntu"></category><category term="ElementaryOs"></category></entry></feed>

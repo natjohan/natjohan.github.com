@@ -1,39 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.security.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2013-04-14T14:11:00+02:00</updated><entry><title>Tip of the week 16</title><link href="http://natjohan.info/tip-of-the-week-16.html" rel="alternate"></link><updated>2013-04-14T14:11:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-14:tip-of-the-week-16.html</id><summary type="html">&lt;img alt="" src="/images/splunk-logo.png" /&gt;
-&lt;div class="section" id="secure-your-splunk-free-server"&gt;
-&lt;h2&gt;Secure your Splunk Free server&lt;/h2&gt;
-&lt;p&gt;&amp;quot;Splunk Enterprise is a fully featured, powerful platform for collecting, searching, monitoring and analyzing machine data&amp;quot;. There is a free version of Splunk with some limitations (read &lt;a class="reference external" href="http://docs.splunk.com/Documentation/Splunk/5.0.2/Admin/MoreAboutSplunkFree"&gt;here&lt;/a&gt;), but it's sufficent to analyze fews hosts logs (&amp;lt; 20). The major disadvatage of this edition is the lack of an authentication module for the web interface, which mean anyone can access to your splunk interface and show your data.&lt;/p&gt;
-&lt;p&gt;One way to secure it is to bind SplunkWeb on localhost and use a ssh tunnel to access it.&lt;/p&gt;
-&lt;div class="section" id="configuration"&gt;
-&lt;h3&gt;Configuration&lt;/h3&gt;
-&lt;p&gt;You just have to edit &lt;cite&gt;$SPLUNK_HOME/etc/system/default/web.conf&lt;/cite&gt; to uncomment and modify this line like that :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;server.socket_host = localhost&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Restart Splunk :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;splunk-server# $SPLUNK_HOME/bin/splunk restart splunk&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Verify your configuration :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;splunk-server# netstat -an | grep 8000&lt;/span&gt;
-&lt;span class="go"&gt;        tcp   0    0 127.0.0.1:8000   0.0.0.0:*   LISTEN&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/tag.security.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2016-02-08T21:17:00+01:00</updated><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2016-02-08T21:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2016-02-08:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="" src="/images/Encfs-global.png" /&gt;
+&lt;div class="section" id="edit"&gt;
+&lt;h2&gt;Edit&lt;/h2&gt;
+&lt;p&gt;First, I published this article three years ago, in 2013. As things moving fast, specially in security, Sebastian Messmer just
+advising me that &lt;cite&gt;EncFS&lt;/cite&gt; is not a really secure tool anymore to save files on Dropbox. In February 2014, Taylor Hornby a scientist and security researcher done an audit of the EncFS code, and bad news :&lt;/p&gt;
+&lt;!--  --&gt;
+&lt;blockquote&gt;
+&lt;em&gt;EncFS is probably safe as long as the adversary only gets one copy of
+the ciphertext and nothing more. EncFS is not safe if the adversary
+has the opportunity to see two or more snapshots of the ciphertext at
+different times. EncFS attempts to protect files from malicious
+modification, but there are serious problems with this feature.&lt;/em&gt;&lt;/blockquote&gt;
+&lt;p&gt;You can find the whole audit &lt;a class="reference external" href="https://defuse.ca/audits/encfs.htm"&gt;online&lt;/a&gt; .
+That mean &lt;cite&gt;EncFS&lt;/cite&gt; is not a good way to secure your Dropbox, as it saves many snapshots of your files. Since this audit, several
+versions were released : &lt;a class="reference external" href="https://github.com/vgough/encfs/releases"&gt;https://github.com/vgough/encfs/releases&lt;/a&gt; , but unfortunately, all issues are not fixed &lt;a class="reference external" href="https://github.com/vgough/encfs/issues/9"&gt;yet&lt;/a&gt;. So Sebastian built his own crypto tool named Cryfs, it alreadydo the job, even if it's not user-friendly and cross platform yet, but that's a young tool. You can find a comparison of the market : &lt;a class="reference external" href="https://www.cryfs.org/comparison"&gt;https://www.cryfs.org/comparison&lt;/a&gt; and if you're interested in crypto, you can also read the Sebastian's &lt;a class="reference external" href="https://www.cryfs.org/cryfs_mathesis.pdf"&gt;thesis&lt;/a&gt; about cryfs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lesson learned :&lt;/strong&gt; don't use the current encfs (1.8) version to protect your files on Dropbox, Open Source allows users to edit the code freely and thus increase the level of security for users of this code.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="access"&gt;
-&lt;h3&gt;Access&lt;/h3&gt;
-&lt;p&gt;Now, if you want to access your SplunkWeb interface, you need to setup a ssh tunnel between your pc and your server to forward the remote 8000 port on your pc&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# ssh -L 8000:127.0.0.1:8000 myremoteuser@&amp;lt;splunk-server-address&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Explanation : the &lt;cite&gt;-L 8000&lt;/cite&gt; option mean you specify the local port on your pc to access to &lt;cite&gt;127.0.0.1:8000&lt;/cite&gt; on your remote server&lt;/p&gt;
-&lt;p&gt;Now your can access to your Splunk interface on your pc by typing &lt;a class="reference external" href="https://127.0.0.1:8000"&gt;https://127.0.0.1:8000&lt;/a&gt; in your browser.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="go-further"&gt;
-&lt;h3&gt;Go Further&lt;/h3&gt;
-&lt;div class="line-block"&gt;
-&lt;div class="line"&gt;&lt;a class="reference external" href="http://wiki.splunk.com/Community:DeployHardenedSplunk"&gt;Splunk wiki Deploy hardened Splunk&lt;/a&gt;&lt;/div&gt;
-&lt;div class="line"&gt;&lt;a class="reference external" href="http://blog.7elements.co.uk/2012/11/quick-post-securing-splunk-free.html"&gt;source&lt;/a&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</summary><category term="tool"></category><category term="network"></category><category term="splunk"></category><category term="security"></category><category term="ssh"></category></entry><entry><title>EncFS : simply protect and access to your private data on cloud services</title><link href="http://natjohan.info/encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html" rel="alternate"></link><updated>2013-01-22T18:17:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-01-22:encfs-simply-protect-and-access-to-your-private-data-on-cloud-services.html</id><summary type="html">&lt;img alt="" src="/images/Encfs-global.png" /&gt;
 &lt;div class="section" id="synopsis"&gt;
 &lt;h2&gt;Synopsis&lt;/h2&gt;
 &lt;p&gt;Nowadays, there is many cloud storage services (Dropbox, Bitcasa, Box, Hubic, Mega, Drive, Sparkleshare, etc) to sync/backup/share/copy your data. Thanks to it, you can prevent hard drive crash or access it from different devices.&lt;/p&gt;
@@ -159,4 +141,38 @@ There is several android apps for decrypt Encfs folder, but CloudFetch is my fav
 &lt;div class="line"&gt;A pdf report from Fraunhofer institut : &lt;a class="reference external" href="http://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=1&amp;amp;cad=rja&amp;amp;ved=0CD0QFjAA&amp;amp;url=http%3A%2F%2Fwww.sit.fraunhofer.de%2Fcontent%2Fdam%2Fsit%2Fen%2Fstudies%2FCloud-Storage-Security_a4.pdf&amp;amp;ei=nzf8UP62HdKIhQf6oIFw&amp;amp;usg=AFQjCNGhymnIFCQOFJaXrWI8elG_3cirCA&amp;amp;sig2=V_kMG85r96f2hxpX5s8bqw&amp;amp;bvm=bv.41248874,d.ZG4"&gt;On the security of cloud storage services&lt;/a&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="crypt"></category><category term="filesystem"></category><category term="dropbox"></category><category term="cloud"></category><category term="security"></category><category term="EncFS"></category><category term="data"></category></entry></feed>
+</summary><category term="crypt"></category><category term="filesystem"></category><category term="dropbox"></category><category term="cloud"></category><category term="security"></category><category term="EncFS"></category><category term="data"></category></entry><entry><title>Tip of the week 16</title><link href="http://natjohan.info/tip-of-the-week-16.html" rel="alternate"></link><updated>2013-04-14T14:11:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2013-04-14:tip-of-the-week-16.html</id><summary type="html">&lt;img alt="" src="/images/splunk-logo.png" /&gt;
+&lt;div class="section" id="secure-your-splunk-free-server"&gt;
+&lt;h2&gt;Secure your Splunk Free server&lt;/h2&gt;
+&lt;p&gt;&amp;quot;Splunk Enterprise is a fully featured, powerful platform for collecting, searching, monitoring and analyzing machine data&amp;quot;. There is a free version of Splunk with some limitations (read &lt;a class="reference external" href="http://docs.splunk.com/Documentation/Splunk/5.0.2/Admin/MoreAboutSplunkFree"&gt;here&lt;/a&gt;), but it's sufficent to analyze fews hosts logs (&amp;lt; 20). The major disadvatage of this edition is the lack of an authentication module for the web interface, which mean anyone can access to your splunk interface and show your data.&lt;/p&gt;
+&lt;p&gt;One way to secure it is to bind SplunkWeb on localhost and use a ssh tunnel to access it.&lt;/p&gt;
+&lt;div class="section" id="configuration"&gt;
+&lt;h3&gt;Configuration&lt;/h3&gt;
+&lt;p&gt;You just have to edit &lt;cite&gt;$SPLUNK_HOME/etc/system/default/web.conf&lt;/cite&gt; to uncomment and modify this line like that :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;server.socket_host = localhost&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Restart Splunk :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;splunk-server# $SPLUNK_HOME/bin/splunk restart splunk&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Verify your configuration :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;splunk-server# netstat -an | grep 8000&lt;/span&gt;
+&lt;span class="go"&gt;        tcp   0    0 127.0.0.1:8000   0.0.0.0:*   LISTEN&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="access"&gt;
+&lt;h3&gt;Access&lt;/h3&gt;
+&lt;p&gt;Now, if you want to access your SplunkWeb interface, you need to setup a ssh tunnel between your pc and your server to forward the remote 8000 port on your pc&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;natjohan# ssh -L 8000:127.0.0.1:8000 myremoteuser@&amp;lt;splunk-server-address&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Explanation : the &lt;cite&gt;-L 8000&lt;/cite&gt; option mean you specify the local port on your pc to access to &lt;cite&gt;127.0.0.1:8000&lt;/cite&gt; on your remote server&lt;/p&gt;
+&lt;p&gt;Now your can access to your Splunk interface on your pc by typing &lt;a class="reference external" href="https://127.0.0.1:8000"&gt;https://127.0.0.1:8000&lt;/a&gt; in your browser.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="go-further"&gt;
+&lt;h3&gt;Go Further&lt;/h3&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="http://wiki.splunk.com/Community:DeployHardenedSplunk"&gt;Splunk wiki Deploy hardened Splunk&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="http://blog.7elements.co.uk/2012/11/quick-post-securing-splunk-free.html"&gt;source&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="tool"></category><category term="network"></category><category term="splunk"></category><category term="security"></category><category term="ssh"></category></entry></feed>
