@@ -3,7 +3,7 @@
 &lt;div class="section" id="edit"&gt;
 &lt;h2&gt;Edit&lt;/h2&gt;
 &lt;p&gt;First, I published this article three years ago, in 2013. As things moving fast, specially in security, Sebastian Messmer just
-advising me that &lt;cite&gt;EncFS&lt;/cite&gt; is not a really secure tool anymore to save files on Dropbox. In February 2014, Taylor Hornby a scientist and security researcher done an audit of the EncFS code, and bad news :&lt;/p&gt;
+advised me that &lt;cite&gt;EncFS&lt;/cite&gt; is not a really secure tool anymore to save files on Dropbox. In February 2014, Taylor Hornby a scientist and security researcher done an audit of the EncFS code, and bad news :&lt;/p&gt;
 &lt;!--  --&gt;
 &lt;blockquote&gt;
 &lt;em&gt;EncFS is probably safe as long as the adversary only gets one copy of
