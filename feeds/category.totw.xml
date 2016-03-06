@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/category.totw.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2015-10-03T18:29:00+02:00</updated><entry><title>Tip of the week 43</title><link href="http://natjohan.info/tip-of-the-week-43.html" rel="alternate"></link><updated>2015-10-03T18:29:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-10-03:tip-of-the-week-43.html</id><summary type="html">&lt;img alt="" src="/images/prey-logo.png" /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Natjohan</title><link href="http://natjohan.info/" rel="alternate"></link><link href="http://natjohan.info/feeds/category.totw.xml" rel="self"></link><id>http://natjohan.info/</id><updated>2016-03-06T13:52:00+01:00</updated><entry><title>Tip of the week 44</title><link href="http://natjohan.info/tip-of-the-week-44.html" rel="alternate"></link><updated>2016-03-06T13:52:00+01:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2016-03-06:tip-of-the-week-44.html</id><summary type="html">&lt;img alt="" src="/images/Shutter_logo.png" /&gt;
+&lt;div class="section" id="shutter-feature-rich-screenshot-tool"&gt;
+&lt;h2&gt;Shutter : feature rich screenshot tool&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://shutter-project.org/"&gt;Shutter&lt;/a&gt; is a powerful screenshot tool w/ many features, it allows you
+to &lt;strong&gt;capture&lt;/strong&gt; (a specific selection/windows/menu/tooltip/website...),
+you can easily &lt;strong&gt;edit&lt;/strong&gt; your captures with shutter built-in editor
+(add text, arrows, crop, highlight,...) and also &lt;strong&gt;share&lt;/strong&gt; (flickr, imgur, etc)&lt;/p&gt;
+&lt;p&gt;To install it under you debian based distribution :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~ sudo add-apt-repository ppa:shutter/ppa&lt;/span&gt;
+&lt;span class="go"&gt;~ sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install shutter&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Under Fedora :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="go"&gt;~ yum install shutter&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Just launch &lt;cite&gt;Shutter&lt;/cite&gt; and you are ready to go ! Explore the -&amp;gt; &lt;em&gt;edit&lt;/em&gt; -&amp;gt; &lt;em&gt;preferences&lt;/em&gt;
+(folder to save your screenshot, naming, launch at startup, etc) I also highly recommend
+to use &lt;cite&gt;Shutter&lt;/cite&gt; as default when you type &lt;cite&gt;print screen&lt;/cite&gt; touch, to do so just follow this step
+by step &lt;a class="reference external" href="http://shutter-project.org/faq-help/set-shutter-as-the-default-screenshot-tool/"&gt;guide&lt;/a&gt;&lt;/p&gt;
+&lt;img alt="" src="/images/Shutter_edit_tool.png" /&gt;
+&lt;/div&gt;
+</summary><category term="linux"></category><category term="ubuntu"></category><category term="screenshot"></category><category term="tools"></category></entry><entry><title>Tip of the week 43</title><link href="http://natjohan.info/tip-of-the-week-43.html" rel="alternate"></link><updated>2015-10-03T18:29:00+02:00</updated><author><name>natjohan</name></author><id>tag:natjohan.info,2015-10-03:tip-of-the-week-43.html</id><summary type="html">&lt;img alt="" src="/images/prey-logo.png" /&gt;
 &lt;div class="section" id="protect-your-computer-against-theft-with-prey"&gt;
 &lt;h2&gt;Protect your computer against theft with Prey&lt;/h2&gt;
 &lt;p&gt;Everyday, a ton of electronic devices are stolen in the world, and it does

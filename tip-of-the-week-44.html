@@ -10,7 +10,7 @@
 
 	<link href="http://natjohan.info/" type="application/atom+xml" rel="alternate" title="Natjohan ATOM Feed" />
 
-		<title>Natjohan - ubuntu</title>
+		<title> Tip of the week 44 | Natjohan </title>
 		<meta charset="utf-8" />
 </head>
 <body>
@@ -25,7 +25,7 @@
 			<ul>
 						<li><a href="http://natjohan.info/category/dev.html">Dev</a></li>
 						<li><a href="http://natjohan.info/category/linux.html">Linux</a></li>
-						<li><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
+						<li class="active"><a href="http://natjohan.info/category/totw.html">ToTW</a></li>
 					<li><a href="/pages/about.html">About</a></li>
 			</ul>
 		</div>
@@ -55,65 +55,71 @@
 
 	<section id="posts">
 	<header>
-		<h1>Natjohan's blog</h1>
-		<h3>
-			<script type="text/javascript">
-				var currentDate = new Date();
-				var day = currentDate.getDate();
-				var monthNames = [ "Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-				var month = monthNames[currentDate.getMonth()].toUpperCase();
-				var year = currentDate.getFullYear();
-				document.write(month + " " + day + ", " + year);
-			</script>
-		</h3>
+		<h1>natjohan's blog</h1>
+		<h3>Posted dim. 06 mars 2016</h3>
 	</header>
-
-	<dl>
-		<ol>
-				<li>
-					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-44.html" rel="bookmark" title="Permalink to Tip of the week 44">Tip of the week 44</a>
-					</h1>
-					<abbr class="published" title="2016-03-06T13:52:00">dim. 06 mars 2016</abbr>
-				<div class="entry-content"> <img alt="" src="/images/Shutter_logo.png" />
+	<article>
+		<h1 id="title">
+			<a href="http://natjohan.info/tip-of-the-week-44.html" rel="bookmark"
+				title="Permalink to Tip of the week 44">Tip of the week 44</a>
+		</h1>
+		<img alt="" src="/images/Shutter_logo.png" />
 <div class="section" id="shutter-feature-rich-screenshot-tool">
 <h2>Shutter : feature rich screenshot tool</h2>
 <p><a class="reference external" href="http://shutter-project.org/">Shutter</a> is a powerful screenshot tool w/ many features, it allows you
 to <strong>capture</strong> (a specific selection/windows/menu/tooltip/website...),
 you can easily <strong>edit</strong> your captures with shutter built-in editor
 (add text, arrows, crop, highlight,...) and also <strong>share</strong> (flickr, imgur, etc)</p>
-<p>To install it ...</p></div> </div>
-				</li>
-				<li>
-					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-43.html" rel="bookmark" title="Permalink to Tip of the week 43">Tip of the week 43</a>
-					</h1>
-					<abbr class="published" title="2015-10-03T18:29:00">sam. 03 octobre 2015</abbr>
-				<div class="entry-content"> <img alt="" src="/images/prey-logo.png" />
-<div class="section" id="protect-your-computer-against-theft-with-prey">
-<h2>Protect your computer against theft with Prey</h2>
-<p>Everyday, a ton of electronic devices are stolen in the world, and it does
-not only happen to others, and you should protect your devices. That's why
-I just tested Prey and I think it's quite a good solution.</p>
-<p>As the ...</p></div> </div>
-				</li>
-				<li>
-					<h1 class="title">
-						<a href="http://natjohan.info/tip-of-the-week-42.html" rel="bookmark" title="Permalink to Tip of the week 42">Tip of the week 42</a>
-					</h1>
-					<abbr class="published" title="2015-09-19T13:52:00">sam. 19 septembre 2015</abbr>
-				<div class="entry-content"> <div class="section" id="use-the-ip-command-under-linux">
-<h2>Use the <cite>ip</cite> command under linux</h2>
-<p>As you know (or not) the <cite>ifconfig</cite> command is deprecated since many years now and not developped anymore since 2001,
-it's still present but for now you should use the <cite>ip</cite> command which is a part of the <cite>iproute2</cite> package,
-it supports all ...</p></div> </div>
-				</li>
-		</ol>
-	</dl>
+<p>To install it under you debian based distribution :</p>
+<div class="highlight"><pre><span class="go">~ sudo add-apt-repository ppa:shutter/ppa</span>
+<span class="go">~ sudo apt-get update &amp;&amp; sudo apt-get install shutter</span>
+</pre></div>
+<p>Under Fedora :</p>
+<div class="highlight"><pre><span class="go">~ yum install shutter</span>
+</pre></div>
+<p>Just launch <cite>Shutter</cite> and you are ready to go ! Explore the -&gt; <em>edit</em> -&gt; <em>preferences</em>
+(folder to save your screenshot, naming, launch at startup, etc) I also highly recommend
+to use <cite>Shutter</cite> as default when you type <cite>print screen</cite> touch, to do so just follow this step
+by step <a class="reference external" href="http://shutter-project.org/faq-help/set-shutter-as-the-default-screenshot-tool/">guide</a></p>
+<img alt="" src="/images/Shutter_edit_tool.png" />
+</div>
 
-<p class="paginator">
-		<a href="http://natjohan.info/tag/ubuntu2.html" class="button_accent" style="position: absolute; right: 0;">continue&nbsp;&nbsp;&nbsp;&rarr;</a>
-</p>
+
+		<div id="article_meta">
+				Category:
+					<a href="http://natjohan.info/category/totw.html">ToTW</a>
+				<br />Tags:
+					<a href="http://natjohan.info/tag/linux.html">linux</a>
+					<a href="http://natjohan.info/tag/ubuntu.html">ubuntu</a>
+					<a href="http://natjohan.info/tag/screenshot.html">screenshot</a>
+					<a href="http://natjohan.info/tag/tools.html">tools</a>
+		</div>
+		
+		<div id="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-via="natjohan">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+
+	</article>
+
+	<footer>
+		<a href="http://natjohan.info/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+	<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "tip-of-the-week-44.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://natjohan.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+
 	</section>
 
 <script type="text/javascript">
